@@ -8,7 +8,7 @@ export function Footer() {
   return (
     <Sc.Container theme={theme}>
       <h1>
-        Sobre nós <img src="#" alt="toggle theme" />
+        Sobre nós
       </h1>
     </Sc.Container>
   )

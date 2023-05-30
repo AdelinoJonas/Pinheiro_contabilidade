@@ -1,9 +1,46 @@
 import styled from "styled-components";
+import { BsFillMoonStarsFill } from 'react-icons/bs';
+import { BsFillSunFill } from 'react-icons/bs';
 
 export const Container = styled.nav`
-  background: ${(props) => props.theme.bg.primary};
+  width: 100%;
   height: 6rem;
-  h1{
-  color: ${props => props.theme.color.links};
+  background: ${(props) => props.theme.bg.primary};
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 3rem 0 3rem;
+  position: fixed;
+  ul{
+    display: flex;
+    gap: 1.6rem;
   }
+  li{
+    all: unset;
+    cursor: pointer;
+    color: ${props => props.theme.color.links};
+    font-size: ${props => props.theme.sizeFonts.links};
+    font-weight: ${props => props.theme.weightFonts.links};
+    
+    &:hover{
+      text-transform: uppercase;
+      color: ${props => props.theme.color.text};
+      font-weight: ${props => props.theme.weightFonts.title1};
+      opacity: 0.8;
+      transition: all 0.6s;
+    }
+  }
+`;
+
+export const darkTheme = styled(BsFillMoonStarsFill)`
+  width: 3rem;
+  height: 3rem;
+  color: ${(props) => (props.theme.color.links)};
+  cursor: pointer
+`;
+export const lightTheme = styled(BsFillSunFill)`
+  width: 3rem;
+  height: 3rem;
+  color: ${(props) => (props.theme.color.links)};
+  cursor: pointer
 `;

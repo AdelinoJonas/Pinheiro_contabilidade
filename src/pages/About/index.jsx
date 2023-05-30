@@ -8,9 +8,13 @@ export function About () {
   const { theme } = useContext(ThemeContext);
   return (
     <Sc.Container theme={theme}>
-      <h1>
-        Sobre nós <img src="#" alt="toggle theme" />
-      </h1>
+      <div>
+        <h1>Pinheiro Contabilidade: </h1>
+        <span>
+          Simplificando suas finanças online!
+        </span>
+        <button >Entre em Contato</button>
+      </div>
     </Sc.Container>
   )
 }

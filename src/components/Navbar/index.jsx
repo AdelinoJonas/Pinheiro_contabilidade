@@ -3,14 +3,33 @@ import { ThemeContext } from '../../context/ThemeContext';
 import * as Sc from './styles';
 
 export function Navbar() {
-  const { theme, toggleTheme } = useContext(ThemeContext);
+  const { theme, toggleTheme, isDarkTheme } = useContext(ThemeContext);
 
   return (
     <Sc.Container theme={theme}>
-      <h1>
-        Sobre nós <img src="#" alt="toggle theme" />
-      </h1>
-      <button onClick={toggleTheme}>Toggle Theme</button>
+      <ul>
+        <li>
+          Início
+        </li>
+        <li>
+          Serviços
+        </li>
+        <li>
+          Clientes
+        </li>
+        <li>
+          Links Uteis
+        </li>
+        <li>
+          Notícias
+        </li>
+        <li>
+          Contato
+        </li>
+      </ul>
+      {isDarkTheme ? 
+      <Sc.darkTheme onClick={toggleTheme} theme={theme}/> : 
+      <Sc.lightTheme onClick={toggleTheme} theme={theme}/>}
     </Sc.Container>
   );
 }

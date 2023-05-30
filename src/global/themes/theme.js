@@ -12,7 +12,7 @@ export const lightTheme = {
   },
   sizeFonts: {
     links: '1.6rem',
-    title1: '6.2rem',
+    title1: '4.2rem',
     title: '3.6rem',
     subtitle: '1.8rem',
     text: '1.6rem',
@@ -37,7 +37,7 @@ export const darkTheme = {
   },
   color: {
     text: '#FFF',
-    title1: '#000',
+    title1: '#FFF',
     links: '#7ea291'
   },
   sizeFonts: {
@@ -48,37 +48,6 @@ export const darkTheme = {
     text: '1.6rem',
     button: '1.6rem',
   },
-  weightFonts: {
-    links: 400,
-    title1: 700,
-    title: 500,
-    subtitle: 300,
-    text: 400,
-    button: 500,
-  }
-};export default {
-  bg: {
-    primary: '#0f5132',
-    secundary: '#FFFFFF',
-    tertiary: '#8c747f',
-    sideFilter: '#E2E8F0'
-  },
-
-  color: {
-    text: '#000000',
-    title1: '#fff',
-    links: '#7ea291'
-  },
-
-  sizeFonts: {
-    links: '1.6rem',
-    title1: '6.2rem',
-    title: '3.6rem',
-    subtitle: '1.8rem',
-    text: '1.6rem',
-    button: '1.6rem',
-  },
-
   weightFonts: {
     links: 400,
     title1: 700,
