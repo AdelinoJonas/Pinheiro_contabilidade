@@ -10,8 +10,8 @@ export default function App() {
     <ThemeProvider>
       <GlobalStyles />
       <Navbar />
-        {/* <About />
-        <Footer /> */}
+      <About />
+      <Footer />
     </ThemeProvider>
   );
 }
