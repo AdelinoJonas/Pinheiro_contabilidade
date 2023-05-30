@@ -9,13 +9,13 @@ export default createGlobalStyle`
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-body {
+/* body {
     background: ${(props) => props.theme.bg.primary};
     color: ${props => props.theme.color.text};        
     }
 h1 {
     color: ${props => props.theme.color.title};        
-}
+} */
 
 textarea {
   &::-webkit-scrollbar {

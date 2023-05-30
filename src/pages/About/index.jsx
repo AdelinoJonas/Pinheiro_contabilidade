@@ -6,8 +6,8 @@ export function About () {
 
   return (
   <>
-    <button onClick={()=> navigate("/services")}>index</button>
-    <button onClick={() => setIsDarkTheme(!isDarkTheme)}>theme</button>
+    {/* <button onClick={()=> navigate("/services")}>index</button> */}
+    ABOUT
   </>
   )
 }
