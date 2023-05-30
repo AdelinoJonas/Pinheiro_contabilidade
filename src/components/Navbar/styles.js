@@ -28,7 +28,7 @@ export const Container = styled.nav`
       color: ${props => props.theme.color.active};
       font-weight: ${props => props.theme.weightFonts.title1};
       opacity: 0.8;
-      transition: all 0.6s;
+      transition: all 0.3s;
     }
   }
 `;
@@ -53,12 +53,21 @@ export const darkTheme = styled(BsFillMoonStarsFill)`
   width: 3rem;
   height: 3rem;
   color: ${(props) => (props.theme.color.links)};
-  cursor: pointer
-`;
+  cursor: pointer;
+
+  &:hover{
+    color: ${props => props.theme.color.active};
+    transition: all 0.3s;
+    }
+    `;
 
 export const lightTheme = styled(BsFillSunFill)`
   width: 3rem;
   height: 3rem;
   color: ${(props) => (props.theme.color.links)};
-  cursor: pointer
-`;
+  cursor: pointer;
+  &:hover{
+    color: ${props => props.theme.color.active};
+    transition: all 0.3s;
+    }
+  `;

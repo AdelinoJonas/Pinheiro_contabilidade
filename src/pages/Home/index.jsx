@@ -20,7 +20,7 @@ export function Home() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSloganIndex(prevIndex => (prevIndex + 1) % slogans.length);
-    }, 4000);
+    }, 3000);
     
     return () => clearInterval(interval);
   }, []);
@@ -32,7 +32,7 @@ export function Home() {
           {/* <h1>Pinheiro Contabilidade: </h1> */}
           <span>{slogans[currentSloganIndex]}</span>
         </section>
-      <button>Entre em Contato</button>
+      <button>Quem somos</button>
       </div>
     </Sc.Container>
   );
