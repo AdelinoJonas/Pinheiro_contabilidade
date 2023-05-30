@@ -8,23 +8,40 @@ export function Navbar() {
   return (
     <Sc.Container theme={theme}>
       <ul>
-        <li>
-          Início
+      <li>
+          <Sc.SelectItem exact activeClassName="active" theme={theme} to="/">
+            Início
+          </Sc.SelectItem>
         </li>
         <li>
-          Serviços
+          <Sc.SelectItem exact activeClassName="active" theme={theme} to="/about">
+            Sobre nós
+          </Sc.SelectItem>
         </li>
         <li>
-          Clientes
+          <Sc.SelectItem exact activeClassName="active" theme={theme} to="/services">
+            Serviços
+          </Sc.SelectItem>
         </li>
         <li>
-          Links Uteis
+          <Sc.SelectItem exact activeClassName="active" theme={theme} to="/custumers">
+            Clientes
+          </Sc.SelectItem>
         </li>
         <li>
-          Notícias
+          <Sc.SelectItem exact activeClassName="active" theme={theme} to="/links">
+            Links Uteis
+          </Sc.SelectItem>
         </li>
         <li>
-          Contato
+          <Sc.SelectItem exact activeClassName="active" theme={theme} to="/news">
+            Notícias
+          </Sc.SelectItem>
+        </li>
+        <li>
+          <Sc.SelectItem exact activeClassName="active" theme={theme} to="/contact">
+            Contato
+          </Sc.SelectItem>
         </li>
       </ul>
       {isDarkTheme ? 

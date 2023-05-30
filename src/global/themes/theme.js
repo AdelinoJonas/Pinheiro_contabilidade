@@ -8,11 +8,12 @@ export const lightTheme = {
   color: {
     text: '#000000',
     title1: '#fff',
-    links: '#7ea291'
+    links: '#7ea291',
+    active: '#fff'
   },
   sizeFonts: {
     links: '1.6rem',
-    title1: '4.2rem',
+    title1: '6.2rem',
     title: '3.6rem',
     subtitle: '1.8rem',
     text: '1.6rem',
@@ -33,12 +34,13 @@ export const darkTheme = {
     primary: '#000000',
     secondary: '#1b1b1b',
     tertiary: '#8c747f',
-    sideFilter: '#222222'
+    sideFilter: '#0f5132'
   },
   color: {
     text: '#FFF',
     title1: '#FFF',
-    links: '#7ea291'
+    links: '#7ea291',
+    active: '#fff'
   },
   sizeFonts: {
     links: '1.6rem',

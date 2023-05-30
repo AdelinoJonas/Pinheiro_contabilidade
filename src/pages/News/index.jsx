@@ -1,6 +1,6 @@
 import React from 'react'
 
-export function About () {
+export function News () {
   return (
     <div>index</div>
   )
