@@ -5,6 +5,9 @@ export function About () {
   const navigate = useNavigate();
 
   return (
+  <>
     <button onClick={()=> navigate("/services")}>index</button>
+    <button onClick={() => setIsDarkTheme(!isDarkTheme)}>theme</button>
+  </>
   )
 }

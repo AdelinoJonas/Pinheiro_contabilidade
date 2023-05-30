@@ -1,16 +1,19 @@
+import React, { useState } from 'react';
 import { Suspense } from 'react';
 import { ThemeProvider } from 'styled-components';
 import GlobalStyles from '../global/GlobalStyles';
-import theme from '../global/theme/theme';
-import { MyRoutes } from './routes';
+import { lightTheme, darkTheme } from '../global/themes/theme';
+import { About } from '../pages/About';
 
 function App() {
+  const [isDarkTheme, setIsDarkTheme] = useState(false)
 
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={isDarkTheme ? darkTheme : lightTheme}>
       <GlobalStyles />
       <Suspense fallback={null}>
-        <MyRoutes />
+        {/* <About /> */}
+        <button onClick={() => setIsDarkTheme(!isDarkTheme)}>theme</button>
       </Suspense>
     </ThemeProvider>
   )
