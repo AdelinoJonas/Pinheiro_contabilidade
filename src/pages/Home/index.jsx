@@ -1,20 +1,47 @@
-import { useNavigate } from 'react-router-dom';
-import React, { useContext } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { ThemeContext } from '../../context/ThemeContext';
 import * as Sc from './styles';
+import { useNavigate } from 'react-router-dom';
 
-export function Home () {
+export function Home() {
   const navigate = useNavigate();
   const { theme } = useContext(ThemeContext);
+  
+  const slogans = [
+    "Simplificando suas finanças online!",
+    "Parceiro confiável para todas as suas necessidades contábeis",
+    "Transformando a maneira como você lida com as finanças!",
+    "Contabilidade inteligente para o seu negócio!",
+    "Gerenciando suas finanças com expertise"
+  ];
+  
+  const [currentSloganIndex, setCurrentSloganIndex] = useState(0);
+  
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSloganIndex(prevIndex => (prevIndex + 1) % slogans.length);
+    }, 4000);
+    
+    return () => clearInterval(interval);
+  }, []);
+  
   return (
     <Sc.Container theme={theme}>
       <div>
-        <h1>Pinheiro Contabilidade: </h1>
-        <span>
-          Simplificando suas finanças online!
-        </span>
-        <button >Entre em Contato</button>
+        <section>
+          {/* <h1>Pinheiro Contabilidade: </h1> */}
+          <span>{slogans[currentSloganIndex]}</span>
+        </section>
+      <button>Entre em Contato</button>
       </div>
     </Sc.Container>
-  )
+  );
 }
+
+
+
+
+
+
+
+

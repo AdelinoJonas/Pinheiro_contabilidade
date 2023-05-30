@@ -15,10 +15,15 @@ export const Container = styled.div`
     font-size: ${props => props.theme.sizeFonts.title1};
     font-weight: ${props => props.theme.weightFonts.title1};
   }
-  span{
-    color: ${props => props.theme.color.title1};
-    font-size: ${props => props.theme.sizeFonts.title1};
-    font-weight: ${props => props.theme.weightFonts.title1};
+  div{
+    section{
+      height: 12rem;
+      span{
+        color: ${props => props.theme.color.title1};
+        font-size: ${props => props.theme.sizeFonts.title1};
+        font-weight: ${props => props.theme.weightFonts.title1};
+      }
+    }
   }
   button {
     cursor: pointer;
@@ -41,9 +46,5 @@ export const Container = styled.div`
   }
   }
 `;
-
-// export const Button = styled.button`
-   
-// `;
 
 

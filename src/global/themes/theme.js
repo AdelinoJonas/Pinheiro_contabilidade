@@ -13,7 +13,7 @@ export const lightTheme = {
   },
   sizeFonts: {
     links: '1.6rem',
-    title1: '6.2rem',
+    title1: '5.2rem',
     title: '3.6rem',
     subtitle: '1.8rem',
     text: '1.6rem',
@@ -44,7 +44,7 @@ export const darkTheme = {
   },
   sizeFonts: {
     links: '1.6rem',
-    title1: '6.2rem',
+    title1: '5.2rem',
     title: '3.6rem',
     subtitle: '1.8rem',
     text: '1.6rem',
