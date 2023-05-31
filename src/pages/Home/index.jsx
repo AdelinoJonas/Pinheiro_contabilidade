@@ -2,6 +2,7 @@ import React, { useState, useEffect, useContext } from 'react';
 import { ThemeContext } from '../../context/ThemeContext';
 import * as Sc from './styles';
 import { useNavigate } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 export function Home() {
   const navigate = useNavigate();
@@ -26,14 +27,20 @@ export function Home() {
   }, []);
   
   return (
-    <Sc.Container theme={theme}>
-      <div>
-        <section>
-          <span>{slogans[currentSloganIndex]}</span>
-        </section>
-        <button>Serviços</button>
-      </div>
-    </Sc.Container>
+    <motion.div 
+      initial={{width: 0}}
+      animate={{width: '100%'}}
+      exit={{x: -window.innerHeight}}
+    >
+      <Sc.Container theme={theme}>
+        <div>
+          <section>
+            <span>{slogans[currentSloganIndex]}</span>
+          </section>
+          <button onClick={() => navigate("/services")}>Serviços</button>
+        </div>
+      </Sc.Container>
+    </motion.div>
   );
 }
 

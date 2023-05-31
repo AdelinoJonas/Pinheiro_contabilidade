@@ -2,16 +2,25 @@ import React, { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ThemeContext } from '../../context/ThemeContext';
 import * as Sc from './styles';
+import { motion } from 'framer-motion';
 
 export function About() {
   const navigate = useNavigate();
   const { theme } = useContext(ThemeContext);
    
   return (
+    <motion.div 
+      initial={{width: 0}}
+      animate={{width: '100%'}}
+      exit={{x: window.innerHeight}}
+    >
     <Sc.Container theme={theme}>
       <div>
-<h1>  ABOUT  </h1>
+        <h1>
+          ABOUT
+        </h1>
       </div>
     </Sc.Container>
+    </motion.div>
   );
 }

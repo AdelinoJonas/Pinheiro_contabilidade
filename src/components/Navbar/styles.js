@@ -12,7 +12,7 @@ export const Container = styled.nav`
   justify-content: space-between;
   align-items: center;
   padding: 0 3rem 0 3rem;
-  position: fixed;
+
   div{
     display: flex;
     align-items: center;
@@ -54,13 +54,13 @@ export const SelectItem = styled(NavLink)`
   font-size: ${props => props.theme.sizeFonts.links};
   font-weight: ${props => props.theme.weightFonts.links};
     
-    &:hover{
-      text-transform: uppercase;
-      color: ${props => props.theme.color.active};
-      font-weight: ${props => props.theme.weightFonts.title1};
-      opacity: 0.8;
-      transition: all 0.3s;
-    }
+  &:hover{
+    text-transform: uppercase;
+    color: ${props => props.theme.color.active};
+    font-weight: ${props => props.theme.weightFonts.title1};
+    opacity: 0.8;
+    transition: all 0.3s;
+  }
 
   &.active {
     color: ${(props) => props.theme.color.active};

@@ -15,31 +15,31 @@ export function Navbar() {
         <h2>Pinheiro Contabilidade</h2>
       </div>
       <div>
-        <Sc.SelectItem exact activeclassName="active" theme={theme} to="/">
+        <Sc.SelectItem exact active theme={theme} to="/home">
           Início
         </Sc.SelectItem>
       
-        <Sc.SelectItem activeclassname="active" theme={theme} to="/about">
+        <Sc.SelectItem active theme={theme} to="/about">
           Sobre nós
         </Sc.SelectItem>
       
-        <Sc.SelectItem activeclassname="active" theme={theme} to="/services">
+        <Sc.SelectItem active theme={theme} to="/services">
           Serviços
         </Sc.SelectItem>
       
-        <Sc.SelectItem activeclassname="active" theme={theme} to="/custumers">
+        <Sc.SelectItem active theme={theme} to="/custumers">
           Clientes
         </Sc.SelectItem>
       
-        <Sc.SelectItem activeclassname="active" theme={theme} to="/links">
+        <Sc.SelectItem active theme={theme} to="/links">
           Links Uteis
         </Sc.SelectItem>
       
-        <Sc.SelectItem activeclassname="active" theme={theme} to="/news">
+        <Sc.SelectItem active theme={theme} to="/news">
           Notícias
         </Sc.SelectItem>
       
-        <Sc.SelectItem activeclassname="active" theme={theme} to="/contact">
+        <Sc.SelectItem active theme={theme} to="/contact">
           Contato
         </Sc.SelectItem>
       </div>
