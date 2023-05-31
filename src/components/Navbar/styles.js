@@ -3,6 +3,7 @@ import { BsFillMoonStarsFill } from 'react-icons/bs';
 import { BsFillSunFill } from 'react-icons/bs';
 import { NavLink } from "react-router-dom";
 
+
 export const Container = styled.nav`
   width: 100%;
   height: 6rem;
@@ -12,24 +13,34 @@ export const Container = styled.nav`
   align-items: center;
   padding: 0 3rem 0 3rem;
   position: fixed;
-  ul{
+  div{
     display: flex;
-    gap: 1.6rem;
-  }
-  li{
-    all: unset;
-    cursor: pointer;
-    color: ${props => props.theme.color.links};
-    font-size: ${props => props.theme.sizeFonts.links};
-    font-weight: ${props => props.theme.weightFonts.links};
-    
-    &:hover{
-      text-transform: uppercase;
-      color: ${props => props.theme.color.active};
-      font-weight: ${props => props.theme.weightFonts.title1};
-      opacity: 0.8;
-      transition: all 0.3s;
+    align-items: center;
+    gap: 1rem;
+    div{
+      background: ${(props) => props.theme.color.active};
+      height: 5rem;
+      width: 5rem;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
+    img{
+      width: 8rem;
+      height: 8rem;
+    }
+    h2{
+      color: ${props => props.theme.color.active};
+      text-transform: uppercase;
+      font-weight: ${props => props.theme.weightFonts.title1};
+      font-size: ${props => props.theme.sizeFonts.subtitle};
+    }
+
+  }
+  div{
+    display: flex;
+    gap: 1rem;
   }
 `;
 
@@ -38,9 +49,18 @@ export const SelectItem = styled(NavLink)`
   text-decoration: none;
   width: inherit;
   height: inherit;
-  span {
-    flex: 1;
-  }
+  cursor: pointer;
+  color: ${props => props.theme.color.links};
+  font-size: ${props => props.theme.sizeFonts.links};
+  font-weight: ${props => props.theme.weightFonts.links};
+    
+    &:hover{
+      text-transform: uppercase;
+      color: ${props => props.theme.color.active};
+      font-weight: ${props => props.theme.weightFonts.title1};
+      opacity: 0.8;
+      transition: all 0.3s;
+    }
 
   &.active {
     color: ${(props) => props.theme.color.active};

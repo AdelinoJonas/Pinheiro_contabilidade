@@ -10,7 +10,7 @@ export function Customers() {
   return (
     <Sc.Container theme={theme}>
       <div>
-<h1>  CLIENTES  </h1>
+        <h1>CLIENTES</h1>
       </div>
     </Sc.Container>
   );

@@ -29,10 +29,9 @@ export function Home() {
     <Sc.Container theme={theme}>
       <div>
         <section>
-          {/* <h1>Pinheiro Contabilidade: </h1> */}
           <span>{slogans[currentSloganIndex]}</span>
         </section>
-      <button>Quem somos</button>
+        <button>Serviços</button>
       </div>
     </Sc.Container>
   );
