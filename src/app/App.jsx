@@ -1,22 +1,27 @@
-import React, { useState } from 'react';
-import { Suspense } from 'react';
-import { ThemeProvider } from 'styled-components';
+import React from 'react';
 import GlobalStyles from '../global/GlobalStyles';
-import { lightTheme, darkTheme } from '../global/themes/theme';
+import { Home } from '../pages/Home';
+import { Navbar } from '../components/Navbar';
+import { Footer } from '../components/Footer';
+import { ThemeProvider } from '../context/ThemeContext';
 import { About } from '../pages/About';
+import { Services } from '../pages/Services';
+import { Customers } from '../pages/Customers';
+import { News } from '../pages/News';
+import { Contact } from '../pages/Contact';
 
-function App() {
-  const [isDarkTheme, setIsDarkTheme] = useState(false)
-
+export default function App() {
   return (
-    <ThemeProvider theme={isDarkTheme ? darkTheme : lightTheme}>
+    <ThemeProvider>
       <GlobalStyles />
-      <Suspense fallback={null}>
-        {/* <About /> */}
-        <button onClick={() => setIsDarkTheme(!isDarkTheme)}>theme</button>
-      </Suspense>
+      <Navbar />
+      <Home />
+      <About />
+      <Services />
+      <Customers />
+      <News />
+      <Contact />
+      <Footer />
     </ThemeProvider>
-  )
+  );
 }
-
-export default App

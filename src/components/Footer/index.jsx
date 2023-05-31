@@ -1,17 +1,15 @@
 import React, { useContext } from 'react';
-import { useNavigate } from 'react-router-dom';
 import { ThemeContext } from '../../context/ThemeContext';
 import * as Sc from './styles';
 
-export function Services() {
-  const navigate = useNavigate();
+export function Footer() {
   const { theme } = useContext(ThemeContext);
-   
+
   return (
     <Sc.Container theme={theme}>
-      <div>
-        <h1> SERVICES </h1>
-      </div>
+      <h1>
+        Sobre nós
+      </h1>
     </Sc.Container>
-  );
+  )
 }
