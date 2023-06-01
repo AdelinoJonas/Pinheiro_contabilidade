@@ -4,7 +4,7 @@ import { ThemeContext } from '../../context/ThemeContext';
 import * as Sc from './styles';
 import { motion } from 'framer-motion';
 
-export function About() {
+export function Links() {
   const navigate = useNavigate();
   const { theme } = useContext(ThemeContext);
    
@@ -14,13 +14,11 @@ export function About() {
       animate={{width: '100%'}}
       exit={{x: -window.innerWidth, transition:{duration: 0.1}}}
     >
-    <Sc.Container theme={theme}>
-      <div>
-        <h1>
-          ABOUT
-        </h1>
-      </div>
-    </Sc.Container>
+      <Sc.Container theme={theme}>
+        <div>
+          <h1> links </h1>
+        </div>
+      </Sc.Container>
     </motion.div>
   );
 }

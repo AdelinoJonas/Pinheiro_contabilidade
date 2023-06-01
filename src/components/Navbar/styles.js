@@ -6,17 +6,19 @@ import { NavLink } from "react-router-dom";
 
 export const Container = styled.nav`
   width: 100%;
-  height: 6rem;
+  height: 7rem;
   background: ${(props) => props.theme.bg.primary};
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 3rem 0 3rem;
+  border: 3px gray;
 
   div{
     display: flex;
     align-items: center;
     gap: 1rem;
+    cursor: pointer;
     div{
       background: ${(props) => props.theme.color.active};
       height: 5rem;
@@ -25,10 +27,10 @@ export const Container = styled.nav`
       display: flex;
       align-items: center;
       justify-content: center;
-    }
-    img{
-      width: 8rem;
-      height: 8rem;
+      img{
+        width: 8rem;
+        height: 8rem;
+      }
     }
     h2{
       color: ${props => props.theme.color.active};
@@ -47,15 +49,13 @@ export const Container = styled.nav`
 export const SelectItem = styled(NavLink)`
   all: unset;
   text-decoration: none;
-  width: inherit;
-  height: inherit;
   cursor: pointer;
   color: ${props => props.theme.color.links};
   font-size: ${props => props.theme.sizeFonts.links};
   font-weight: ${props => props.theme.weightFonts.links};
+  text-transform: uppercase;
     
   &:hover{
-    text-transform: uppercase;
     color: ${props => props.theme.color.active};
     font-weight: ${props => props.theme.weightFonts.title1};
     opacity: 0.8;

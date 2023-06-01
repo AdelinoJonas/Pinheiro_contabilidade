@@ -30,7 +30,7 @@ export function Home() {
     <motion.div 
       initial={{width: 0}}
       animate={{width: '100%'}}
-      exit={{x: -window.innerHeight}}
+      exit={{x: -window.innerWidth, transition:{duration: 0.1}}}
     >
       <Sc.Container theme={theme}>
         <div>

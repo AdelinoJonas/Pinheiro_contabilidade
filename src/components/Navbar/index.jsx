@@ -2,44 +2,46 @@ import React, { useContext } from 'react';
 import { ThemeContext } from '../../context/ThemeContext';
 import * as Sc from './styles';
 import LogoOffice from "../../assets/pineLogo.png";
+import { useNavigate } from 'react-router-dom';
 
 export function Navbar() {
+  const navigate = useNavigate();
   const { theme, toggleTheme, isDarkTheme } = useContext(ThemeContext);
 
   return (
     <Sc.Container theme={theme}>
-      <div>
+      <div onClick={() => navigate('/')}>
         <div>
           <img src={LogoOffice} alt="light theme"/>
         </div>
         <h2>Pinheiro Contabilidade</h2>
       </div>
       <div>
-        <Sc.SelectItem exact active theme={theme} to="/home">
+        <Sc.SelectItem exact='true' active='true' theme={theme} to="/">
           Início
         </Sc.SelectItem>
       
-        <Sc.SelectItem active theme={theme} to="/about">
+        <Sc.SelectItem active='false' theme={theme} to="/about">
           Sobre nós
         </Sc.SelectItem>
       
-        <Sc.SelectItem active theme={theme} to="/services">
+        <Sc.SelectItem active='false' theme={theme} to="/services">
           Serviços
         </Sc.SelectItem>
       
-        <Sc.SelectItem active theme={theme} to="/custumers">
+        <Sc.SelectItem active='false' theme={theme} to="/customers">
           Clientes
         </Sc.SelectItem>
       
-        <Sc.SelectItem active theme={theme} to="/links">
+        <Sc.SelectItem active='false' theme={theme} to="/links">
           Links Uteis
         </Sc.SelectItem>
       
-        <Sc.SelectItem active theme={theme} to="/news">
+        <Sc.SelectItem active='false' theme={theme} to="/news">
           Notícias
         </Sc.SelectItem>
       
-        <Sc.SelectItem active theme={theme} to="/contact">
+        <Sc.SelectItem active='false' theme={theme} to="/contact">
           Contato
         </Sc.SelectItem>
       </div>
