@@ -10,12 +10,12 @@ export function Navbar() {
 
   return (
     <Sc.Container theme={theme}>
-      <div onClick={() => navigate('/')}>
+      <section onClick={() => navigate('/')}>
         <div>
           <img src={LogoOffice} alt="light theme"/>
         </div>
         <h2>Pinheiro Contabilidade</h2>
-      </div>
+      </section>
       <div>
         <Sc.SelectItem exact='true' active='true' theme={theme} to="/">
           Início

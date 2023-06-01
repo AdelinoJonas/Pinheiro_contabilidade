@@ -14,7 +14,7 @@ export const Container = styled.nav`
   padding: 0 3rem 0 3rem;
   border: 3px gray;
 
-  div{
+  section{
     display: flex;
     align-items: center;
     gap: 1rem;
@@ -43,7 +43,12 @@ export const Container = styled.nav`
   div{
     display: flex;
     gap: 1rem;
+
+    @media(max-width: 900px){
+      display: none;
+    } 
   }
+  
 `;
 
 export const SelectItem = styled(NavLink)`

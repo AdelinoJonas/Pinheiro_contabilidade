@@ -9,22 +9,27 @@ export const Container = styled.div`
   height: 100vh;
   display: flex;
   align-items: center;
-  padding-left: 10rem;
+  padding: 0 5rem 0 5rem;
+
+    @media(max-width: 500px){
+      padding-left: 0 10rem 0 10rem;
+    } 
 
   div{
     section{
       min-height: 12rem;
       margin-bottom: 5rem;
 
-      @media(max-width: 400px){
-
-      } 
-
+      
       span{
         color: ${props => props.theme.color.title1};
         font-size: ${props => props.theme.sizeFonts.title1};
         font-weight: ${props => props.theme.weightFonts.title1};
         letter-spacing: 0.5px;
+
+        @media(max-width: 500px){
+          font-size: ${props => props.theme.sizeFonts.title};
+        } 
       }
     }
     button {
