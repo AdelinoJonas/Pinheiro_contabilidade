@@ -53,7 +53,7 @@ export const SelectItem = styled(NavLink)`
   color: ${props => props.theme.color.links};
   font-size: ${props => props.theme.sizeFonts.links};
   font-weight: ${props => props.theme.weightFonts.links};
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
     
   &:hover{
     color: ${props => props.theme.color.active};

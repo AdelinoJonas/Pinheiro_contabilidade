@@ -16,10 +16,6 @@ export const Container = styled.div`
       min-height: 12rem;
       margin-bottom: 5rem;
 
-      /* @media(max-width: 800px){
-
-        margin-bottom: 15rem;
-      }*/
       @media(max-width: 400px){
 
       } 
@@ -28,6 +24,7 @@ export const Container = styled.div`
         color: ${props => props.theme.color.title1};
         font-size: ${props => props.theme.sizeFonts.title1};
         font-weight: ${props => props.theme.weightFonts.title1};
+        letter-spacing: 0.5px;
       }
     }
     button {
