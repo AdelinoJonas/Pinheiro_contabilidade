@@ -45,3 +45,17 @@ export const Container = styled.nav`
     gap: 1rem;
   }
 `;
+
+export const Whatsapp= styled.div`
+position: absolute;
+width: 90%;
+display: flex;
+justify-content: end;
+  img{
+    position: relative;
+    z-index: 555;
+    margin-top: -6rem;
+    width: 8rem;
+    height: 8rem;
+  }
+`;
