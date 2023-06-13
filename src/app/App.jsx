@@ -1,10 +1,12 @@
 import React from 'react';
-import GlobalStyles from '../global/GlobalStyles';
-import { Navbar } from '../components/Navbar';
-import { Footer } from '../components/Footer';
-import { ThemeProvider } from '../context/ThemeContext';
-import { MyRoutes } from './routes';
 import { BrowserRouter } from 'react-router-dom';
+import { Footer } from '../components/Footer';
+import { Navbar } from '../components/Navbar';
+import { ThemeProvider } from '../context/ThemeContext';
+import GlobalStyles from '../global/GlobalStyles';
+import ScrollToTop from './ScrollTotop';
+import { MyRoutes } from './routes';
+import * as Sc from './styles';
 
 export default function App() {
   return (

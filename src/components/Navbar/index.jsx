@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { ThemeContext } from '../../context/ThemeContext';
 import * as Sc from './styles';
-import LogoOffice from "../../assets/pineLogo.png";
+import LogoOffice from "../../assets/pinheiro-cores.jpg";
 import { useNavigate } from 'react-router-dom';
 
 export function Navbar() {
@@ -11,10 +11,7 @@ export function Navbar() {
   return (
     <Sc.Container theme={theme}>
       <section onClick={() => navigate('/')}>
-        <div>
-          <img src={LogoOffice} alt="light theme"/>
-        </div>
-        <h2>Pinheiro Contabilidade</h2>
+        <img src={LogoOffice} alt="light theme"/>
       </section>
       <div>
         <Sc.SelectItem exact='true' active='true' theme={theme} to="/">
@@ -24,11 +21,7 @@ export function Navbar() {
         <Sc.SelectItem active='false' theme={theme} to="/about">
           Sobre nós
         </Sc.SelectItem>
-      
-        <Sc.SelectItem active='false' theme={theme} to="/services">
-          Serviços
-        </Sc.SelectItem>
-      
+          
         <Sc.SelectItem active='false' theme={theme} to="/customers">
           Clientes
         </Sc.SelectItem>
