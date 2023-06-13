@@ -19,18 +19,9 @@ export const Container = styled.nav`
     align-items: center;
     gap: 1rem;
     cursor: pointer;
-    div{
-      background: ${(props) => props.theme.color.active};
-      height: 5rem;
-      width: 5rem;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      img{
-        width: 8rem;
-        height: 8rem;
-      }
+    img {
+      max-height: 6rem;
+      border-radius: 6px;
     }
     h2{
       color: ${props => props.theme.color.active};
