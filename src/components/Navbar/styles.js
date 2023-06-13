@@ -22,6 +22,7 @@ export const Container = styled.nav`
     img {
       max-height: 6rem;
       border-radius: 6px;
+      opacity: 0.8;
     }
     h2{
       color: ${props => props.theme.color.active};

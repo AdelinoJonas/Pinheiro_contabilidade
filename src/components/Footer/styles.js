@@ -16,7 +16,9 @@ export const Container = styled.div`
     img {
       max-height: 6rem;
       border-radius: 6px;
+      opacity: 0.8;
     }
+    
     h1{
       color: ${props => props.theme.color.active};
       text-transform: uppercase;
