@@ -28,17 +28,21 @@ export function Home() {
   
   return (
     <motion.div 
-      initial={{width: 0}}
-      animate={{width: '100%'}}
-      exit={{x: -window.innerWidth, transition:{duration: 0.1}}}
+      initial={{opacity: 0}}
+      animate={{opacity: 1}}
+      exit={{opacity: 0}}
     >
       <Sc.Container theme={theme}>
-        <div>
+        <motion.div 
+          initial={{opacity: 0}}
+          animate={{opacity: 1}}
+          exit={{opacity: 0}}
+        >
           <section>
             <span>{slogans[currentSloganIndex]}</span>
           </section>
-          <button onClick={() => navigate("/services")}>Serviços</button>
-        </div>
+          <button onClick={() => navigate("/services")}>Conheça nossos Serviços</button>
+        </motion.div>
       </Sc.Container>
     </motion.div>
   );

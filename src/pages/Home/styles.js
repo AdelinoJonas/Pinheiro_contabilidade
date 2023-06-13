@@ -6,7 +6,7 @@ export const Container = styled.div`
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  height: 100vh;
+  height: calc(100vh - 14rem);
   display: flex;
   align-items: center;
   padding: 0 5rem 0 5rem;
@@ -34,18 +34,21 @@ export const Container = styled.div`
     }
     button {
       cursor: pointer;
-      height: 4rem;
+      height: 6rem;
       display: flex;
       justify-content: space-evenly;
       align-items: center;
       padding: 0rem 2rem;
       color: ${props => props.theme.color.text};
-      font-size: ${props => props.theme.sizeFonts.links};
+      font-size: ${props => props.theme.sizeFonts.subtitle};
       font-weight: ${props => props.theme.weightFonts.title};
       background: ${props => props.theme.bg.sideFilter};
       border-radius: 4px;
-      border: 1px solid transparent;
-      
+      border: 1px solid #000;
+      -webkit-box-shadow: 1px -6px 28px 1px rgba(0,0,0,1);
+      -moz-box-shadow: 1px -6px 28px 1px rgba(0,0,0,1);
+      box-shadow: 1px -6px 28px 1px rgba(0,0,0,1);
+            
       &:hover{
         opacity: 0.8;
         transition: all 0.2s;

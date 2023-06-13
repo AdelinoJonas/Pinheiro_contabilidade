@@ -16,7 +16,6 @@ export const Container = styled.div`
     img {
       max-height: 6rem;
       border-radius: 6px;
-      opacity: 0.8;
     }
     
     h1{
@@ -46,5 +45,6 @@ justify-content: end;
     margin-top: -6rem;
     width: 7rem;
     height: 10rem;
+    opacity: 1;
   }
 `;

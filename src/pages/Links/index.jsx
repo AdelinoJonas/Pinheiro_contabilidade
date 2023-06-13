@@ -10,9 +10,9 @@ export function Links() {
    
   return (
     <motion.div 
-      initial={{width: 0}}
-      animate={{width: '100%'}}
-      exit={{x: -window.innerWidth, transition:{duration: 0.1}}}
+      initial={{x: 1000}}
+      animate={{x: 0}}
+      exit={{x: window.innerWidth, transition:{duration: 0.1}}}
     >
       <Sc.Container theme={theme}>
         <div>

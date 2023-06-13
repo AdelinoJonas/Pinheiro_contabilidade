@@ -21,11 +21,7 @@ export function Navbar() {
         <Sc.SelectItem active='false' theme={theme} to="/about">
           Sobre nós
         </Sc.SelectItem>
-      
-        <Sc.SelectItem active='false' theme={theme} to="/services">
-          Serviços
-        </Sc.SelectItem>
-      
+          
         <Sc.SelectItem active='false' theme={theme} to="/customers">
           Clientes
         </Sc.SelectItem>

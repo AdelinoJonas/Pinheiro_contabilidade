@@ -13,20 +13,8 @@ export default function App() {
     <BrowserRouter>
       <ThemeProvider>
         <GlobalStyles />
-        <Sc.Nav>
-          <ScrollToTop />
-          <Navbar />
-        </Sc.Nav>
-
+        <Navbar />
         <MyRoutes />
-        {/* <Home id="home"/>
-        <About />
-        <Services />
-        <Customers />
-        <Links />
-        <News />
-        <Contact />
-        <Principal /> */}
         <Footer />
       </ThemeProvider>
     </BrowserRouter>
