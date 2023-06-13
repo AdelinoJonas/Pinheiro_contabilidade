@@ -1,27 +1,22 @@
 import React from 'react';
-import GlobalStyles from '../global/GlobalStyles';
-import { Home } from '../pages/Home';
-import { Navbar } from '../components/Navbar';
+import { BrowserRouter } from 'react-router-dom';
 import { Footer } from '../components/Footer';
+import { Navbar } from '../components/Navbar';
 import { ThemeProvider } from '../context/ThemeContext';
-import { About } from '../pages/About';
-import { Services } from '../pages/Services';
-import { Customers } from '../pages/Customers';
-import { News } from '../pages/News';
-import { Contact } from '../pages/Contact';
+import GlobalStyles from '../global/GlobalStyles';
+import ScrollToTop from './ScrollTotop';
+import { MyRoutes } from './routes';
+import * as Sc from './styles';
 
 export default function App() {
   return (
-    <ThemeProvider>
-      <GlobalStyles />
-      <Navbar />
-      <Home />
-      <About />
-      <Services />
-      <Customers />
-      <News />
-      <Contact />
-      <Footer />
-    </ThemeProvider>
+    <BrowserRouter>
+      <ThemeProvider>
+        <GlobalStyles />
+        <Navbar />
+        <MyRoutes />
+        <Footer />
+      </ThemeProvider>
+    </BrowserRouter>
   );
 }

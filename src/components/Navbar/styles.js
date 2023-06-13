@@ -3,43 +3,60 @@ import { BsFillMoonStarsFill } from 'react-icons/bs';
 import { BsFillSunFill } from 'react-icons/bs';
 import { NavLink } from "react-router-dom";
 
+
 export const Container = styled.nav`
   width: 100%;
-  height: 6rem;
+  height: 7rem;
   background: ${(props) => props.theme.bg.primary};
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 3rem 0 3rem;
-  position: fixed;
-  ul{
+  border: 3px gray;
+
+  section{
     display: flex;
-    gap: 1.6rem;
-  }
-  li{
-    all: unset;
+    align-items: center;
+    gap: 1rem;
     cursor: pointer;
-    color: ${props => props.theme.color.links};
-    font-size: ${props => props.theme.sizeFonts.links};
-    font-weight: ${props => props.theme.weightFonts.links};
-    
-    &:hover{
-      text-transform: uppercase;
-      color: ${props => props.theme.color.active};
-      font-weight: ${props => props.theme.weightFonts.title1};
+    img {
+      max-height: 6rem;
+      border-radius: 6px;
       opacity: 0.8;
-      transition: all 0.3s;
     }
+    h2{
+      color: ${props => props.theme.color.active};
+      text-transform: uppercase;
+      font-weight: ${props => props.theme.weightFonts.title1};
+      font-size: ${props => props.theme.sizeFonts.subtitle};
+    }
+
   }
+  div{
+    display: flex;
+    gap: 1rem;
+
+    @media(max-width: 900px){
+      display: none;
+    } 
+  }
+  
 `;
 
 export const SelectItem = styled(NavLink)`
   all: unset;
   text-decoration: none;
-  width: inherit;
-  height: inherit;
-  span {
-    flex: 1;
+  cursor: pointer;
+  color: ${props => props.theme.color.links};
+  font-size: ${props => props.theme.sizeFonts.links};
+  font-weight: ${props => props.theme.weightFonts.links};
+  /* text-transform: uppercase; */
+    
+  &:hover{
+    color: ${props => props.theme.color.active};
+    font-weight: ${props => props.theme.weightFonts.title1};
+    opacity: 0.8;
+    transition: all 0.3s;
   }
 
   &.active {

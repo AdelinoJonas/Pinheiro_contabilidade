@@ -1,23 +1,26 @@
-import React from 'react';
-import {
-  Route,
-  Routes
-} from 'react-router-dom';
-
-const About = React.lazy(async () => import('../pages/About').then((m) => ({ default: m.About })));
-const Services = React.lazy(async () => import('../pages/Services').then((m) => ({ default: m.Services })));
-// const EmailConfirm = React.lazy(async () => import('../pages/Login/ForgotPassword/EmailConfirm').then((m) => ({ default: m.EmailConfirm })));
+import { Route, Routes, useLocation } from 'react-router-dom';
+import { Home } from '../pages/Home';
+import { About } from '../pages/About';
+import { Services } from '../pages/Services';
+import { Customers } from '../pages/Customers';
+import { News } from '../pages/News';
+import { Contact } from '../pages/Contact';
+import { AnimatePresence } from 'framer-motion';
+import { Links } from '../pages/Links';
 
 export function MyRoutes() {
+  const location = useLocation();
   return (
-    <Routes>
-
-      <Route path="/" element={<About />} />
-
-       <Route path="/services" element={<Services />} />
-    {/*  <Route path="/forgotPassword/emailconfirm" element={<EmailConfirm />} /> */}
-
-   </Routes>
-
+    <AnimatePresence mode="wait">
+      <Routes location={location} key={location.pathname}>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/customers" element={<Customers />} />
+        <Route path="/links" element={<Links />} />
+        <Route path="/news" element={<News />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+    </AnimatePresence>
   );
 }
