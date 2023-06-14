@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { ThemeContext } from '../../context/ThemeContext';
 import * as Sc from './styles';
-import LogoOffice from "../../assets/pinheiro-cores.jpg";
+import LogoOffice from "../../assets/pinheiro-vertical-cores.png";
 import { useNavigate } from 'react-router-dom';
 
 export function Navbar() {
@@ -38,9 +38,23 @@ export function Navbar() {
           Contato
         </Sc.SelectItem>
       </div>
-      {!isDarkTheme ? 
-      <Sc.darkTheme onClick={toggleTheme} theme={theme} alt="Dark theme"/> : 
-      <Sc.lightTheme onClick={toggleTheme} theme={theme} alt="light theme"/>}
+
+      <Sc.ToggleTheme>
+
+        <Sc.LightTheme onClick={toggleTheme} theme={theme} alt="light theme"/>
+
+        <Sc.ToggleContainer htmlFor="toggle">
+          <Sc.ToggleBall isActive={isDarkTheme} />
+          <Sc.HiddenCheckbox
+            type="checkbox"
+            id="toggle"
+            checked={isDarkTheme}
+            onChange={toggleTheme}
+          />
+        </Sc.ToggleContainer>
+
+        <Sc.DarkTheme onClick={toggleTheme} theme={theme} alt="Dark theme"/> 
+      </Sc.ToggleTheme>
     </Sc.Container>
   );
 }

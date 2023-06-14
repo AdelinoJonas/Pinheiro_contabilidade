@@ -9,7 +9,7 @@ export function Home() {
   const { theme } = useContext(ThemeContext);
   
   const slogans = [
-    "Simplificando suas finanças online!",
+    "Simplificando suas finanças com agilidade!",
     "Parceiro confiável para todas as suas necessidades contábeis",
     "Transformando a maneira como você lida com as finanças!",
     "Contabilidade inteligente para o seu negócio!",

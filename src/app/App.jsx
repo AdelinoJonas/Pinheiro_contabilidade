@@ -13,9 +13,10 @@ export default function App() {
     <BrowserRouter>
       <ThemeProvider>
         <GlobalStyles />
-        <Navbar />
-        <MyRoutes />
-        <Footer />
+        <Sc.Body>
+          <Navbar />
+          <MyRoutes />
+        </Sc.Body>
       </ThemeProvider>
     </BrowserRouter>
   );

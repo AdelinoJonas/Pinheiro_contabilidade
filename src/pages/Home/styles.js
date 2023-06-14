@@ -2,11 +2,12 @@ import styled from "styled-components";
 import homeBg from "../../assets/home-bg.png";
 
 export const Container = styled.div`
+   height: 100%;
+   width: 85vw;
    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0)), url(${homeBg});
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  height: calc(100vh - 14rem);
   display: flex;
   align-items: center;
   padding: 0 5rem 0 5rem;
@@ -39,6 +40,7 @@ export const Container = styled.div`
       justify-content: space-evenly;
       align-items: center;
       padding: 0rem 2rem;
+      margin-left: 0%;
       color: ${props => props.theme.color.text};
       font-size: ${props => props.theme.sizeFonts.subtitle};
       font-weight: ${props => props.theme.weightFonts.title};

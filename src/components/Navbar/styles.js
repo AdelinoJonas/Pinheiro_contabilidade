@@ -5,52 +5,54 @@ import { NavLink } from "react-router-dom";
 
 
 export const Container = styled.nav`
-  width: 100%;
-  height: 7rem;
+  width: 20vw;
+  height: 100vh;
   background: ${(props) => props.theme.bg.primary};
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 0 3rem 0 3rem;
+  padding: 1rem 2rem 3rem 2rem;
   border: 3px gray;
 
   section{
+    width: 100%;
+    height: 30%;
     display: flex;
     align-items: center;
-    gap: 1rem;
+    justify-content: center;
     cursor: pointer;
-    img {
-      max-height: 6rem;
-      border-radius: 6px;
-      opacity: 0.8;
-    }
-    h2{
-      color: ${props => props.theme.color.active};
-      text-transform: uppercase;
-      font-weight: ${props => props.theme.weightFonts.title1};
-      font-size: ${props => props.theme.sizeFonts.subtitle};
-    }
+    background: ${(props) => props.theme.bg.tertiary};
+    border-radius: 50%;
 
+    img {
+      width: 80%;
+      height: 80%;
+      margin-top: -2rem;
+    }
   }
   div{
+    width: 95%;
     display: flex;
-    gap: 1rem;
-
+    flex-direction: column;
+    
     @media(max-width: 900px){
       display: none;
     } 
   }
   
-`;
+  `;
 
 export const SelectItem = styled(NavLink)`
   all: unset;
   text-decoration: none;
   cursor: pointer;
   color: ${props => props.theme.color.links};
-  font-size: ${props => props.theme.sizeFonts.links};
+  font-size: ${props => props.theme.sizeFonts.subtitle};
   font-weight: ${props => props.theme.weightFonts.links};
-  /* text-transform: uppercase; */
+  
+  padding: 1.5rem;
+  border-top: 2px solid rgba(245, 244, 244, 0.575);
     
   &:hover{
     color: ${props => props.theme.color.active};
@@ -66,25 +68,64 @@ export const SelectItem = styled(NavLink)`
   }
 `;
 
-export const darkTheme = styled(BsFillMoonStarsFill)`
+export const ToggleTheme = styled.nav`
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+`;
+
+export const ToggleContainer = styled.label`
+  display: inline-block;
+  width: 80px;
+  height: 40px;
+  border-radius: 20px;
+  background-color: rgba(245, 244, 244, 0.251);
+  position: relative;
+  cursor: pointer;
+`;
+
+export const ToggleBall = styled.span`
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+  background-color: rgb(29, 17, 17);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: transform 0.3s ease-in-out;
+  left: ${({ isActive }) => (isActive ? 'calc(100% - 35px)' : '5px')};
+`;
+
+export const HiddenCheckbox = styled.input`
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  pointer-events: none;
+`;
+
+export const DarkTheme = styled(BsFillMoonStarsFill)`
   width: 3rem;
   height: 3rem;
-  color: ${(props) => (props.theme.color.links)};
+  color: ${(props) => (props.theme.color.toggleTheme)};
   cursor: pointer;
 
   &:hover{
-    color: ${props => props.theme.color.active};
+    color: ${props => props.theme.color.toggleTheme};
     transition: all 0.3s;
     }
-    `;
+  `;
 
-export const lightTheme = styled(BsFillSunFill)`
+export const LightTheme = styled(BsFillSunFill)`
   width: 3rem;
   height: 3rem;
-  color: ${(props) => (props.theme.color.links)};
+  color: ${(props) => (props.theme.color.toggleTheme)};
   cursor: pointer;
   &:hover{
-    color: ${props => props.theme.color.active};
+    color: ${props => props.theme.color.toggleTheme};
     transition: all 0.3s;
     }
   `;
