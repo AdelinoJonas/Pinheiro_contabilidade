@@ -5,6 +5,7 @@ export const ThemeContext = createContext();
 
 export const ThemeProvider = ({ children }) => {
   const [isDarkTheme, setIsDarkTheme] = useState(false);
+  const [openMenu, setOpenMenu] = useState(false);
 
   const toggleTheme = () => {
     setIsDarkTheme(!isDarkTheme);
@@ -12,8 +13,13 @@ export const ThemeProvider = ({ children }) => {
 
   const theme = isDarkTheme ? darkTheme : lightTheme;
 
+  function handleToggleMenu() {
+    setOpenMenu(!openMenu);
+  }
+
+
   return (
-    <ThemeContext.Provider value={{ theme, toggleTheme, isDarkTheme }}>
+    <ThemeContext.Provider value={{ theme, toggleTheme, isDarkTheme, handleToggleMenu, openMenu, setOpenMenu }}>
       {children}
     </ThemeContext.Provider>
   );

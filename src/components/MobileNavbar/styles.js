@@ -1,8 +1,24 @@
 import styled from "styled-components";
 import { BsFillMoonStarsFill } from 'react-icons/bs';
 import { BsFillSunFill } from 'react-icons/bs';
+import { RiMenuLine } from 'react-icons/ri';
 import { NavLink } from "react-router-dom";
 
+export const BackDrop = styled.div`
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 9;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; 
+  padding: 1.6rem;
+`;
 
 export const Container = styled.nav`
   min-width: 15vw;
@@ -35,6 +51,7 @@ export const Container = styled.nav`
     width: 95%;
     display: flex;
     flex-direction: column;
+    
   }
   
   `;
@@ -124,6 +141,18 @@ export const LightTheme = styled(BsFillSunFill)`
   cursor: pointer;
   &:hover{
     color: ${props => props.theme.color.toggleTheme};
+    transition: all 0.3s;
+    }
+  `;
+
+export const Menu = styled(RiMenuLine)`
+  width: 3rem;
+  height: 3rem;
+  color: #FFF;
+  cursor: pointer;
+  position: fixed;
+  &:hover{
+    color: #FFF;
     transition: all 0.3s;
     }
   `;

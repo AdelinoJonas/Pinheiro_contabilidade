@@ -2,9 +2,9 @@ import styled from "styled-components";
 import homeBg from "../../assets/home-bg.png";
 
 export const Container = styled.div`
-   height: 100%;
-   width: 85vw;
-   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0)), url(${homeBg});
+  height: 100vh;
+  width: 85vw;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0)), url(${homeBg});
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -12,8 +12,9 @@ export const Container = styled.div`
   align-items: center;
   padding: 0 5rem 0 5rem;
 
-    @media(max-width: 500px){
+    @media(max-width: 900px){
       padding-left: 0 10rem 0 10rem;
+      width: 100vw;
     } 
 
   div{
@@ -23,12 +24,13 @@ export const Container = styled.div`
 
       
       span{
+        width: 100vw;
         color: ${props => props.theme.color.title1};
         font-size: ${props => props.theme.sizeFonts.title1};
         font-weight: ${props => props.theme.weightFonts.title1};
         letter-spacing: 0.5px;
 
-        @media(max-width: 500px){
+        @media(max-width: 900px){
           font-size: ${props => props.theme.sizeFonts.title};
         } 
       }
@@ -56,7 +58,21 @@ export const Container = styled.div`
         transition: all 0.2s;
       }
     }
+    img{
+      position: fixed;
+      z-index: 555;
+      width: 7vw;
+      height: 15vh;
+      opacity: 1;
+      margin-left: 73%;
+      margin-top: 5%;
+    }
   }
+`;
+
+export const Whatsapp= styled.div`
+position: fixed;
+
 `;
 
 

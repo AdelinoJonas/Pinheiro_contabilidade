@@ -3,6 +3,7 @@ import { ThemeContext } from '../../context/ThemeContext';
 import * as Sc from './styles';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import whatsapp from "../../assets/logo_whatsapp_icon3D.png";
 
 export function Home() {
   const navigate = useNavigate();
@@ -42,6 +43,7 @@ export function Home() {
             <span>{slogans[currentSloganIndex]}</span>
           </section>
           <button onClick={() => navigate("/services")}>Conheça nossos Serviços</button>
+          <img src={whatsapp} alt="whatsApp contact" onClick={() => handleOpenWhatsapp(whatsappNumber)}/>
         </motion.div>
       </Sc.Container>
     </motion.div>

@@ -11,6 +11,7 @@ export const lightTheme = {
     links: '#7ea291',
     active: '#fff',
     toggleTheme: '#E2E8F0',
+    ball: '#07351f',
   },
   sizeFonts: {
     links: '1.6rem',
@@ -43,6 +44,7 @@ export const darkTheme = {
     links: '#7ea291',
     active: '#fff',
     toggleTheme: '#7ea291',
+    ball: '#7ea291',
   },
   sizeFonts: {
     links: '1.6rem',
