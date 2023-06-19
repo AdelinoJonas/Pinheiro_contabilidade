@@ -42,7 +42,10 @@ export function Home() {
           <section>
             <span>{slogans[currentSloganIndex]}</span>
           </section>
-          <button onClick={() => navigate("/services")}>Conheça nossos Serviços</button>
+          <div>
+            <button onClick={() => navigate("/services")}>Conheça nossos Serviços</button>
+          </div>
+          
           <img src={whatsapp} alt="whatsApp contact" onClick={() => handleOpenWhatsapp(whatsappNumber)}/>
         </motion.div>
       </Sc.Container>

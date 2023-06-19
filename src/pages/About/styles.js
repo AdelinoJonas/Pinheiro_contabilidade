@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   background: ${(props) => props.theme.bg.secundary};
-  height: 100vh;
   padding: 3rem;
   div{
     display: flex;

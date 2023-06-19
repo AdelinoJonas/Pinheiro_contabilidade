@@ -11,11 +11,12 @@ export const BackDrop = styled.div`
   left: 0;
   right: 0;
   background: rgba(0, 0, 0, 0.4);
-
+  z-index: 555;
 `;
 
 export const Container = styled.nav`
   height: 100vh;
+  width: 60vw;
   background: ${(props) => props.theme.bg.primary};
   display: flex;
   flex-direction: column;

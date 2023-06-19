@@ -11,7 +11,8 @@ export const Container = styled.div`
   align-items: center;
 
     @media(max-width: 900px){
-
+      align-items: start;
+      justify-content: space-evenly;
     } 
 
   div{
@@ -19,6 +20,9 @@ export const Container = styled.div`
     section{
       min-height: 12rem;
       margin-bottom: 5rem;
+      @media(max-width: 900px){
+          height: 25vh;
+        } 
       
       span{
         width: 80%;
@@ -32,32 +36,38 @@ export const Container = styled.div`
         } 
       }
     }
-    button {
-      cursor: pointer;
-      height: 6rem;
-      display: flex;
-      justify-content: space-evenly;
-      align-items: center;
-      padding: 0rem 2rem;
-      margin-left: 0%;
-      color: ${props => props.theme.color.text};
-      font-size: ${props => props.theme.sizeFonts.subtitle};
-      font-weight: ${props => props.theme.weightFonts.title};
-      background: ${props => props.theme.bg.sideFilter};
-      border-radius: 4px;
-      border: 1px solid #000;
-      -webkit-box-shadow: 1px -6px 28px 1px rgba(0,0,0,1);
-      -moz-box-shadow: 1px -6px 28px 1px rgba(0,0,0,1);
-      box-shadow: 1px -6px 28px 1px rgba(0,0,0,1);
+    div{
+      button {
+        cursor: pointer;
+        height: 6rem;
+        display: flex;
+        align-items: center;
+        padding: 0rem 2rem;
+        color: ${props => props.theme.color.text};
+        font-size: ${props => props.theme.sizeFonts.subtitle};
+        font-weight: ${props => props.theme.weightFonts.title};
+        background: ${props => props.theme.bg.sideFilter};
+        border-radius: 6px;
+        border: 1px solid #000;
+        
+        -webkit-box-shadow: 1px -6px 28px 1px rgba(0,0,0,1);
+        -moz-box-shadow: 1px -6px 28px 1px rgba(0,0,0,1);
+        box-shadow: 1px -6px 28px 1px rgba(0,0,0,1);
             
-      &:hover{
-        opacity: 0.8;
-        transition: all 0.2s;
+        @media(max-width: 900px){
+          position: absolute;
+          left: 5rem;
+        } 
+
+        &:hover{
+          opacity: 0.8;
+          transition: all 0.2s;
+        }
       }
     }
     img{
       position: fixed;
-      z-index: 555;
+      z-index: 5;
       width: 80px;
       height: 80px;
       opacity: 1;
