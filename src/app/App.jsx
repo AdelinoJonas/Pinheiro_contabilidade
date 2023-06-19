@@ -16,14 +16,20 @@ export default function App() {
       <ThemeProvider>
         <GlobalStyles />
         <Sc.Body>
+          {/* <Sc.Aside>
+            <Navbar />
+          </Sc.Aside>  */}
           {screenWidth > 900 ? 
-            <Navbar /> : 
+            <Sc.Aside>
+              <Navbar />
+            </Sc.Aside>  : 
             <Sc.MobileContainer>
               <MobileNavbar /> 
             </Sc.MobileContainer>
           }
-          
-          <MyRoutes />
+          <Sc.Main>
+            <MyRoutes />
+          </Sc.Main>
         </Sc.Body>
       </ThemeProvider>
     </BrowserRouter>

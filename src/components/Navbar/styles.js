@@ -5,7 +5,6 @@ import { NavLink } from "react-router-dom";
 
 
 export const Container = styled.nav`
-  min-width: 15vw;
   height: 100vh;
   background: ${(props) => props.theme.bg.primary};
   display: flex;
@@ -47,7 +46,7 @@ export const SelectItem = styled(NavLink)`
   font-size: ${props => props.theme.sizeFonts.subtitle};
   font-weight: ${props => props.theme.weightFonts.links};
   
-  padding: 1.5rem;
+  padding: 1.3rem;
   border-top: 2px solid rgba(245, 244, 244, 0.575);
     
   &:hover{
@@ -55,6 +54,7 @@ export const SelectItem = styled(NavLink)`
     font-weight: ${props => props.theme.weightFonts.title1};
     opacity: 0.8;
     transition: all 0.3s;
+    background: rgba(245, 244, 244, 0.275);
   }
 
   &.active {

@@ -3,28 +3,25 @@ import homeBg from "../../assets/home-bg.png";
 
 export const Container = styled.div`
   height: 100vh;
-  width: 85vw;
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0)), url(${homeBg});
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   display: flex;
   align-items: center;
-  padding: 0 5rem 0 5rem;
 
     @media(max-width: 900px){
-      padding-left: 0 10rem 0 10rem;
-      width: 100vw;
+
     } 
 
   div{
+    padding: 5rem;
     section{
       min-height: 12rem;
       margin-bottom: 5rem;
-
       
       span{
-        width: 100vw;
+        width: 80%;
         color: ${props => props.theme.color.title1};
         font-size: ${props => props.theme.sizeFonts.title1};
         font-weight: ${props => props.theme.weightFonts.title1};
@@ -61,11 +58,11 @@ export const Container = styled.div`
     img{
       position: fixed;
       z-index: 555;
-      width: 7vw;
-      height: 15vh;
+      width: 80px;
+      height: 80px;
       opacity: 1;
-      margin-left: 73%;
-      margin-top: 5%;
+      right: 5rem;
+      bottom: 2rem;
     }
   }
 `;
