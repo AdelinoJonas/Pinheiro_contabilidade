@@ -4,6 +4,13 @@ export const Body = styled.div`
   display: grid;
   grid-template-columns: 1fr 4fr;
   grid-template-areas: "aside main";
+
+  @media(max-width: 900px){
+    grid-template-columns: 1fr;
+    grid-template-rows: "30vh 70vh";
+    grid-template-areas: "header" 
+                          "main";
+  }
 `;
 
 export const Aside = styled.aside`
@@ -11,13 +18,18 @@ export const Aside = styled.aside`
 `
 
 export const MobileContainer = styled.div`
-  display: none;
 
+  @media(max-width: 900px){
+    display: block;
+    grid-area: header;
+    /* margin-left: 20px */
+  }
+`
+
+export const Main = styled.div`
+  grid-area: main;
   @media(max-width: 900px){
     display: block;
     grid-area: main;
   }
-`
-export const Main = styled.div`
-  grid-area: main;
 `

@@ -11,17 +11,10 @@ export const BackDrop = styled.div`
   left: 0;
   right: 0;
   background: rgba(0, 0, 0, 0.4);
-  z-index: 9;
 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center; 
-  padding: 1.6rem;
 `;
 
 export const Container = styled.nav`
-  min-width: 15vw;
   height: 100vh;
   background: ${(props) => props.theme.bg.primary};
   display: flex;
@@ -150,7 +143,7 @@ export const Menu = styled(RiMenuLine)`
   height: 3rem;
   color: #FFF;
   cursor: pointer;
-  position: fixed;
+
   &:hover{
     color: #FFF;
     transition: all 0.3s;

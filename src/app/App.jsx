@@ -6,6 +6,7 @@ import { ThemeProvider } from '../context/ThemeContext';
 import GlobalStyles from '../global/GlobalStyles';
 import { MyRoutes } from './routes';
 import * as Sc from './styles';
+import { Header } from '../components/Header';
 
 export default function App() {
 
@@ -16,16 +17,16 @@ export default function App() {
       <ThemeProvider>
         <GlobalStyles />
         <Sc.Body>
-          {/* <Sc.Aside>
-            <Navbar />
-          </Sc.Aside>  */}
           {screenWidth > 900 ? 
             <Sc.Aside>
               <Navbar />
             </Sc.Aside>  : 
-            <Sc.MobileContainer>
-              <MobileNavbar /> 
-            </Sc.MobileContainer>
+            // <Sc.Header>
+            //   <Sc.MobileContainer>
+            //     <MobileNavbar /> 
+            //   </Sc.MobileContainer>
+            // </Sc.Header>
+            <Header/>
           }
           <Sc.Main>
             <MyRoutes />

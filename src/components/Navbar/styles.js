@@ -15,8 +15,8 @@ export const Container = styled.nav`
   border: 3px gray;
 
   section{
-    width: 100%;
-    height: 30%;
+    width: 95%;
+    height: 32%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -27,7 +27,7 @@ export const Container = styled.nav`
     img {
       width: 80%;
       height: 80%;
-      margin-top: -2rem;
+      margin-top: -1rem;
     }
   }
   div{
@@ -69,6 +69,7 @@ export const ToggleTheme = styled.nav`
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  
 `;
 
 export const ToggleContainer = styled.label`
@@ -80,6 +81,7 @@ export const ToggleContainer = styled.label`
   position: relative;
   cursor: pointer;
   border: 2px solid #07351f;
+
 `;
 
 export const ToggleBall = styled.span`
