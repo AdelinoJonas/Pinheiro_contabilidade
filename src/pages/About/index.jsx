@@ -1,5 +1,5 @@
-import { motion } from 'framer-motion';
-import React, { useContext } from 'react';
+import { motion, useAnimation, useInView} from "framer-motion";
+import React, { useContext, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ThemeContext } from '../../context/ThemeContext';
 import LogoOffice from "../../assets/pinheiro-cores.jpg";
@@ -11,21 +11,32 @@ import * as Sc from './styles';
 
 export function About() {
   const navigate = useNavigate();
-  const { theme } = useContext(ThemeContext);
-   
+  const ref = useRef(null);
+  const isInView = useInView(ref, {once: true});
+  const controls = useAnimation();
+  const slideControls = useAnimation();
+
+  const { theme, handleOpenWhatsapp, whatsappNumber } = useContext(ThemeContext);
+
+  useEffect(() => {
+    if(isInView){
+      controls.start("visible");
+      slideControls.start("visible");
+    }
+  }, [isInView]);
+  
   return (
-    <motion.div 
-    initial={{opacity: 0}}
-    animate={{opacity: 1}}
-    exit={{opacity: 0}}
-    transition={{duration: 0.1}}
-    >
-    <Sc.Container theme={theme}>
+  <>
+    <Sc.Container theme={theme} ref={ref}>
       <motion.div 
-      initial={{opacity: 0}}
-      animate={{opacity: 1}}
-      exit={{opacity: 0}}
-      transition={{duration: 0.3, delay: 0.1}}
+        className="box-animated"
+        variants={{
+          hidden: {opacity:0, y: 75},
+          visible: {opacity: 1, y: 0},
+        }}
+        initial="hidden"
+        animate={controls}
+        transition={{duration: 0.5, delay: 0.25}}
       >
         <img src={LogoOffice} alt="Logo" className='logoPage'/>
         <h1 className='company'>EMPRESA</h1>
@@ -42,30 +53,47 @@ export function About() {
             <img src={office1} alt="Logo"/>
           </div>
         </div>
-        <div className="full-row">
-          <p>
-            Nossa equipe de contadores especializados também está preparada para lidar com questões tributárias complexas. Podemos ajudá-lo no planejamento tributário estratégico, buscando a redução de impostos de forma legal e eficiente. Além disso, cuidaremos de todas as obrigações fiscais, como a preparação e envio de declarações de imposto de renda e demais obrigações acessórias.
-          </p>
-          <p>
-            Nosso compromisso é fornecer um atendimento personalizado e soluções sob medida para cada cliente. Valorizamos a confiança e a transparência em nossos relacionamentos comerciais, garantindo que suas informações financeiras sejam tratadas com o mais alto nível de confidencialidade.
-          </p>
-          <p>
-            Se você está procurando um parceiro confiável para lidar com todas as suas necessidades contábeis e financeiras, não hesite em entrar em contato conosco. Estamos ansiosos para ajudá-lo a alcançar o sucesso financeiro e o crescimento sustentável.
-          </p>
-        </div>
-       
-       
       </motion.div>
+
+      <div >
+        <motion.div
+          variants={{
+            hidden: {left:0},
+            visible: {left: "100%"},
+          }}
+          initial="hidden"
+          animate={slideControls}
+          transition={{duration: 0.5, ease:"easeIn"}}
+          className="full-row"
+        >
+          <div>
+            <p>
+              Nossa equipe de contadores especializados também está preparada para lidar com questões tributárias complexas. Podemos ajudá-lo no planejamento tributário estratégico, buscando a redução de impostos de forma legal e eficiente. Além disso, cuidaremos de todas as obrigações fiscais, como a preparação e envio de declarações de imposto de renda e demais obrigações acessórias.
+            </p>
+            <p>
+              Nosso compromisso é fornecer um atendimento personalizado e soluções sob medida para cada cliente. Valorizamos a confiança e a transparência em nossos relacionamentos comerciais, garantindo que suas informações financeiras sejam tratadas com o mais alto nível de confidencialidade.
+            </p>
+            <p>
+              Se você está procurando um parceiro confiável para lidar com todas as suas necessidades contábeis e financeiras, não hesite em entrar em contato conosco. Estamos ansiosos para ajudá-lo a alcançar o sucesso financeiro e o crescimento sustentável.
+            </p>
+
+          </div>
+          <div className="contactButtomBox">
+            <button onClick={() => handleOpenWhatsapp(whatsappNumber)}> 
+              TIRE SUAS DÚVIDAS
+            </button>
+          </div>
+        </motion.div>
+      </div>
+        
       <motion.div 
-      initial={{opacity: 0}}
-      animate={{opacity: 1}}
-      exit={{opacity: 0}}
-      transition={{duration: 0.3, delay: 0.5}}
+        initial={{opacity: 0}}
+        animate={{opacity: 1}}
+        exit={{opacity: 0}}
+        transition={{duration: 0.3, delay: 0.5}}
       >
-      <Sc.ImageOffice className="office2">
-        <img src={office2} alt="Logo"/>
-      </Sc.ImageOffice>
-      <h1>
+      
+      <h1 className="mission">
         MISSÃO, VISÃO, VALORES E POLÍTICA
       </h1>
       <div className='subtitle'>
@@ -89,8 +117,13 @@ export function About() {
           <li>
             <span>Colaboração</span><br /><br /> Trabalhamos em parceria com nossos clientes, promovendo uma comunicação aberta e colaborativa, e atuamos como uma extensão de sua equipe financeira.
           </li>
-       
+      
         </ul>
+
+      <Sc.ImageOffice className="office2">
+        <img src={office2} alt="Logo"/>
+      </Sc.ImageOffice>
+
       <div className='subtitle2'>
         Visão: Nossa visão é ser reconhecidos como a empresa de contabilidade líder em nosso mercado, conhecida por nossa excelência, confiabilidade e compromisso com a satisfação do cliente. Buscamos constantemente expandir nossa carteira de clientes, construir relacionamentos duradouros e sermos referência em soluções contábeis inovadoras.
       </div>
@@ -114,11 +147,11 @@ export function About() {
           <li>
             <span>Desenvolvimento da equipe</span><br /><br /> Investimos no desenvolvimento profissional de nossa equipe, proporcionando treinamentos e oportunidades de crescimento, a fim de garantir a competência e o conhecimento atualizado em nossa área de atuação.
           </li>
-       
+      
         </ul>
       </motion.div>
     </Sc.Container>
-      <Footer />
-    </motion.div>
+    <Footer />
+  </>
   );
 }

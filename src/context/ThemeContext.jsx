@@ -17,9 +17,15 @@ export const ThemeProvider = ({ children }) => {
     setOpenMenu(!openMenu);
   }
 
+  const whatsappNumber = 41987971725;
+
+  function handleOpenWhatsapp(whatsappNumber) {
+    const whatsappLink = `https://wa.me/55${whatsappNumber}?text=Olá,%20Pode%20me%20ajudar%20com%20minha%20contabilidade?`;
+    window.open(whatsappLink);
+  }
 
   return (
-    <ThemeContext.Provider value={{ theme, toggleTheme, isDarkTheme, handleToggleMenu, openMenu, setOpenMenu }}>
+    <ThemeContext.Provider value={{ theme, toggleTheme, isDarkTheme, handleToggleMenu, openMenu, setOpenMenu, handleOpenWhatsapp, whatsappNumber }}>
       {children}
     </ThemeContext.Provider>
   );

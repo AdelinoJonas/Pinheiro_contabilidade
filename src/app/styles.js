@@ -9,7 +9,7 @@ export const Body = styled.div`
     grid-template-columns: 1fr;
     grid-template-rows: "30vh 70vh";
     grid-template-areas: "header" 
-                          "main";
+                          "body";
   }
 `;
 
@@ -30,6 +30,6 @@ export const Main = styled.div`
   grid-area: main;
   @media(max-width: 900px){
     display: block;
-    grid-area: main;
+    grid-area: body;
   }
 `

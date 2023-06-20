@@ -36,15 +36,13 @@ export const Container = styled.div`
 
 export const Whatsapp= styled.div`
 position: absolute;
-width: 70%;
+width: 75%;
 display: flex;
 justify-content: end;
   img{
     position: relative;
     z-index: 555;
     margin-top: -10rem;
-    width: 7rem;
-    height: 10rem;
     opacity: 1;
   }
 `;

@@ -44,8 +44,8 @@ export function MobileNavbar() {
                 Sobre nós
               </Sc.SelectItem>
                 
-              <Sc.SelectItem active='false' theme={theme} to="/customers" onClick={handleToggleMenu}>
-                Clientes
+              <Sc.SelectItem active='false' theme={theme} to="/services" onClick={handleToggleMenu}>
+                Services
               </Sc.SelectItem>
             
               <Sc.SelectItem active='false' theme={theme} to="/links" onClick={handleToggleMenu}>

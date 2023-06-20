@@ -7,7 +7,7 @@ import whatsapp from "../../assets/logo_whatsapp_icon3D.png";
 
 export function Home() {
   const navigate = useNavigate();
-  const { theme } = useContext(ThemeContext);
+  const { theme, handleOpenWhatsapp, whatsappNumber } = useContext(ThemeContext);
   
   const slogans = [
     "Simplificando suas finanças com agilidade!",

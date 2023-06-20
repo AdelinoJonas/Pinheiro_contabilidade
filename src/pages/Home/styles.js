@@ -73,6 +73,7 @@ export const Container = styled.div`
       opacity: 1;
       right: 5rem;
       bottom: 2rem;
+      cursor: pointer;
     }
   }
 `;

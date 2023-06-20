@@ -3,15 +3,19 @@ import styled from "styled-components";
 export const Container = styled.div`
   background: ${(props) => props.theme.bg.secundary};
   padding: 3rem;
+    .box-animated{
+      display: flex;
+      align-items: center;
+      height: 100%;
+      .logoPage{
+        width: 60%;
+        height: 18vh;
+        border-radius: 25px;
+        margin-left: 5%;
+      }
 
-  .logoPage{
-    width: 70%;
-    height: 22vh;
-    border-radius: 25px;
-    margin-left: 5%;
-  }
+    }
 
-  
   div{
     display: flex;
     flex-direction: column;
@@ -21,7 +25,8 @@ export const Container = styled.div`
       font-size: ${props => props.theme.sizeFonts.title};
       font-weight: ${props => props.theme.weightFonts.title};
       margin: 10rem 0 3rem 0;
-      text-align: start;
+      display: flex;
+      align-self: flex-start;
     }
 
     .row{
@@ -55,31 +60,67 @@ export const Container = styled.div`
     }
 
     .full-row{
-      margin-top: 3rem;
-      border-top: 1px solid ${props => props.theme.color.text};
+      margin-top: 5rem;
       padding-top: 3rem;
       text-align: center;
       line-height: 150%;
       color: ${props => props.theme.color.text};
       font-size: ${props => props.theme.sizeFonts.text};
       font-weight: ${props => props.theme.weightFonts.text};
-      gap: 2rem;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-evenly;
-      p{
-        background-color: ${props => props.theme.bg.sideFilter};
-        padding: 2rem;
-        border-radius: 20px;
-      }
-    }
+      gap: 10rem;
 
-    h1{
+      div{
+        gap: 2rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+
+        p{
+          background-color: ${props => props.theme.bg.sideFilter};
+          padding: 2rem;
+          border-radius: 20px;
+          text-align: justify;
+        }
+      }
+
+      .contactButtomBox{
+
+        button{
+          all: unset;
+          cursor: pointer;
+          height: 6rem;
+          display: flex;
+          align-items: center;
+          padding: 0rem 2rem;
+          color: ${props => props.theme.color.text};
+          font-size: ${props => props.theme.sizeFonts.subtitle};
+          font-weight: ${props => props.theme.weightFonts.title};
+          background: ${props => props.theme.bg.sideFilter};
+          border-radius: 6px;
+          border: 1px solid rgba(0,0,0,4);
+              
+          @media(max-width: 900px){
+            position: absolute;
+            left: 5rem;
+          } 
+
+          &:hover{
+            opacity: 0.8;
+            transition: all 0.2s;
+          }
+        }
+      }
+
+    }
+  
+    .mission{
+      border-top: 1px solid rgba(0,0,0,4);;
       color: ${props => props.theme.color.text};
       font-size: ${props => props.theme.sizeFonts.title};
       font-weight: ${props => props.theme.weightFonts.title};
-      margin: 10rem 0 3rem 0;
+      margin: 5rem 0 3rem 0;
       text-align: center;
+      padding-top: 5rem;
     }
   }
 
