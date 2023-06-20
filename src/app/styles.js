@@ -4,7 +4,7 @@ export const Body = styled.div`
   display: grid;
   grid-template-columns: 1fr 4fr;
   grid-template-areas: "aside main";
-
+  
   @media(max-width: 900px){
     grid-template-columns: 1fr;
     grid-template-rows: "30vh 70vh";

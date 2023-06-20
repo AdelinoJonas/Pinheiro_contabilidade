@@ -5,6 +5,7 @@ import { NavLink } from "react-router-dom";
 
 
 export const Container = styled.nav`
+  width: 20%;
   height: 100vh;
   background: ${(props) => props.theme.bg.primary};
   display: flex;
@@ -13,6 +14,7 @@ export const Container = styled.nav`
   align-items: center;
   padding: 1rem 2rem 3rem 2rem;
   border: 3px gray;
+  position: fixed;
 
   section{
     width: 95%;

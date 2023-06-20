@@ -4,7 +4,7 @@ import LogoOffice from "../../assets/pinheiro-cores.jpg";
 import * as Sc from './styles';
 import whatsapp from "../../assets/logo_whatsapp_icon3D.png";
 
-export function Footer() {
+export default function Footer() {
   const { theme } = useContext(ThemeContext);
   const year = new Date().getFullYear();
   const whatsappNumber = 41987971725;
@@ -17,13 +17,13 @@ export function Footer() {
   return (
     <Sc.Container theme={theme}>
       <div onClick={() => navigate('/')}>
-        <img src={LogoOffice} alt="Logo"/>
+        <h1>PINHEIRO CONTABILIDADE </h1>
         <h1>&copy;&reg;</h1>
         <h2>{year}</h2>
       </div>
-        <Sc.Whatsapp onClick={() => handleOpenWhatsapp(whatsappNumber)}>
-          <img src={whatsapp} alt="whatsApp contact"/>
-        </Sc.Whatsapp>
+      <Sc.Whatsapp onClick={() => handleOpenWhatsapp(whatsappNumber)}>
+        <img src={whatsapp} alt="whatsApp contact"/>
+      </Sc.Whatsapp>
     </Sc.Container>
   )
 }

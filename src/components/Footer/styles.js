@@ -1,11 +1,11 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  width: 100%;
+
   height: 7rem;
   background: ${(props) => props.theme.bg.primary};
   display: flex;
-  justify-content: start;
+  justify-content: space-evenly;
   align-items: center;
   padding: 0 3rem 0 3rem;
   div{
@@ -36,13 +36,13 @@ export const Container = styled.div`
 
 export const Whatsapp= styled.div`
 position: absolute;
-width: 95%;
+width: 70%;
 display: flex;
 justify-content: end;
   img{
     position: relative;
     z-index: 555;
-    margin-top: -6rem;
+    margin-top: -10rem;
     width: 7rem;
     height: 10rem;
     opacity: 1;
