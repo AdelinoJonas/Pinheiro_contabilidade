@@ -6,13 +6,12 @@ export const Reveal = ({ children }) => {
   const isInView = useInView(ref, {once: true});
 
   const mainControls = useAnimation();
-  const slideControls = useAnimation();
 
   useEffect(() => {
 
     if (isInView){
       mainControls.start("visible");
-      slideControls.start("visible");
+      // slideControls.start("visible");
     }
 
   },[isInView]);
@@ -22,7 +21,8 @@ export const Reveal = ({ children }) => {
       <motion.div 
         variants={{
           hidden: { opacity: 0, y: 100 },
-          visible: { opacity: 1, y: 0 }
+          visible: { opacity: 1, y: 0 },
+          exit: { opacity: 0, transition:{ duration: 0.25}}
         }}  
         initial= "hidden"
         animate= {mainControls}

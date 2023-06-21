@@ -44,6 +44,8 @@ export function Links() {
 
           <h2>https://cfc.org.br/</h2>
           
+          <h2>LINK RECEITA ESTADUAL</h2>
+          
         </div>
       </Sc.Container>
     </motion.div>
