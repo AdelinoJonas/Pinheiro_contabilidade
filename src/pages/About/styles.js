@@ -39,6 +39,9 @@ export const Container = styled.div`
         margin-top: -10rem;
         img{
           border-radius: 20px;
+          box-shadow: 9px 11px 23px -2px rgba(0,0,0,0.76);
+          -webkit-box-shadow: 9px 11px 23px -2px rgba(0,0,0,0.76);
+          -moz-box-shadow: 9px 11px 23px -2px rgba(0,0,0,0.76);
         }
         
       }
@@ -68,18 +71,21 @@ export const Container = styled.div`
       font-size: ${props => props.theme.sizeFonts.text};
       font-weight: ${props => props.theme.weightFonts.text};
       gap: 10rem;
-
+      
       div{
         gap: 2rem;
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
-
+        
         p{
           background-color: ${props => props.theme.bg.sideFilter};
           padding: 2rem;
           border-radius: 20px;
           text-align: justify;
+          box-shadow: 9px 11px 23px -2px rgba(0,0,0,0.76);
+          -webkit-box-shadow: 9px 11px 23px -2px rgba(0,0,0,0.76);
+          -moz-box-shadow: 9px 11px 23px -2px rgba(0,0,0,0.76);
         }
       }
 
@@ -98,6 +104,9 @@ export const Container = styled.div`
           background: ${props => props.theme.bg.sideFilter};
           border-radius: 6px;
           border: 1px solid rgba(0,0,0,4);
+          box-shadow: 9px 11px 23px -2px rgba(0,0,0,0.76);
+          -webkit-box-shadow: 9px 11px 23px -2px rgba(0,0,0,0.76);
+          -moz-box-shadow: 9px 11px 23px -2px rgba(0,0,0,0.76);
               
           @media(max-width: 900px){
             position: absolute;
@@ -114,13 +123,14 @@ export const Container = styled.div`
     }
   
     .mission{
-      border-top: 1px solid rgba(0,0,0,4);;
+      border-top: 1px solid ${props => props.theme.color.text};;
       color: ${props => props.theme.color.text};
       font-size: ${props => props.theme.sizeFonts.title};
       font-weight: ${props => props.theme.weightFonts.title};
       margin: 5rem 0 3rem 0;
       text-align: center;
       padding-top: 5rem;
+      
     }
   }
 
@@ -129,7 +139,7 @@ export const Container = styled.div`
     font-size: ${props => props.theme.sizeFonts.subtitle};
     font-weight: ${props => props.theme.weightFonts.text};
     text-align: center;
-    margin-bottom: 2rem;
+    margin-bottom: 5rem;
     padding: 0 2rem 0 2rem;
   }
 
@@ -138,7 +148,7 @@ export const Container = styled.div`
     font-size: ${props => props.theme.sizeFonts.subtitle};
     font-weight: ${props => props.theme.weightFonts.text};
     text-align: center;
-    margin-bottom: 2rem;
+    margin-bottom: 5rem;
     padding: 0 2rem 0 2rem;
     margin-top: 5rem;
   }
@@ -159,6 +169,9 @@ export const Container = styled.div`
       padding: 1rem;
       border-radius: 20px;
       text-align: center;
+      box-shadow: 9px 11px 23px -2px rgba(0,0,0,0.76);
+      -webkit-box-shadow: 9px 11px 23px -2px rgba(0,0,0,0.76);
+      -moz-box-shadow: 9px 11px 23px -2px rgba(0,0,0,0.76);
       span{
         width: 100%;
         color: ${props => props.theme.color.text};
@@ -176,9 +189,14 @@ export const Container = styled.div`
 export const ImageOffice = styled.div`
 display: flex;
 align-items: center;
+margin-top: 5rem;
+
   img{
     width: 70%;
     margin-top: 4rem;
     border-radius: 10%;
+    box-shadow: 9px 11px 23px -2px rgba(0,0,0,0.76);
+    -webkit-box-shadow: 9px 11px 23px -2px rgba(0,0,0,0.76);
+    -moz-box-shadow: 9px 11px 23px -2px rgba(0,0,0,0.76);
   }
 `;

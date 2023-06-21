@@ -36,6 +36,7 @@ export function About() {
         }}
         initial="hidden"
         animate={controls}
+        exit={{opacity: 0, y: 75}}
         transition={{duration: 0.5, delay: 0.25}}
       >
         <img src={LogoOffice} alt="Logo" className='logoPage'/>
