@@ -14,6 +14,7 @@ export const Container = styled.div`
 
   .content{
     padding: 3rem;
+
     .contactButton{
       height: 20vh;
       display: flex;
@@ -21,7 +22,7 @@ export const Container = styled.div`
       align-items: center;
       margin-right: 5rem;
       img{
-        height: 100%;
+        height: 10rem;
       }
       button{
         width: 30vw;
@@ -89,32 +90,30 @@ export const Container = styled.div`
   }
       
 }
-
-  .title{
-    display: flex;
-    justify-content: center;
-    margin: 5rem 0 8rem 0 ;
-    h1{
-      width: max-content;
-      text-align: center;
-      background: ${(props) => props.theme.bg.primary};
-      color: ${props => props.theme.color.active};
-      font-size: ${props => props.theme.sizeFonts.title};
-      font-weight: ${props => props.theme.weightFonts.title};
-      letter-spacing: 0.25rem;
-      border-radius: 6px;
-      padding: 1rem;
-      box-shadow: 9px 11px 23px -2px rgba(0,0,0,0.76);
-      -webkit-box-shadow: 9px 11px 23px -2px rgba(0,0,0,0.76);
-      -moz-box-shadow: 9px 11px 23px -2px rgba(0,0,0,0.76);
-    }
+.title{
+  display: flex;
+  justify-content: center;
+  margin: 5rem 0 8rem 0 ;
+  h1{
+    width: max-content;
+    text-align: center;
+    background: ${(props) => props.theme.bg.primary};
+    color: ${props => props.theme.color.active};
+    font-size: ${props => props.theme.sizeFonts.title};
+    font-weight: ${props => props.theme.weightFonts.title};
+    letter-spacing: 0.25rem;
+    border-radius: 6px;
+    padding: 1rem;
+    box-shadow: 9px 11px 23px -2px rgba(0,0,0,0.76);
+    -webkit-box-shadow: 9px 11px 23px -2px rgba(0,0,0,0.76);
+    -moz-box-shadow: 9px 11px 23px -2px rgba(0,0,0,0.76);
   }
+}
 `;
 
 export const Company = styled(MdAccountBalance)`
   width: 7rem;
   height: 7rem;
- 
 `;
 
 export const Business = styled(MdBusinessCenter)`
@@ -128,30 +127,35 @@ export const AlterCompany = styled(TbTransform)`
   height: 7rem;
 `;
 
-
 export const Calculator = styled(GiCalculator)`
   min-width: 2.8rem;
   height: 2.8rem;
+  color: ${props => props.theme.bg.quarternary};
 `;
 export const Boxes = styled(BsInboxes)`
   min-width: 2.8rem;
   height: 2.8rem;
+  color: ${props => props.theme.bg.quarternary};
 `;
 export const Pd = styled(LuNewspaper)`
   min-width: 2.8rem;
   height: 2.8rem;
+  color: ${props => props.theme.bg.quarternary};
 `;
 export const Society = styled(SlPeople)`
   min-width: 2.8rem;
   height: 2.8rem;
+  color: ${props => props.theme.bg.quarternary};
 `;
 export const Account = styled(MdOutlineAccountBalance)`
   min-width: 2.8rem;
   height: 2.8rem;
+  color: ${props => props.theme.bg.quarternary};
 `;
 export const Graph = styled(BsGraphUpArrow)`
   min-width: 2.8rem;
   height: 2.8rem;
+  color: ${props => props.theme.bg.quarternary};
 `;
 
 export const ServiceContainer = styled.section`
@@ -161,26 +165,30 @@ export const ServiceContainer = styled.section`
     
     .flexRow{
       display: flex;
+      align-items: center;
       margin-bottom: 2rem;
       gap: 2rem;
-    }
-    
-    .text{
-      min-width: 80%;
-      display: flex;
-      flex-direction: column;
-      align-items: end;
-      margin-bottom: 2rem;
-      span {
-        font-size: 1.6rem;
-        font-weight: 500;
-        line-height: 2.5rem;
-      }
-      p{
-        font-size: 1.4rem;
-        font-weight: 300;
-        line-height: 2rem;
-        text-align: end;
+      
+      .text{
+        min-width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        margin-bottom: 2rem;
+        span {
+          font-size: 2rem;
+          font-weight: 700;
+          line-height: 2.5rem;
+          color: ${props => props.theme.bg.quarternary};
+        }
+        p{
+          font-size: 1.6rem;
+          font-weight: 300;
+          line-height: 2rem;
+          text-align: end;
+          color: ${props => props.theme.bg.quarternary};
+          margin-top: 1rem;
+        }
       }
     }
   }
@@ -189,22 +197,26 @@ export const ServiceContainer = styled.section`
     .flexRow{
       display: flex;
       flex-direction: row-reverse;
+      align-items: center;
       margin-bottom: 2rem;
-      gap: 2rem
+      gap: 2rem;
     }
-
+    
     .text{
       min-width: 80%;
       margin-bottom: 2rem;
       span {
-        font-size: 1.6rem;
-        font-weight: 500;
+        font-size: 2rem;
+        font-weight: 700;
         line-height: 2.5rem;
+        color: ${props => props.theme.bg.quarternary};
       }
       p{
-        font-size: 1.4rem;
+        color: ${props => props.theme.bg.quarternary};
+        font-size: 1.6rem;
         font-weight: 300;
         line-height: 2rem;
+        margin-top: 1rem;
       }
     }
   }
@@ -212,12 +224,23 @@ export const ServiceContainer = styled.section`
 `;
 
 export const backgroundServices = styled.div`
-position: relative;
-margin-top: 4rem;
-.imgLogo{
   position: relative;
-  opacity: 0.3;
-  height: 100%;
-  width: 25vw;
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  h1{
+    text-align: center;
+    letter-spacing: 1rem;
+    color: ${props => props.theme.bg.quarternary};
+    margin-top: -5rem;
+    opacity: 0.3;
+  }
+  .imgLogo{
+    position: relative;
+    opacity: 0.3;
+    height: 100%;
+    width: 25vw;
   }
 `;

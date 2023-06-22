@@ -8,7 +8,7 @@ import * as Sc from './styles';
 import whatsapp from "../../assets/logo_whatsapp_icon3D.png";
 
 export function Services() {
-  const { theme } = useContext(ThemeContext);
+  const { theme, handleOpenWhatsapp, whatsappNumber } = useContext(ThemeContext);
   
   return (
       <>
@@ -48,7 +48,7 @@ export function Services() {
               </div>
             </Reveal>
             
-            <Sc.ServiceContainer>
+            <Sc.ServiceContainer theme={theme}>
               <div className="leftSide">
                 <Reveal >
                   <div className="flexRow">
@@ -56,7 +56,7 @@ export function Services() {
                       <span>Contabilidade</span> 
                       <p>Nosso departamento contábil está pronto a atender as necessidades legais da sua empresa.</p> 
                     </div>
-                    <Sc.Calculator/>
+                    <Sc.Calculator theme={theme}/>
                   </div>
                 </Reveal>
                 <Reveal >
@@ -65,7 +65,7 @@ export function Services() {
                       <span>Fiscal</span>
                       <p>Sua empresa com uma assessoria completa para atender a todas as obrigações fiscais.</p>
                     </div>
-                    <Sc.Boxes/>
+                    <Sc.Boxes theme={theme}/>
                   </div>
                 </Reveal>
                 <Reveal >
@@ -74,13 +74,15 @@ export function Services() {
                       <span>Departamento Pessoal</span>
                       <p>Imprescindível para qualquer empresa, sendo responsável pela execução de toda a rotina de departamento de pessoal.</p>
                     </div>
-                    <Sc.Pd/>
+                    <Sc.Pd theme={theme}/>
                   </div>
                 </Reveal>
               </div>
 
-              <Sc.backgroundServices >
+              <Sc.backgroundServices theme={theme}>
+                <h1>PINHEIRO</h1>
                 <img src={pine} alt="logo" className='imgLogo'/>
+                <h1>CONTABILIDADE</h1>
               </Sc.backgroundServices >
 
               <div className="rightSide">
@@ -91,7 +93,7 @@ export function Services() {
                       <span>Sociétario</span>
                       <p>Serviços completos em questões que envolvem a parte legal (administrativa) das empresas junto aos órgãos públicos e privados.</p>
                     </div>
-                    <Sc.Account/>
+                    <Sc.Account theme={theme}/>
                   </div>
                   </Reveal>
                   <Reveal >
@@ -102,7 +104,7 @@ export function Services() {
                         Abra sua empresa com a estrutura societária mais adequada, sempre com foco na economia tributária.
                         </p>
                     </div>
-                    <Sc.Society/>
+                    <Sc.Society theme={theme}/>
                   </div>
                   </Reveal>
                   <Reveal >
@@ -113,7 +115,7 @@ export function Services() {
                         Dispensando o lançamento manual das informações, agilizando o processo e reduzindo a possibilidade de erros.
                       </p>
                     </div>
-                    <Sc.Graph/>
+                    <Sc.Graph theme={theme}/>
                   </div>
                 </Reveal>
               </div>
@@ -121,7 +123,7 @@ export function Services() {
 
             <Reveal>
               <div className="contactButton">
-              <img src={whatsapp} alt="whatsApp contact"/>
+              <img src={whatsapp} onClick={() => handleOpenWhatsapp(whatsappNumber)} alt="whatsApp contact"/>
               </div>
             </Reveal>
                         
