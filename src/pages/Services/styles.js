@@ -2,6 +2,12 @@ import styled from "styled-components";
 import { MdAccountBalance } from 'react-icons/md';
 import { MdBusinessCenter } from 'react-icons/md';
 import { TbTransform } from 'react-icons/tb';
+import { GiCalculator } from 'react-icons/gi';
+import { BsInboxes } from 'react-icons/bs';
+import { LuNewspaper } from 'react-icons/lu';
+import { SlPeople } from 'react-icons/sl';
+import { MdOutlineAccountBalance } from 'react-icons/md';
+import { BsGraphUpArrow } from 'react-icons/bs';
 
 
 export const Container = styled.div`
@@ -53,7 +59,7 @@ export const Container = styled.div`
   .title{
     display: flex;
     justify-content: center;
-    margin: 5rem 0 5rem ;
+    margin: 5rem 0 8rem 0 ;
     h1{
       width: max-content;
       text-align: center;
@@ -74,21 +80,108 @@ export const Container = styled.div`
 export const Company = styled(MdAccountBalance)`
   width: 7rem;
   height: 7rem;
-  cursor: pointer;
-
+ 
 `;
 
 export const Business = styled(MdBusinessCenter)`
   width: 7rem;
   height: 7rem;
-  cursor: pointer;
-
+ 
 `;
 
 export const AlterCompany = styled(TbTransform)`
   width: 7rem;
   height: 7rem;
-  cursor: pointer;
-  
-  `;
+`;
 
+
+export const Calculator = styled(GiCalculator)`
+  min-width: 2.8rem;
+  height: 2.8rem;
+`;
+export const Boxes = styled(BsInboxes)`
+  min-width: 2.8rem;
+  height: 2.8rem;
+`;
+export const Pd = styled(LuNewspaper)`
+  min-width: 2.8rem;
+  height: 2.8rem;
+`;
+export const Society = styled(SlPeople)`
+  min-width: 2.8rem;
+  height: 2.8rem;
+`;
+export const Account = styled(MdOutlineAccountBalance)`
+  min-width: 2.8rem;
+  height: 2.8rem;
+`;
+export const Graph = styled(BsGraphUpArrow)`
+  min-width: 2.8rem;
+  height: 2.8rem;
+`;
+
+export const ServiceContainer = styled.section`
+  display: flex;
+  margin: 5rem,  0 7rem 0;
+  .leftSide{
+    
+    .flexRow{
+      display: flex;
+      margin-bottom: 2rem;
+      gap: 2rem;
+    }
+    
+    .text{
+      min-width: 80%;
+      display: flex;
+      flex-direction: column;
+      align-items: end;
+      span {
+        font-size: 1.6rem;
+        font-weight: 500;
+        line-height: 2.5rem;
+      }
+      p{
+        font-size: 1.4rem;
+        font-weight: 300;
+        line-height: 2rem;
+        text-align: end;
+      }
+    }
+  }
+  
+  .rightSide{
+    .flexRow{
+      display: flex;
+      flex-direction: row-reverse;
+      margin-bottom: 2rem;
+      gap: 2rem
+    }
+
+    .text{
+      min-width: 80%;
+      span {
+        font-size: 1.6rem;
+        font-weight: 500;
+        line-height: 2.5rem;
+      }
+      p{
+        font-size: 1.4rem;
+        font-weight: 300;
+        line-height: 2rem;
+      }
+    }
+  }
+
+`;
+
+export const backgroundServices = styled.div`
+position: relative;
+margin-top: 4rem;
+.imgLogo{
+  position: relative;
+  opacity: 0.3;
+  height: 100%;
+  width: 25vw;
+  }
+`;
