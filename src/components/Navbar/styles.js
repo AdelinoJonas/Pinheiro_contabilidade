@@ -13,7 +13,7 @@ export const Container = styled.nav`
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem 3rem 2rem;
-  border: 3px gray;
+  border-right: 3px double ${(props) => props.theme.bg.quarternary};
   position: fixed;
 
   section{

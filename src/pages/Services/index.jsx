@@ -126,11 +126,11 @@ export function Services() {
             </Reveal>
                         
           </div>
-            <div className="footer">
-              <Reveal >
-                <Footer/>
-              </Reveal>
-            </div>
+          <div className="footer">
+            <Reveal >
+              <Footer/>
+            </Reveal>
+          </div>
         </Sc.Container>
     </>
   );

@@ -21,6 +21,7 @@ export const lightTheme = {
     subtitle: '1.8rem',
     text: '1.6rem',
     button: '1.6rem',
+    titleCards: '2.2rem',
   },
   weightFonts: {
     links: 400,
@@ -55,6 +56,7 @@ export const darkTheme = {
     subtitle: '1.8rem',
     text: '1.6rem',
     button: '1.6rem',
+    titleCards: '2.5rem',
   },
   weightFonts: {
     links: 400,
