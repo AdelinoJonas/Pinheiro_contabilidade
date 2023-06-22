@@ -5,17 +5,7 @@ export const Container = styled.div`
 
   .content{
     padding: 3rem;
-    .header{
-      display:"flex";
-      justify-content: "center";
-      align-items:"center";
-      margin-bottom: "5rem";
-        .logoPage{
-          border-radius: 25px;
-          margin-left: 5%;
-        }
-    }
-
+    
     div{
       display: flex;
       flex-direction: column;
@@ -191,26 +181,18 @@ export const Container = styled.div`
     }
   }
 
-  /* .contactButton{
-    img{
-      display: flex;
-      justify-content: end;
-      align-items: end;
-      height: 4rem;
-      cursor: pointer;
-    }
-  } */
-
   .footer{
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    
     img{
       width: 10rem;
       margin-left: 80%;
-      margin: 5rem 0 3rem 85%
+      margin: 5rem 0 3rem 85%;
+      cursor: pointer;
     }
   }
 `;
