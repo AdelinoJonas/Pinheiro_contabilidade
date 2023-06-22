@@ -5,6 +5,7 @@ import { Reveal } from "../../utils/Reveal";
 import pine from "../../assets/pine-logo.png";
 import Footer from "../../components/Footer";
 import * as Sc from './styles';
+import whatsapp from "../../assets/logo_whatsapp_icon3D.png";
 
 export function Services() {
   const { theme } = useContext(ThemeContext);
@@ -12,38 +13,40 @@ export function Services() {
   return (
       <>
         <Sc.Container theme={theme} >
-          <div className="mktBox">
-            <div className="mktItem">
-              <div className="image">
+          <div className="content">
 
-              <Sc.Company/> 
-              </div>
-              <span>Já sem sua empresa?</span> 
-              <p>Fazemos sua contabilidade</p>
-            </div>
-            <div className="mktMiddleItem">
-              <div className="image">
+            <div className="mktBox">
+              <div className="mktItem">
+                <div className="image">
 
-              <Sc.Business/>
+                <Sc.Company/> 
+                </div>
+                <span>Já sem sua empresa?</span> 
+                <p>Fazemos sua contabilidade</p>
               </div>
-              <span>Deseja abrir sua empresa?</span> 
-              <p>Te explicamos e cuidamos de tudo pra você</p>
-            </div>
-            <div className="mktItem">
-              <div className="image">
+              <div className="mktMiddleItem">
+                <div className="image">
 
-              <Sc.AlterCompany/>
+                <Sc.Business/>
+                </div>
+                <span>Deseja abrir sua empresa?</span> 
+                <p>Te explicamos e cuidamos de tudo pra você</p>
               </div>
-              <span>Sua empresa é MEI?</span> 
-              <p>Transformamos MEI em ME</p>
+              <div className="mktItem">
+                <div className="image">
+
+                <Sc.AlterCompany/>
+                </div>
+                <span>Sua empresa é MEI?</span> 
+                <p>Transformamos MEI em ME</p>
+              </div>
             </div>
-          </div>
-          
-          <Reveal >
-            <div className='title' >
-              <h1>PRINCIPAIS SERVIÇOS</h1>
-            </div>
-          </Reveal>
+            
+            <Reveal >
+              <div className='title' >
+                <h1>PRINCIPAIS SERVIÇOS</h1>
+              </div>
+            </Reveal>
             
             <Sc.ServiceContainer>
               <div className="leftSide">
@@ -115,13 +118,20 @@ export function Services() {
                 </Reveal>
               </div>
             </Sc.ServiceContainer>
-        </Sc.Container>
-      <Reveal >
-        <div className="d">
 
-        <Footer/>
-        </div>
-      </Reveal>
+            <Reveal>
+              <div className="contactButton">
+              <img src={whatsapp} alt="whatsApp contact"/>
+              </div>
+            </Reveal>
+                        
+          </div>
+            <div className="footer">
+              <Reveal >
+                <Footer/>
+              </Reveal>
+            </div>
+        </Sc.Container>
     </>
   );
 }

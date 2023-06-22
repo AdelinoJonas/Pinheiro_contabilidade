@@ -9,10 +9,41 @@ import { SlPeople } from 'react-icons/sl';
 import { MdOutlineAccountBalance } from 'react-icons/md';
 import { BsGraphUpArrow } from 'react-icons/bs';
 
-
 export const Container = styled.div`
   background-color: ${(props) => props.theme.bg.sideFilter};
-  padding: 2rem;
+
+  .content{
+    padding: 3rem;
+    .contactButton{
+      height: 20vh;
+      display: flex;
+      justify-content: end;
+      align-items: center;
+      margin-right: 5rem;
+      img{
+        height: 100%;
+      }
+      button{
+        width: 30vw;
+        all: unset;
+        cursor: pointer;
+        height: 6rem;
+        display: flex;
+        -webkit-box-align: center;
+        align-items: center;
+        color: rgb(0, 0, 0);
+        font-size: 1.8rem;
+        font-weight: 500;
+        box-shadow: rgba(0, 0, 0, 0.76) 9px 11px 23px -2px;
+        padding: 0rem 2rem;
+        background: rgb(226, 232, 240);
+        border-radius: 6px;
+        border-width: 1px;
+        border-style: solid;
+        border-color: rgb(0, 0, 0);
+        border-image: initial;
+      }
+    }
   .mktBox{
     display: flex;
     justify-content: space-evenly;
@@ -29,6 +60,7 @@ export const Container = styled.div`
         font-size: ${props => props.theme.sizeFonts.subtitle};
         font-weight: ${props => props.theme.weightFonts.title};
       }
+
       p {
         font-size: ${props => props.theme.sizeFonts.text};
         font-weight: ${props => props.theme.weightFonts.subtitle};
@@ -55,6 +87,8 @@ export const Container = styled.div`
       }
     }
   }
+      
+}
 
   .title{
     display: flex;
@@ -136,6 +170,7 @@ export const ServiceContainer = styled.section`
       display: flex;
       flex-direction: column;
       align-items: end;
+      margin-bottom: 2rem;
       span {
         font-size: 1.6rem;
         font-weight: 500;
@@ -160,6 +195,7 @@ export const ServiceContainer = styled.section`
 
     .text{
       min-width: 80%;
+      margin-bottom: 2rem;
       span {
         font-size: 1.6rem;
         font-weight: 500;

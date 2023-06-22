@@ -15,9 +15,6 @@ export default function Footer() {
         <h1>&copy;&reg;</h1>
         <h2>{year}</h2>
       </div>
-      <Sc.Whatsapp onClick={() => handleOpenWhatsapp(whatsappNumber)}>
-        <img src={whatsapp} alt="whatsApp contact"/>
-      </Sc.Whatsapp>
     </Sc.Container>
   )
 }
