@@ -20,6 +20,7 @@ export const Container = styled.div`
     section{
       min-height: 12rem;
       margin-bottom: 5rem;
+      margin-top: 5rem;
       @media(max-width: 900px){
           height: 25vh;
         } 
@@ -76,11 +77,6 @@ export const Container = styled.div`
       cursor: pointer;
     }
   }
-`;
-
-export const Whatsapp= styled.div`
-position: fixed;
-
 `;
 
 

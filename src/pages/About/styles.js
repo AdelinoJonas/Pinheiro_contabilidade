@@ -81,9 +81,7 @@ export const Container = styled.div`
             -moz-box-shadow: 9px 11px 23px -2px rgba(0,0,0,0.76);
           }
         }
-
         .contactButtomBox{
-
           button{
             all: unset;
             cursor: pointer;
@@ -111,7 +109,6 @@ export const Container = styled.div`
             }
           }
         }
-
       }
     
       .mission{

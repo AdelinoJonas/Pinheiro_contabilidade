@@ -6,6 +6,7 @@ import pine from "../../assets/pine-logo.png";
 import Footer from "../../components/Footer";
 import * as Sc from './styles';
 import whatsapp from "../../assets/logo_whatsapp_icon3D.png";
+import { motion } from 'framer-motion';
 
 export function Services() {
   const { theme, handleOpenWhatsapp, whatsappNumber } = useContext(ThemeContext);
@@ -16,30 +17,46 @@ export function Services() {
           <div className="content">
 
             <div className="mktBox">
-              <div className="mktItem">
+            <motion.div 
+                initial={{opacity: 0, x: -100}}
+                animate={{opacity: 1, x: 0}}
+                exit={{opacity: 0, x: -100}}
+                transition={{duration: 1, delay: 0.25}} 
+                className="mktItem">
                 <div className="image">
 
                 <Sc.Company/> 
                 </div>
                 <span>Já sem sua empresa?</span> 
                 <p>Fazemos sua contabilidade</p>
-              </div>
-              <div className="mktMiddleItem">
+              </motion.div>
+              <motion.div 
+                initial={{opacity: 0, y: -100}}
+                animate={{opacity: 1, y: 0}}
+                exit={{opacity: 0, y: -100}}
+                transition={{duration: 1, delay: 0.25}}
+                className="mktMiddleItem"
+              >
                 <div className="image">
 
                 <Sc.Business/>
                 </div>
                 <span>Deseja abrir sua empresa?</span> 
                 <p>Te explicamos e cuidamos de tudo pra você</p>
-              </div>
-              <div className="mktItem">
+              </motion.div>
+              <motion.div 
+                initial={{opacity: 0, x: 100}}
+                animate={{opacity: 1, x: 0}}
+                exit={{opacity: 0, x: 100}}
+                transition={{duration: 1, delay: 0.25}}
+                className="mktItem">
                 <div className="image">
 
                 <Sc.AlterCompany/>
                 </div>
                 <span>Sua empresa é MEI?</span> 
                 <p>Transformamos MEI em ME</p>
-              </div>
+              </motion.div>
             </div>
             
             <Reveal >

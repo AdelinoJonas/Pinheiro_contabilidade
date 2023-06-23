@@ -4,6 +4,7 @@ import * as Sc from './styles';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import whatsapp from "../../assets/logo_whatsapp_icon3D.png";
+import { Reveal } from '../../utils/Reveal';
 
 export function Home() {
   const navigate = useNavigate();
@@ -28,16 +29,12 @@ export function Home() {
   }, []);
   
   return (
-    <motion.div 
-      initial={{opacity: 0}}
-      animate={{opacity: 1}}
-      exit={{opacity: 0}}
-    >
-      <Sc.Container theme={theme}>
+    <Sc.Container theme={theme}>
         <motion.div 
-          initial={{opacity: 0}}
-          animate={{opacity: 1}}
-          exit={{opacity: 0}}
+          initial={{opacity: 0, y: 100}}
+          animate={{opacity: 1, y: 0}}
+          exit={{opacity: 0, y: 100}}
+          transition={{duration: 1, delay: 0.25}}
         >
           <section>
             <span>{slogans[currentSloganIndex]}</span>
@@ -45,11 +42,9 @@ export function Home() {
           <div>
             <button onClick={() => navigate("/services")}>Conheça nossos Serviços</button>
           </div>
-          
-          <img src={whatsapp} alt="whatsApp contact" onClick={() => handleOpenWhatsapp(whatsappNumber)}/>
+            <img src={whatsapp} alt="whatsApp contact" onClick={() => handleOpenWhatsapp(whatsappNumber)}/>
         </motion.div>
       </Sc.Container>
-    </motion.div>
   );
 }
 

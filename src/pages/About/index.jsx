@@ -80,16 +80,16 @@ export function About() {
                 </p>
               </Reveal>
             </div>
-            <motion.div 
-              initial={{opacity: 0, x: 100}}
-              animate={{opacity: 1, x: 0}}
-              exit={{opacity: 0, x: 100}}
-              transition={{duration: 1, delay: 0.25}} className="contactButtomBox"
-            >
-              <button onClick={() => handleOpenWhatsapp(whatsappNumber)}> 
-                TIRE SUAS DÚVIDAS
-              </button>
-            </motion.div>
+              <motion.div 
+                initial={{opacity: 0, x: 100}}
+                animate={{opacity: 1, x: 0}}
+                exit={{opacity: 0, x: 100}}
+                transition={{duration: 1, delay: 0.25}} className="contactButtomBox"
+                >
+                <button onClick={() => handleOpenWhatsapp(whatsappNumber)}> 
+                  TIRE SUAS DÚVIDAS
+                </button>
+              </motion.div>
           </div>
         </div>
 
