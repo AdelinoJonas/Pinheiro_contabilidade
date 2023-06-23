@@ -17,7 +17,7 @@ export const ThemeProvider = ({ children }) => {
     setOpenMenu(!openMenu);
   }
 
-  const whatsappNumber = 41987971725;
+  const whatsappNumber = 41996376899;
 
   function handleOpenWhatsapp(whatsappNumber) {
     const whatsappLink = `https://wa.me/55${whatsappNumber}?text=Olá,%20Pode%20me%20ajudar%20com%20minha%20contabilidade?`;

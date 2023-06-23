@@ -1,24 +1,36 @@
 import React, { useContext } from 'react';
-import { useNavigate } from 'react-router-dom';
 import { ThemeContext } from '../../context/ThemeContext';
+import nho from "../../assets/customers/nhô_alimentos.png";
+import lelulita from "../../assets/customers/lelulita.jpg";
+import { Reveal } from "../../utils/Reveal";
 import * as Sc from './styles';
-import { motion } from 'framer-motion';
 
 export function Customers() {
-  const navigate = useNavigate();
   const { theme } = useContext(ThemeContext);
-   
+  
+  const images = [
+    {
+      name: 'inss',
+      src: nho,
+      site:"https://www.nhoalimentos.com.br/"
+    },
+    {
+      name: 'Ministério do Emprego',
+      src: lelulita,
+    }
+  ];
+
   return (
-    <motion.div 
-      initial={{x: 1000}}
-      animate={{x: 0}}
-      exit={{x: window.innerWidth, transition:{duration: 0.1}}}
-    >
-      <Sc.Container theme={theme}>
-        <div>
-          <h1>CLIENTES</h1>
-        </div>
-      </Sc.Container>
-    </motion.div>
+    <Sc.Container theme={theme} >
+      <div className="body">
+        {images.map((image, index) => (
+          <div className="card" key={index}>
+            <Reveal>
+              <img src={image.src} alt={image.name} />
+            </Reveal>
+          </div>
+        ))}
+      </div>
+    </Sc.Container>
   );
 }

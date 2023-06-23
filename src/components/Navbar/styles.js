@@ -12,13 +12,13 @@ export const Container = styled.nav`
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem 1rem 2rem;
+  padding: 1rem 2rem 2rem 2rem;
   border-right: 3px double ${(props) => props.theme.bg.quarternary};
   position: fixed;
 
   section{
     width: 16vw;
-    height: 43vh;
+    height: 210px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -51,7 +51,7 @@ export const SelectItem = styled(NavLink)`
   font-weight: ${props => props.theme.weightFonts.links};
   
   padding: 1.3rem;
-  border-top: 2px solid rgba(245, 244, 244, 0.575);
+  /* border-top: 2px solid rgba(245, 244, 244, 0.575); */
   
   &:hover{
     color: ${props => props.theme.color.active};
@@ -68,7 +68,8 @@ export const SelectItem = styled(NavLink)`
     background: rgba(245, 244, 244, 0.100);
     border-right: 6px groove #FFF;
     border-left: 6px groove #FFF;
-    
+    border-radius: 50px;
+    border-top: none;
   }
 `;
 
@@ -79,8 +80,7 @@ export const FirstItem = styled(NavLink)`
   color: ${props => props.theme.color.links};
   font-size: ${props => props.theme.sizeFonts.subtitle};
   font-weight: ${props => props.theme.weightFonts.links};
-  
-  padding: 1.3rem;
+  padding: 1rem;
     
   &:hover{
     color: ${props => props.theme.color.active};
@@ -94,6 +94,11 @@ export const FirstItem = styled(NavLink)`
     color: ${(props) => props.theme.color.active};
     font-weight: ${(props) => props.theme.weightFonts.title1};
     text-transform: uppercase;
+    background: rgba(245, 244, 244, 0.100);
+    border-right: 6px groove #FFF;
+    border-left: 6px groove #FFF;
+    border-radius: 50px;
+    border-top: none;
   }
 `;
 
