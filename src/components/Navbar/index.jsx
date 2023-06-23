@@ -14,9 +14,9 @@ export function Navbar() {
         <img src={LogoOffice} alt="light theme"/>
       </section>
       <div>
-        <Sc.SelectItem exact='true' active='true' theme={theme} to="/">
+        <Sc.FirstItem exact='true' active='true' theme={theme} to="/">
           Início
-        </Sc.SelectItem>
+        </Sc.FirstItem>
       
         <Sc.SelectItem active='false' theme={theme} to="/about">
           Sobre nós
@@ -32,6 +32,10 @@ export function Navbar() {
       
         <Sc.SelectItem active='false' theme={theme} to="/news">
           Notícias
+        </Sc.SelectItem>
+
+        <Sc.SelectItem active='false' theme={theme} to="/customers">
+          Clientes
         </Sc.SelectItem>
       
         <Sc.SelectItem active='false' theme={theme} to="/contact">

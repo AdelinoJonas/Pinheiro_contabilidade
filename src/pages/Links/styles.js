@@ -10,9 +10,8 @@ export const Container = styled.div`
   .body{
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-evenly;
     gap: 3rem;
-    margin-top: 5rem;
     .card{
       width: 24vw;
       display: flex;

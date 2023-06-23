@@ -12,13 +12,13 @@ export const Container = styled.nav`
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem 3rem 2rem;
+  padding: 1rem 2rem 1rem 2rem;
   border-right: 3px double ${(props) => props.theme.bg.quarternary};
   position: fixed;
 
   section{
-    width: 95%;
-    height: 32%;
+    width: 16vw;
+    height: 43vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -32,10 +32,12 @@ export const Container = styled.nav`
       margin-top: -1rem;
     }
   }
+
   div{
     width: 95%;
     display: flex;
     flex-direction: column;
+    margin-top: 1rem;
   }
   
   `;
@@ -50,6 +52,35 @@ export const SelectItem = styled(NavLink)`
   
   padding: 1.3rem;
   border-top: 2px solid rgba(245, 244, 244, 0.575);
+  
+  &:hover{
+    color: ${props => props.theme.color.active};
+    font-weight: ${props => props.theme.weightFonts.title1};
+    opacity: 0.8;
+    transition: all 0.3s;
+    background: rgba(245, 244, 244, 0.275);
+  }
+  
+  &.active {
+    color: ${(props) => props.theme.color.active};
+    font-weight: ${(props) => props.theme.weightFonts.title1};
+    text-transform: uppercase;
+    background: rgba(245, 244, 244, 0.100);
+    border-right: 6px groove #FFF;
+    border-left: 6px groove #FFF;
+    
+  }
+`;
+
+export const FirstItem = styled(NavLink)`
+  all: unset;
+  text-decoration: none;
+  cursor: pointer;
+  color: ${props => props.theme.color.links};
+  font-size: ${props => props.theme.sizeFonts.subtitle};
+  font-weight: ${props => props.theme.weightFonts.links};
+  
+  padding: 1.3rem;
     
   &:hover{
     color: ${props => props.theme.color.active};
@@ -71,13 +102,14 @@ export const ToggleTheme = styled.nav`
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  margin-top: 2rem;
   
 `;
 
 export const ToggleContainer = styled.label`
   display: inline-block;
-  width: 80px;
-  height: 40px;
+  width: 60px;
+  height: 30px;
   border-radius: 20px;
   background-color: rgba(245, 244, 244, 0.251);
   position: relative;
@@ -88,8 +120,8 @@ export const ToggleContainer = styled.label`
 
 export const ToggleBall = styled.span`
   display: inline-block;
-  width: 30px;
-  height: 30px;
+  width: 20px;
+  height: 20px;
   border-radius: 15px;
   border: 1px solid #7ea291;
   background-color: #07351f;
@@ -97,7 +129,7 @@ export const ToggleBall = styled.span`
   top: 50%;
   transform: translateY(-50%);
   transition: transform 0.3s ease-in-out;
-  left: ${({ isActive }) => (isActive ? 'calc(100% - 35px)' : '5px')};
+  left: ${({ isActive }) => (isActive ? 'calc(100% - 25px)' : '2px')};
 `;
 
 export const HiddenCheckbox = styled.input`
