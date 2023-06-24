@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { ThemeContext } from '../../context/ThemeContext';
 import * as Sc from './styles';
-import LogoOffice from "../../assets/pinheiro-cores.jpg";
+import LogoOffice from "../../assets/pinheiro-vertical-cores.png";
 import { useNavigate } from 'react-router-dom';
 
 export function Navbar() {
@@ -14,33 +14,51 @@ export function Navbar() {
         <img src={LogoOffice} alt="light theme"/>
       </section>
       <div>
-        <Sc.SelectItem exact='true' active='true' theme={theme} to="/">
+        <Sc.FirstItem exact='true' active='true' theme={theme} to="/">
           Início
-        </Sc.SelectItem>
+        </Sc.FirstItem>
       
         <Sc.SelectItem active='false' theme={theme} to="/about">
           Sobre nós
         </Sc.SelectItem>
           
-        <Sc.SelectItem active='false' theme={theme} to="/customers">
-          Clientes
+        <Sc.SelectItem active='false' theme={theme} to="/services">
+          Serviços
         </Sc.SelectItem>
       
         <Sc.SelectItem active='false' theme={theme} to="/links">
           Links Uteis
         </Sc.SelectItem>
       
-        <Sc.SelectItem active='false' theme={theme} to="/news">
+        {/* <Sc.SelectItem active='false' theme={theme} to="/news">
           Notícias
+        </Sc.SelectItem> */}
+
+        <Sc.SelectItem active='false' theme={theme} to="/customers">
+          Clientes
         </Sc.SelectItem>
       
         <Sc.SelectItem active='false' theme={theme} to="/contact">
           Contato
         </Sc.SelectItem>
       </div>
-      {!isDarkTheme ? 
-      <Sc.darkTheme onClick={toggleTheme} theme={theme} alt="Dark theme"/> : 
-      <Sc.lightTheme onClick={toggleTheme} theme={theme} alt="light theme"/>}
+
+      <Sc.ToggleTheme>
+
+        <Sc.LightTheme onClick={toggleTheme} theme={theme} alt="light theme"/>
+
+        <Sc.ToggleContainer htmlFor="toggle">
+          <Sc.ToggleBall isActive={isDarkTheme} />
+          <Sc.HiddenCheckbox
+            type="checkbox"
+            id="toggle"
+            checked={isDarkTheme}
+            onChange={toggleTheme}
+          />
+        </Sc.ToggleContainer>
+
+        <Sc.DarkTheme onClick={toggleTheme} theme={theme} alt="Dark theme"/> 
+      </Sc.ToggleTheme>
     </Sc.Container>
   );
 }

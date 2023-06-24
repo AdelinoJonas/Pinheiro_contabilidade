@@ -3,7 +3,6 @@ import { Home } from '../pages/Home';
 import { About } from '../pages/About';
 import { Services } from '../pages/Services';
 import { Customers } from '../pages/Customers';
-import { News } from '../pages/News';
 import { Contact } from '../pages/Contact';
 import { AnimatePresence } from 'framer-motion';
 import { Links } from '../pages/Links';
@@ -18,7 +17,6 @@ export function MyRoutes() {
         <Route path="/services" element={<Services />} />
         <Route path="/customers" element={<Customers />} />
         <Route path="/links" element={<Links />} />
-        <Route path="/news" element={<News />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
     </AnimatePresence>

@@ -1,15 +1,18 @@
 export const lightTheme = {
   bg: {
     primary: '#0f5132',
-    secondary: '#FFFFFF',
-    tertiary: '#8c747f',
+    secundary: '#FFFFFF',
+    tertiary: '#FFFFFF',
+    quarternary: '#000000',
     sideFilter: '#E2E8F0'
   },
   color: {
     text: '#000000',
     title1: '#fff',
     links: '#7ea291',
-    active: '#fff'
+    active: '#E2E8F0',
+    toggleTheme: '#E2E8F0',
+    ball: '#07351f',
   },
   sizeFonts: {
     links: '1.6rem',
@@ -18,6 +21,7 @@ export const lightTheme = {
     subtitle: '1.8rem',
     text: '1.6rem',
     button: '1.6rem',
+    titleCards: '2.2rem',
   },
   weightFonts: {
     links: 400,
@@ -32,15 +36,18 @@ export const lightTheme = {
 export const darkTheme = {
   bg: {
     primary: '#000000',
-    secondary: '#1b1b1b',
-    tertiary: '#8c747f',
-    sideFilter: '#0f5132'
+    secundary: '#1b1b1b',
+    tertiary: '#FFFFFF',
+    sideFilter: '#0f5132',
+    quarternary: '#FFFFFF',
   },
   color: {
     text: '#FFF',
     title1: '#FFF',
     links: '#7ea291',
-    active: '#fff'
+    active: '#E2E8F0',
+    toggleTheme: '#7ea291',
+    ball: '#7ea291',
   },
   sizeFonts: {
     links: '1.6rem',
@@ -49,6 +56,7 @@ export const darkTheme = {
     subtitle: '1.8rem',
     text: '1.6rem',
     button: '1.6rem',
+    titleCards: '2.5rem',
   },
   weightFonts: {
     links: 400,

@@ -3,13 +3,15 @@ import { ThemeContext } from '../../context/ThemeContext';
 import * as Sc from './styles';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import whatsapp from "../../assets/logo_whatsapp_icon3D.png";
+import { Reveal } from '../../utils/Reveal';
 
 export function Home() {
   const navigate = useNavigate();
-  const { theme } = useContext(ThemeContext);
+  const { theme, handleOpenWhatsapp, whatsappNumber } = useContext(ThemeContext);
   
   const slogans = [
-    "Simplificando suas finanças online!",
+    "Simplificando suas finanças com agilidade!",
     "Parceiro confiável para todas as suas necessidades contábeis",
     "Transformando a maneira como você lida com as finanças!",
     "Contabilidade inteligente para o seu negócio!",
@@ -27,24 +29,22 @@ export function Home() {
   }, []);
   
   return (
-    <motion.div 
-      initial={{opacity: 0}}
-      animate={{opacity: 1}}
-      exit={{opacity: 0}}
-    >
-      <Sc.Container theme={theme}>
-        <motion.div 
-          initial={{opacity: 0}}
-          animate={{opacity: 1}}
-          exit={{opacity: 0}}
-        >
-          <section>
-            <span>{slogans[currentSloganIndex]}</span>
-          </section>
+    <Sc.Container theme={theme}>
+      <motion.div 
+        initial={{opacity: 0, y: 100}}
+        animate={{opacity: 1, y: 0}}
+        exit={{opacity: 0, y: 100}}
+        transition={{duration: 1, delay: 0.25}}
+      >
+        <section>
+          <span>{slogans[currentSloganIndex]}</span>
+        </section>
+        <div>
           <button onClick={() => navigate("/services")}>Conheça nossos Serviços</button>
-        </motion.div>
-      </Sc.Container>
-    </motion.div>
+        </div>
+          <img src={whatsapp} alt="whatsApp contact" onClick={() => handleOpenWhatsapp(whatsappNumber)}/>
+      </motion.div>
+    </Sc.Container>
   );
 }
 
