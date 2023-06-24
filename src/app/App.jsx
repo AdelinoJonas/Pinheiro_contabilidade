@@ -21,11 +21,6 @@ export default function App() {
             <Sc.Aside>
               <Navbar />
             </Sc.Aside>  : 
-            // <Sc.Header>
-            //   <Sc.MobileContainer>
-            //     <MobileNavbar /> 
-            //   </Sc.MobileContainer>
-            // </Sc.Header>
             <Header/>
           }
           <Sc.Main>

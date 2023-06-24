@@ -30,21 +30,21 @@ export function Home() {
   
   return (
     <Sc.Container theme={theme}>
-        <motion.div 
-          initial={{opacity: 0, y: 100}}
-          animate={{opacity: 1, y: 0}}
-          exit={{opacity: 0, y: 100}}
-          transition={{duration: 1, delay: 0.25}}
-        >
-          <section>
-            <span>{slogans[currentSloganIndex]}</span>
-          </section>
-          <div>
-            <button onClick={() => navigate("/services")}>Conheça nossos Serviços</button>
-          </div>
-            <img src={whatsapp} alt="whatsApp contact" onClick={() => handleOpenWhatsapp(whatsappNumber)}/>
-        </motion.div>
-      </Sc.Container>
+      <motion.div 
+        initial={{opacity: 0, y: 100}}
+        animate={{opacity: 1, y: 0}}
+        exit={{opacity: 0, y: 100}}
+        transition={{duration: 1, delay: 0.25}}
+      >
+        <section>
+          <span>{slogans[currentSloganIndex]}</span>
+        </section>
+        <div>
+          <button onClick={() => navigate("/services")}>Conheça nossos Serviços</button>
+        </div>
+          <img src={whatsapp} alt="whatsApp contact" onClick={() => handleOpenWhatsapp(whatsappNumber)}/>
+      </motion.div>
+    </Sc.Container>
   );
 }
 
