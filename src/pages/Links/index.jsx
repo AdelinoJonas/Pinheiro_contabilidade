@@ -12,6 +12,9 @@ import SimplesNacional from "../../assets/links/SimplesNacional.jpg";
 import conselho from "../../assets/links/logo_cfc_vertical.jpg";
 import gov from "../../assets/links/logo.png";
 import tst from "../../assets/links/tst-tribunal.png";
+import safeWeb from "../../assets/links/safeweb.jpg";
+import fecopar from "../../assets/links/logo-fecopar-100.png";
+import empresaFacil from "../../assets/links/empresaFacil.png";
 
 import * as Sc from './styles';
 
@@ -22,7 +25,7 @@ export function Links() {
     {
       name: 'inss',
       src: inss,
-      site:"https://www.inss.gov.br/"
+      site:"https://meu.inss.gov.br/#/login"
     },
     {
       name: 'Ministério do Emprego',
@@ -73,8 +76,27 @@ export function Links() {
       name: 'Pesquisa de Jusisprudência',
       src: tst,
       site:"https://jurisprudencia.tst.jus.br/"
+    },
+    {
+      name: 'safeWeb',
+      src: safeWeb,
+      site:"https://safeweb.com.br/?gclid=Cj0KCQjwqNqkBhDlARIsAFaxvwzZCYi5EocMlSacqTM0zItrkxJxFO8kIl2UjX47TdTqr52WPwLo7VYaAt-bEALw_wcB"
+    },
+    {
+      name: 'fecopar',
+      src: fecopar,
+      site:"https://fecopar.com.br/"
+    },
+    {
+      name: 'empresaFacil',
+      src: empresaFacil,
+      site:"http://www.empresafacil.pr.gov.br/"
     }
   ];
+
+  const handleCardClick = (site) => {
+    window.open(site, "_blank");
+  };
   
   return (
     <Sc.Container theme={theme} >
@@ -83,7 +105,7 @@ export function Links() {
       </div>
       <div className="body">
         {images.map((image, index) => (
-          <div className="card" key={index}>
+          <div className="card" key={index} onClick={() => handleCardClick(image.site)}>
             <Reveal>
               <img src={image.src} alt={image.name} />
             </Reveal>
