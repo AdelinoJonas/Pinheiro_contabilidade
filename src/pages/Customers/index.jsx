@@ -1,7 +1,16 @@
 import React, { useContext } from 'react';
 import { ThemeContext } from '../../context/ThemeContext';
-import nho from "../../assets/customers/nhô_alimentos.png";
+import nho from "../../assets/customers/nho.jpeg";
 import lelulita from "../../assets/customers/lelulita.jpg";
+import aguia from "../../assets/customers/aguia.jpeg";
+import boxecoville from "../../assets/customers/boxecoville.jpeg";
+import dure from "../../assets/customers/dure.jpeg";
+import exalt from "../../assets/customers/exalt.jpeg";
+import gge from "../../assets/customers/gge.jpeg";
+import ljr from "../../assets/customers/ljr.jpeg";
+import luanna_barros from "../../assets/customers/luanna_barros.jpeg";
+import seven_coffee from "../../assets/customers/seven_coffee.jpeg";
+
 import { Reveal } from "../../utils/Reveal";
 import * as Sc from './styles';
 
@@ -10,13 +19,45 @@ export function Customers() {
   
   const images = [
     {
-      name: 'inss',
+      name: 'nho',
       src: nho,
       site:"https://www.nhoalimentos.com.br/"
     },
     {
-      name: 'Ministério do Emprego',
+      name: 'lelulita',
       src: lelulita,
+    },
+    {
+      name: 'aguia',
+      src: aguia,
+    },
+    {
+      name: 'boxecoville',
+      src: boxecoville,
+    },
+    {
+      name: 'dure',
+      src: dure,
+    },
+    {
+      name: 'exalt',
+      src: exalt,
+    },
+    {
+      name: 'gge',
+      src: gge,
+    },
+    {
+      name: 'ljr',
+      src: ljr,
+    },
+    {
+      name: 'luanna_barros',
+      src: luanna_barros,
+    },
+    {
+      name: 'seven_coffee',
+      src: seven_coffee,
     }
   ];
 

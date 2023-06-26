@@ -27,7 +27,7 @@ export function Services() {
 
                 <Sc.Company/> 
                 </div>
-                <span>Já sem sua empresa?</span> 
+                <span>Já tem sua empresa?</span> 
                 <p>Fazemos sua contabilidade</p>
               </motion.div>
               <motion.div 
