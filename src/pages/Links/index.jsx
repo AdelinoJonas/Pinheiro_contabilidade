@@ -16,6 +16,7 @@ import safeWeb from "../../assets/links/safeweb.jpg";
 import fecopar from "../../assets/links/logo-fecopar-100.png";
 import empresaFacil from "../../assets/links/empresaFacil.png";
 import crcpr from "../../assets/links/logoCRCPR.png";
+import Footer from '../../components/Footer';
 
 import * as Sc from './styles';
 
@@ -105,6 +106,7 @@ export function Links() {
   };
   
   return (
+    <>
     <Sc.Container theme={theme} >
       <div className="header">
         <h1>Links uteis</h1>
@@ -126,5 +128,7 @@ export function Links() {
         ))}
       </div>
     </Sc.Container>
+      <Footer />
+    </>
   );
 }

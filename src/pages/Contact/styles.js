@@ -93,7 +93,7 @@ export const Container = styled.div`
           .contact-item{
             width: 50%;
             display: flex;
-            /* align-items: center; */
+            align-items: center;
             justify-content: start;
             gap: 1rem;
             h3{

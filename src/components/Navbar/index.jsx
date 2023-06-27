@@ -31,7 +31,7 @@ export function Navbar() {
         </Sc.SelectItem>
       
         <Sc.SelectItem active='false' theme={theme} to="/news">
-          Notícias
+          Informativos
         </Sc.SelectItem>
 
         <Sc.SelectItem active='false' theme={theme} to="/customers">
