@@ -12,18 +12,26 @@ export const Container = styled.div`
     flex-wrap: wrap;
     justify-content: space-evenly;
     gap: 3rem;
+
     .card{
-      width: 24vw;
+      width: 20vw;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: space-evenly;
       cursor: pointer;
-      img{
-        width: 22vw;
-        margin-left: 1vw; 
+
+      .bg-img{
         background-color: #fff;
         border-radius: 24px;
+        height: 30vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img{
+          width: 60%;
+          height: 60%;
+        }
       }
       .titleCard{
         text-align: center;

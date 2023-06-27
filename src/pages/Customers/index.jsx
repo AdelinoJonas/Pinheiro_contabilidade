@@ -8,6 +8,7 @@ import dure from "../../assets/customers/dure.jpeg";
 import exalt from "../../assets/customers/exalt.jpeg";
 import gge from "../../assets/customers/gge.jpeg";
 import ljr from "../../assets/customers/ljr.jpeg";
+import oticaMartins from "../../assets/customers/oticaMartins.png";
 import luanna_barros from "../../assets/customers/luanna_barros.jpeg";
 import seven_coffee from "../../assets/customers/seven_coffee.jpeg";
 
@@ -54,6 +55,10 @@ export function Customers() {
     {
       name: 'luanna_barros',
       src: luanna_barros,
+    },
+    {
+      name: 'oticaMartins',
+      src: oticaMartins,
     },
     {
       name: 'seven_coffee',

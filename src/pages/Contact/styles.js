@@ -3,7 +3,7 @@ import { ImWhatsapp } from 'react-icons/im';
 import { BsTelephoneInbound } from 'react-icons/bs';
 import { HiOutlineMail } from 'react-icons/hi';
 import { BsTelegram } from 'react-icons/bs';
-// import { PiTelegramLogoBold } from 'react-icons/pi';
+import { CiLocationOn } from 'react-icons/ci';
 import { BsInstagram } from 'react-icons/bs';
 import { BsLinkedin } from 'react-icons/bs';
 
@@ -57,14 +57,13 @@ export const Container = styled.div`
   .bodyContact{
     display: flex;
     margin-top: 10rem;
-    padding-bottom: 10rem;
+    padding-bottom: 5rem;
     align-items: center;
     justify-content: center;
     
     .left{
       background-color: ${props => props.theme.bg.sideFilter};
-      width: 50%;
-      margin-bottom: 4rem;
+      width: 40%;
       color: ${props => props.theme.color.text};
       font-size: ${props => props.theme.sizeFonts.subtitle};
       font-weight: ${props => props.theme.weightFonts.text};
@@ -84,17 +83,17 @@ export const Container = styled.div`
         padding-left: 5%;
 
         .contact{
-          max-width: 50%;
-          margin-left: 25%;
+          max-width: 80%;
+          margin-left: 10%;
           display: flex;
           align-items: center;
           justify-content: center;
           flex-direction: column;
 
           .contact-item{
-            width: 100%;
+            width: 50%;
             display: flex;
-            align-items: center;
+            /* align-items: center; */
             justify-content: start;
             gap: 1rem;
             h3{
@@ -102,30 +101,37 @@ export const Container = styled.div`
               color: ${props => props.theme.color.text};
               font-size: ${props => props.theme.sizeFonts.titleCards};
               font-weight: ${props => props.theme.weightFonts.title1};
+              text-align: center;
             }
-          }
-          span{
-            padding-left: 1rem;
-            color: ${props => props.theme.color.text};
-            font-size: ${props => props.theme.sizeFonts.titleCards};
-            font-weight: ${props => props.theme.weightFonts.subtitle};
+            span{
+              color: ${props => props.theme.color.text};
+              font-size: ${props => props.theme.sizeFonts.titleCards};
+              font-weight: ${props => props.theme.weightFonts.subtitle};
+            }
           }
         }
       }
     }
     .right{
-      width: 40%;
-      padding: 5%;
-      display: flex;
-      align-self: end;
-      img{
-        width: 100%;
-        background-color: ${props => props.theme.bg.sideFilter};
-        border-radius: 24px;
-        margin-bottom: 4rem;
-        box-shadow: 9px 11px 23px -2px rgba(0,0,0,0.76);
-        -webkit-box-shadow: 9px 11px 23px -2px rgba(0,0,0,0.76);
-        -moz-box-shadow: 9px 11px 23px -2px rgba(0,0,0,0.76);
+      width: 50%;
+      margin-left: 5rem;
+      .location{
+        display: flex;
+        align-items: center;
+        margin-bottom: 1rem;
+        gap: 0.5rem;
+        color: ${props => props.theme.color.text};
+        h3{
+          color: ${props => props.theme.color.text};
+          font-size: ${props => props.theme.sizeFonts.titleCards};
+          font-weight: ${props => props.theme.weightFonts.title1};
+        }
+      }
+      span{
+        color: ${props => props.theme.color.text};
+        font-size: ${props => props.theme.sizeFonts.subtitle};
+        font-weight: ${props => props.theme.weightFonts.subtitle};
+        margin-bottom: 0.5rem;
       }
     }
   }
@@ -143,10 +149,10 @@ export const WhatsApp = styled(ImWhatsapp)`
   width: 30px;
   height: 30px;
 `;
-// export const Location = styled(FaMapLocationDot)`
-//   width: 30px;
-//   height: 30px;
-// `;
+export const Location = styled(CiLocationOn)`
+  width: 30px;
+  height: 30px;
+`;
 export const Telegram = styled(BsTelegram)`
   width: 30px;
   height: 30px;

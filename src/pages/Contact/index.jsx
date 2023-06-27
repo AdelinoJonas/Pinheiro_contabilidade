@@ -7,6 +7,7 @@ import * as Sc from './styles';
 import { useEffect } from 'react';
 import { useState } from 'react';
 import { motion } from 'framer-motion';
+import Map from '../../components/Map';
 
 
 export function Contact() {
@@ -26,10 +27,13 @@ export function Contact() {
   
   const [currentSloganIndex, setCurrentSloganIndex] = useState(0);
 
+  const latitude = -25.4579974;
+  const longitude = -49.3443576;
+
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSloganIndex(prevIndex => (prevIndex + 1) % slogans.length);
-    }, 3000);
+    }, 5000);
     
     return () => clearInterval(interval);
   }, []);
@@ -100,15 +104,6 @@ export function Contact() {
                 <span>@pinheirocontabilidade</span>
               </div>
             </Reveal>
-            {/* <Reveal >
-              <div className="contact">
-                <div className="contact-item">
-                  <Sc.LinkedIn />
-                  <h3>LinkedIn</h3>
-                </div>
-                <span>rcpcontadora@gmail.com</span>
-              </div>
-            </Reveal> */}
             </div>
           </Reveal>
         </div>
@@ -118,10 +113,23 @@ export function Contact() {
           exit={{opacity: 0, x: 100}}
           transition={{duration: 1, delay: 0.25}} className="right"
         >
-          <img src={simbol} alt="logo" />
+          <div className="location">
+            <Sc.Location />
+            <h3>Localização:</h3>
+          </div>
+          <span>R. João Tokarski, 210 - Cidade Industrial de Curitiba</span>
+          <div className="location">
+            <Map latitude={latitude} longitude={longitude} />
+          </div>
 
         </motion.div>
       </div>
+      <Reveal >
+        <div className="location">
+          <div className="map">
+          </div>
+        </div>
+      </Reveal>
     </Sc.Container>
   );
 }

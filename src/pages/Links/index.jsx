@@ -15,6 +15,7 @@ import tst from "../../assets/links/tst-tribunal.png";
 import safeWeb from "../../assets/links/safeweb.jpg";
 import fecopar from "../../assets/links/logo-fecopar-100.png";
 import empresaFacil from "../../assets/links/empresaFacil.png";
+import crcpr from "../../assets/links/logoCRCPR.png";
 
 import * as Sc from './styles';
 
@@ -73,7 +74,12 @@ export function Links() {
       site:"https://cfc.org.br/"
     },
     {
-      name: 'Pesquisa de Jusisprudência',
+      name: 'Conselho Estadual de Contabilidade',
+      src: crcpr,
+      site:"https://www3.crcpr.org.br/crcpr/portal/"
+    },
+    {
+      name: 'Pesquisa de Jurisprudência',
       src: tst,
       site:"https://jurisprudencia.tst.jus.br/"
     },
@@ -107,7 +113,9 @@ export function Links() {
         {images.map((image, index) => (
           <div className="card" key={index} onClick={() => handleCardClick(image.site)}>
             <Reveal>
-              <img src={image.src} alt={image.name} />
+              <div className="bg-img">
+                <img src={image.src} alt={image.name} />
+              </div>
             </Reveal>
             <div className="titleCard">
               <Reveal>
