@@ -10,6 +10,9 @@ import gge from "../../assets/customers/gge.jpeg";
 import ljr from "../../assets/customers/ljr.jpeg";
 import oticaMartins from "../../assets/customers/oticaMartins.png";
 import luanna_barros from "../../assets/customers/luanna_barros.jpeg";
+import iob from "../../assets/customers/iob.png";
+import odonto from "../../assets/customers/odonto.jpg";
+import piadoqueijo from "../../assets/customers/piadoqueijo.jpeg";
 import seven_coffee from "../../assets/customers/seven_coffee.jpeg";
 
 import { Reveal } from "../../utils/Reveal";
@@ -63,6 +66,18 @@ export function Customers() {
     {
       name: 'seven_coffee',
       src: seven_coffee,
+    },
+    {
+      name: 'iob',
+      src: iob,
+    },
+    {
+      name: 'odonto',
+      src: odonto,
+    },
+    {
+      name: 'pia do queijo',
+      src: piadoqueijo,
     }
   ];
 
