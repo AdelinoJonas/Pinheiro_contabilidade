@@ -76,6 +76,7 @@ export function Customers() {
     {
       name: 'iob',
       src: iob,
+      site:"https://iob.com.br"
     },
     {
       name: 'odonto',

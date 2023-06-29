@@ -23,12 +23,22 @@ export const Container = styled.div`
         display: flex;
         flex-direction: row;
 
+        @media(max-width: 900px){
+          flex-direction: column;
+          gap: 3rem;
+        } 
+
         .right{
           width: 50%;
           height: 100%;
           display: flex;
           align-items: end;
           justify-content: center;
+
+          @media(max-width: 900px){
+            width: 100%;
+          } 
+
           img{
             width: 100%;
             border-radius: 20px;
@@ -43,6 +53,10 @@ export const Container = styled.div`
           width: 50%;
           height: 50%;
           gap: 2rem;
+
+          @media(max-width: 900px){
+            width: 100%;
+          } 
 
           p{
             width: 90%;
@@ -70,6 +84,9 @@ export const Container = styled.div`
           flex-direction: row;
           justify-content: space-evenly;
           
+          @media(max-width: 900px){
+            flex-direction: column;
+            } 
           p{
             background-color: ${props => props.theme.bg.sideFilter};
             padding: 2rem;
@@ -100,7 +117,7 @@ export const Container = styled.div`
                 
             @media(max-width: 900px){
               position: absolute;
-              left: 5rem;
+              left: 33%;
             } 
 
             &:hover{
@@ -112,7 +129,6 @@ export const Container = styled.div`
       }
     
       .mission{
-        border-top: 1px solid ${props => props.theme.color.text};;
         color: ${props => props.theme.color.text};
         font-size: ${props => props.theme.sizeFonts.title};
         font-weight: ${props => props.theme.weightFonts.title};
@@ -130,6 +146,9 @@ export const Container = styled.div`
       text-align: center;
       margin-bottom: 5rem;
       padding: 0 2rem 0 2rem;
+        @media(max-width: 900px){
+          text-align: justify;
+        } 
     }
 
     .subtitle2{
@@ -140,6 +159,10 @@ export const Container = styled.div`
       margin-bottom: 5rem;
       padding: 0 2rem 0 2rem;
       margin-top: 5rem;
+
+        @media(max-width: 900px){
+          text-align: justify;
+        } 
     }
 
     ul{
@@ -150,6 +173,9 @@ export const Container = styled.div`
       grid-template-areas: "description"
                             "topics center topics";
       margin-bottom: 5rem;
+          @media(max-width: 900px){
+            
+          } 
       li{
         all: unset;
         color: ${props => props.theme.color.text};
