@@ -12,6 +12,11 @@ import SimplesNacional from "../../assets/links/SimplesNacional.jpg";
 import conselho from "../../assets/links/logo_cfc_vertical.jpg";
 import gov from "../../assets/links/logo.png";
 import tst from "../../assets/links/tst-tribunal.png";
+import safeWeb from "../../assets/links/safeweb.jpg";
+import fecopar from "../../assets/links/logo-fecopar-100.png";
+import empresaFacil from "../../assets/links/empresaFacil.png";
+import crcpr from "../../assets/links/logoCRCPR.png";
+import Footer from '../../components/Footer';
 
 import * as Sc from './styles';
 
@@ -22,7 +27,7 @@ export function Links() {
     {
       name: 'inss',
       src: inss,
-      site:"https://www.inss.gov.br/"
+      site:"https://meu.inss.gov.br/#/login"
     },
     {
       name: 'Ministério do Emprego',
@@ -70,22 +75,49 @@ export function Links() {
       site:"https://cfc.org.br/"
     },
     {
-      name: 'Pesquisa de Jusisprudência',
+      name: 'Conselho Estadual de Contabilidade',
+      src: crcpr,
+      site:"https://www3.crcpr.org.br/crcpr/portal/"
+    },
+    {
+      name: 'Pesquisa de Jurisprudência',
       src: tst,
       site:"https://jurisprudencia.tst.jus.br/"
+    },
+    {
+      name: 'safeWeb',
+      src: safeWeb,
+      site:"https://safeweb.com.br/?gclid=Cj0KCQjwqNqkBhDlARIsAFaxvwzZCYi5EocMlSacqTM0zItrkxJxFO8kIl2UjX47TdTqr52WPwLo7VYaAt-bEALw_wcB"
+    },
+    {
+      name: 'fecopar',
+      src: fecopar,
+      site:"https://fecopar.com.br/"
+    },
+    {
+      name: 'empresaFacil',
+      src: empresaFacil,
+      site:"http://www.empresafacil.pr.gov.br/"
     }
   ];
+
+  const handleCardClick = (site) => {
+    window.open(site, "_blank");
+  };
   
   return (
+    <>
     <Sc.Container theme={theme} >
       <div className="header">
         <h1>Links uteis</h1>
       </div>
       <div className="body">
         {images.map((image, index) => (
-          <div className="card" key={index}>
+          <div className="card" key={index} onClick={() => handleCardClick(image.site)}>
             <Reveal>
-              <img src={image.src} alt={image.name} />
+              <div className="bg-img">
+                <img src={image.src} alt={image.name} />
+              </div>
             </Reveal>
             <div className="titleCard">
               <Reveal>
@@ -96,5 +128,7 @@ export function Links() {
         ))}
       </div>
     </Sc.Container>
+      <Footer />
+    </>
   );
 }

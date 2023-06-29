@@ -59,6 +59,7 @@ export const SelectItem = styled(NavLink)`
     opacity: 0.8;
     transition: all 0.3s;
     background: rgba(245, 244, 244, 0.275);
+    border-radius: 25px;
   }
   
   &.active {

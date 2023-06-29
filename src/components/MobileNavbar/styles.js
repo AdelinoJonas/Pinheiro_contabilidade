@@ -16,7 +16,7 @@ export const BackDrop = styled.div`
 
 export const Container = styled.nav`
   height: 100vh;
-  width: 60vw;
+  width: 35vw;
   background: ${(props) => props.theme.bg.primary};
   display: flex;
   flex-direction: column;

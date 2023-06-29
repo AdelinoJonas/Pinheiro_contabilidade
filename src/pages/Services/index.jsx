@@ -3,6 +3,7 @@ import { ThemeContext } from '../../context/ThemeContext';
 
 import { Reveal } from "../../utils/Reveal";
 import pine from "../../assets/pine-logo.png";
+import iob from "../../assets/customers/parceiroAutorizadoIOB.png";
 import Footer from "../../components/Footer";
 import * as Sc from './styles';
 import whatsapp from "../../assets/logo_whatsapp_icon3D.png";
@@ -27,7 +28,7 @@ export function Services() {
 
                 <Sc.Company/> 
                 </div>
-                <span>Já sem sua empresa?</span> 
+                <span>Já tem sua empresa?</span> 
                 <p>Fazemos sua contabilidade</p>
               </motion.div>
               <motion.div 
@@ -137,6 +138,17 @@ export function Services() {
                 </Reveal>
               </div>
             </Sc.ServiceContainer>
+
+              <motion.div 
+                initial={{opacity: 0, x: -100}}
+                animate={{opacity: 1, x: 0}}
+                exit={{opacity: 0, x: -100}}
+                transition={{duration: 1, delay: 0.25}} className="iob"
+                theme={theme}
+              >
+                <img src={iob} alt="IOB Autorizado" />
+                <span>Parceiro Onboarding da IOB TECH - líder do mercado contábil. Realizamos instalações, Importações XML e-Social, Consultoria do sistema IOB Gestão Contábil.</span>
+              </motion.div>
 
             <Reveal>
               <div className="contactButton">

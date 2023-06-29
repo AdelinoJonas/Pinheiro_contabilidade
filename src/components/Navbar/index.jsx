@@ -30,9 +30,9 @@ export function Navbar() {
           Links Uteis
         </Sc.SelectItem>
       
-        {/* <Sc.SelectItem active='false' theme={theme} to="/news">
-          Notícias
-        </Sc.SelectItem> */}
+        <Sc.SelectItem active='false' theme={theme} to="/news">
+          Informativos
+        </Sc.SelectItem>
 
         <Sc.SelectItem active='false' theme={theme} to="/customers">
           Clientes

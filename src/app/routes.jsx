@@ -6,6 +6,7 @@ import { Customers } from '../pages/Customers';
 import { Contact } from '../pages/Contact';
 import { AnimatePresence } from 'framer-motion';
 import { Links } from '../pages/Links';
+import { News } from '../pages/News';
 
 export function MyRoutes() {
   const location = useLocation();
@@ -15,6 +16,7 @@ export function MyRoutes() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/services" element={<Services />} />
+        <Route path="/news" element={<News />} />
         <Route path="/customers" element={<Customers />} />
         <Route path="/links" element={<Links />} />
         <Route path="/contact" element={<Contact />} />
