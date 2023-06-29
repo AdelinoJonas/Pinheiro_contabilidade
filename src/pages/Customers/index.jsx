@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { ThemeContext } from '../../context/ThemeContext';
 import nho from "../../assets/customers/nho.jpeg";
+import adelino from "../../assets/customers/jonas-adelino-neto-logo.png";
 import lelulita from "../../assets/customers/lelulita.jpg";
 import aguia from "../../assets/customers/aguia.jpeg";
 import boxecoville from "../../assets/customers/boxecoville.jpeg";
@@ -22,6 +23,11 @@ export function Customers() {
   const { theme } = useContext(ThemeContext);
   
   const images = [
+    {
+      name: 'adelino',
+      src: adelino,
+      site:"https://adelinoportfolio.netlify.app/"
+    },
     {
       name: 'nho',
       src: nho,
@@ -82,12 +88,14 @@ export function Customers() {
   ];
 
   return (
-    <Sc.Container theme={theme} >
+    <Sc.Container theme={theme}>
       <div className="body">
         {images.map((image, index) => (
           <div className="card" key={index}>
             <Reveal>
-              <img src={image.src} alt={image.name} />
+              <a href={image.site} target="_blank" rel="noopener noreferrer">
+                <img src={image.src} alt={image.name} />
+              </a>
             </Reveal>
           </div>
         ))}

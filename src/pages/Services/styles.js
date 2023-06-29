@@ -24,70 +24,68 @@ export const Container = styled.div`
       img{
         height: 10rem;
       }
-      button{
-        width: 30vw;
-        all: unset;
-        cursor: pointer;
-        height: 6rem;
+    }
+
+    .iob{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 3rem;
+      gap: 2rem;
+      img{
+        width: 22vw;
+      }
+      span{
+        color: ${props => props.theme.color.text};
+        font-size: ${props => props.theme.sizeFonts.subtitle};
+        font-weight: ${props => props.theme.weightFonts.text};
+        margin-left: 1rem;
+        text-align: center;
+      }
+    }
+    .mktBox{
+      display: flex;
+      justify-content: space-evenly;
+      .mktItem{
         display: flex;
-        -webkit-box-align: center;
+        flex-direction: column;
+        justify-content: center;
         align-items: center;
-        color: rgb(0, 0, 0);
-        font-size: 1.8rem;
-        font-weight: 500;
-        box-shadow: rgba(0, 0, 0, 0.76) 9px 11px 23px -2px;
-        padding: 0rem 2rem;
-        background: rgb(226, 232, 240);
-        border-radius: 6px;
-        border-width: 1px;
-        border-style: solid;
-        border-color: rgb(0, 0, 0);
-        border-image: initial;
-      }
-    }
-  .mktBox{
-    display: flex;
-    justify-content: space-evenly;
-    .mktItem{
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      gap: 0.5rem;
-      margin-top: 6rem;
-      margin-bottom: 1rem;
-      color: ${props => props.theme.color.text};
-      span {
-        font-size: ${props => props.theme.sizeFonts.subtitle};
-        font-weight: ${props => props.theme.weightFonts.title};
+        gap: 0.5rem;
+        margin-top: 6rem;
+        margin-bottom: 1rem;
+        color: ${props => props.theme.color.text};
+        span {
+          font-size: ${props => props.theme.sizeFonts.subtitle};
+          font-weight: ${props => props.theme.weightFonts.title};
+        }
+
+        p {
+          font-size: ${props => props.theme.sizeFonts.text};
+          font-weight: ${props => props.theme.weightFonts.subtitle};
+        }
       }
 
-      p {
-        font-size: ${props => props.theme.sizeFonts.text};
-        font-weight: ${props => props.theme.weightFonts.subtitle};
+      .mktMiddleItem{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        color: ${props => props.theme.color.text};
+
+        span {
+          font-size: ${props => props.theme.sizeFonts.subtitle};
+          font-weight: ${props => props.theme.weightFonts.title};
+        }
+        p {
+          font-size: ${props => props.theme.sizeFonts.text};
+          font-weight: ${props => props.theme.weightFonts.subtitle};
+        }
       }
     }
-
-    .mktMiddleItem{
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      gap: 0.5rem;
-      margin-top: 1rem;
-      margin-bottom: 1rem;
-      color: ${props => props.theme.color.text};
-
-      span {
-        font-size: ${props => props.theme.sizeFonts.subtitle};
-        font-weight: ${props => props.theme.weightFonts.title};
-      }
-      p {
-        font-size: ${props => props.theme.sizeFonts.text};
-        font-weight: ${props => props.theme.weightFonts.subtitle};
-      }
-    }
-  }
       
 }
 .title{
