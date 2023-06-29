@@ -146,7 +146,9 @@ export function Services() {
                 transition={{duration: 1, delay: 0.25}} className="iob"
                 theme={theme}
               >
-                <img src={iob} alt="IOB Autorizado" />
+                <a href="https://iob.com.br/" target="_blank" rel="noopener noreferrer">
+                  <img src={iob} alt="IOB Autorizado" />
+                </a>
                 <span>Parceiro Onboarding da IOB TECH - líder do mercado contábil. Realizamos instalações, Importações XML e-Social, Consultoria do sistema IOB Gestão Contábil.</span>
               </motion.div>
 

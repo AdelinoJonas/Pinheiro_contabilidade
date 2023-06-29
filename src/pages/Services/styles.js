@@ -34,6 +34,10 @@ export const Container = styled.div`
       gap: 2rem;
       img{
         width: 22vw;
+
+        @media(max-width: 700px){
+          width: 50vw;
+        } 
       }
       span{
         color: ${props => props.theme.color.text};
@@ -46,6 +50,9 @@ export const Container = styled.div`
     .mktBox{
       display: flex;
       justify-content: space-evenly;
+        @media(max-width: 700px){
+          flex-direction: column;
+        } 
       .mktItem{
         display: flex;
         flex-direction: column;
@@ -159,8 +166,12 @@ export const Graph = styled(BsGraphUpArrow)`
 export const ServiceContainer = styled.section`
   display: flex;
   margin: 5rem,  0 7rem 0;
-  .leftSide{
-    
+
+    @media(max-width: 700px){
+      flex-direction: column;
+    } 
+    .leftSide{
+
     .flexRow{
       display: flex;
       align-items: center;
@@ -173,6 +184,9 @@ export const ServiceContainer = styled.section`
         flex-direction: column;
         align-items: end;
         margin-bottom: 2rem;
+          @media(max-width: 700px){
+            width: 40%;
+          } 
         span {
           font-size: 2rem;
           font-weight: 700;
@@ -186,6 +200,9 @@ export const ServiceContainer = styled.section`
           text-align: end;
           color: ${props => props.theme.bg.quarternary};
           margin-top: 1rem;
+            @media(max-width: 700px){
+              text-align: justify;
+            } 
         }
       }
     }
@@ -203,6 +220,9 @@ export const ServiceContainer = styled.section`
     .text{
       min-width: 80%;
       margin-bottom: 2rem;
+        @media(max-width: 700px){
+          width: 40%;
+        } 
       span {
         font-size: 2rem;
         font-weight: 700;
@@ -228,6 +248,11 @@ export const backgroundServices = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  @media(max-width: 700px){
+      display: none;
+    } 
+  
   h1{
     text-align: center;
     letter-spacing: 1rem;
