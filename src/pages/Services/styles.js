@@ -11,7 +11,9 @@ import { BsGraphUpArrow } from 'react-icons/bs';
 
 export const Container = styled.div`
   background-color: ${(props) => props.theme.bg.sideFilter};
-
+  @media(max-width: 700px){
+      width: 100vw;
+    } 
   .content{
     padding: 3rem;
 
@@ -36,7 +38,7 @@ export const Container = styled.div`
         width: 22vw;
 
         @media(max-width: 700px){
-          width: 50vw;
+          width: 90vw;
         } 
       }
       span{
@@ -45,6 +47,11 @@ export const Container = styled.div`
         font-weight: ${props => props.theme.weightFonts.text};
         margin-left: 1rem;
         text-align: center;
+        @media(max-width: 700px){
+          text-align: justify;
+          width: 80vw;
+          margin-left: 0;
+        } 
       }
     }
     .mktBox{
