@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { ThemeContext } from '../../context/ThemeContext';
 import { Reveal } from "../../utils/Reveal";
 import inss from "../../assets/links/inss.jpg";
-import mte from "../../assets/links/MTE.jpg";
+import mte from "../../assets/links/mte.jpg";
 import notaFiscal from "../../assets/links/notaFiscal.jpg";
 import receitaFederal from "../../assets/links/receitaFederal.jpg";
 import receitaEstadual from "../../assets/links/receitaEstadual.jpg";
@@ -47,7 +47,7 @@ export function Links() {
     {
       name: 'Receita Estadual',
       src: receitaEstadual,
-      site:"http://acesso.mte.gov.br"
+      site:"https://www.fazenda.pr.gov.br/Pagina/Consultas-rapidas-da-Receita-Estadual"
     },
     {
       name: 'Rede Sim',
@@ -87,7 +87,7 @@ export function Links() {
     {
       name: 'safeWeb',
       src: safeWeb,
-      site:"https://safeweb.com.br/?gclid=Cj0KCQjwqNqkBhDlARIsAFaxvwzZCYi5EocMlSacqTM0zItrkxJxFO8kIl2UjX47TdTqr52WPwLo7VYaAt-bEALw_wcB"
+      site:"https://safeweb.com.br/"
     },
     {
       name: 'fecopar',
