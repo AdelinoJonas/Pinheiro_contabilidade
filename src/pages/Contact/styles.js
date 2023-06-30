@@ -9,12 +9,19 @@ import { BsLinkedin } from 'react-icons/bs';
 
 export const Container = styled.div`
   background: ${(props) => props.theme.bg.secundary};
+  @media(max-width: 700px){
+      width: 100vw;
+    } 
 
   .header{
     padding: 4rem;
     display: flex;
     justify-content: center;
     margin-bottom: 5rem;
+      @media(max-width: 700px){
+        flex-direction: column;
+        padding: 1rem;
+      } 
     h1{
       border-right: 6px groove ${props => props.theme.color.text};
       color: ${props => props.theme.color.text};
@@ -22,6 +29,12 @@ export const Container = styled.div`
       font-weight: ${props => props.theme.weightFonts.title1};
       line-height: 200%;
       padding-right: 2rem;
+      @media(max-width: 700px){
+        border-bottom: 6px groove ${props => props.theme.color.text};
+        border-right:none;
+        margin-bottom: 1rem;
+        text-align: center;
+      } 
     }
     img{
       padding-left: 2rem;
@@ -38,6 +51,12 @@ export const Container = styled.div`
     -moz-box-shadow: 9px 11px 23px -2px rgba(0,0,0,0.76);
     display: flex;
     justify-content: center;
+      @media(max-width: 700px){
+        width: 90%;
+        margin-left: 0;
+        margin-left: 5%;
+        border-radius:0 40% 0 40%;
+        } 
     section{ 
       max-width: 75%;
       height: 20vh;
@@ -46,6 +65,10 @@ export const Container = styled.div`
       align-items: center;
       text-align: justify;
       padding: 2rem 2rem;
+
+      @media(max-width: 700px){
+        height: 50vh;
+        } 
       span{
         color: ${props => props.theme.color.text};
         font-size: ${props => props.theme.sizeFonts.titleCards};
@@ -60,6 +83,10 @@ export const Container = styled.div`
     padding-bottom: 5rem;
     align-items: center;
     justify-content: center;
+
+      @media(max-width: 700px){
+        flex-direction: column;
+        } 
     
     .left{
       background-color: ${props => props.theme.bg.sideFilter};
@@ -76,12 +103,18 @@ export const Container = styled.div`
       display: flex;
       justify-content: center;
       padding: 2rem 0 2rem 0;
-
+        @media(max-width: 700px){
+          width: 90%;
+          border-radius: 40% 0 40% 0;
+          padding: 2rem 0 3rem 0;
+        } 
       .contact-box{
         display: flex;
         flex-direction: column;
         padding-left: 5%;
-
+        @media(max-width: 700px){
+          padding-left: 0;
+        } 
         .contact{
           max-width: 80%;
           margin-left: 10%;
@@ -115,6 +148,11 @@ export const Container = styled.div`
     .right{
       width: 50%;
       margin-left: 5rem;
+      @media(max-width: 700px){
+          width: 90%;
+          margin-left: 0;
+          margin-top: 5rem;
+        } 
       .location{
         display: flex;
         align-items: center;

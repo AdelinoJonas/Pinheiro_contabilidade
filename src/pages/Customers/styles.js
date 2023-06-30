@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const Container = styled.div`
   background: ${(props) => props.theme.bg.secundary};
   padding: 3rem;
+
   .body{
     display: flex;
     flex-wrap: wrap;
