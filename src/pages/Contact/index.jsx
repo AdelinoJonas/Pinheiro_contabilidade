@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { ThemeContext } from '../../context/ThemeContext';
-import logo from "../../assets/pinheiro-cores.jpg";
+import logo from "../../assets/pinheirocores.jpg";
 import Footer from "../../components/Footer";
 import { Reveal } from "../../utils/Reveal";
 import * as Sc from './styles';

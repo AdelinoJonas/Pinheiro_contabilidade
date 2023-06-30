@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { ThemeContext } from '../../context/ThemeContext';
 import nho from "../../assets/customers/nho.jpeg";
-import adelino from "../../assets/customers/jonas-adelino-neto-logo.png";
+import adelino from "../../assets/customers/jonasadelinonetologo.png";
 import lelulita from "../../assets/customers/lelulita.jpg";
 import aguia from "../../assets/customers/aguia.jpeg";
 import boxecoville from "../../assets/customers/boxecoville.jpeg";
@@ -10,11 +10,11 @@ import exalt from "../../assets/customers/exalt.jpeg";
 import gge from "../../assets/customers/gge.jpeg";
 import ljr from "../../assets/customers/ljr.jpeg";
 import oticaMartins from "../../assets/customers/oticaMartins.png";
-import luanna_barros from "../../assets/customers/luanna_barros.jpeg";
+import luanna_barros from "../../assets/customers/luannabarros.jpeg";
 import iob from "../../assets/customers/iob.png";
 import odonto from "../../assets/customers/odonto.jpg";
 import piadoqueijo from "../../assets/customers/piadoqueijo.jpeg";
-import seven_coffee from "../../assets/customers/seven_coffee.jpeg";
+import seven_coffee from "../../assets/customers/sevencoffee.jpeg";
 import { Reveal } from "../../utils/Reveal";
 import * as Sc from './styles';
 

@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { ThemeContext } from '../../context/ThemeContext';
-import LogoOffice from "../../assets/pinheiro-cores.jpg";
+import LogoOffice from "../../assets/pinheirocores.jpg";
 import * as Sc from './styles';
 import { MobileNavbar } from '../MobileNavbar';
 

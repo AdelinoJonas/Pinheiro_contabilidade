@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { ThemeContext } from '../../context/ThemeContext';
 import * as Sc from './styles';
-import LogoOffice from "../../assets/pinheiro-vertical-cores.png";
+import LogoOffice from "../../assets/pinheiroverticalcores.png";
 import { useNavigate } from 'react-router-dom';
 
 export function Navbar() {

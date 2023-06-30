@@ -3,7 +3,7 @@ import { ThemeContext } from '../../context/ThemeContext';
 import * as Sc from './styles';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import whatsapp from "../../assets/logo_whatsapp_icon3D.png";
+import whatsapp from "../../assets/logowhatsappicon3D.png";
 import { Reveal } from '../../utils/Reveal';
 
 export function Home() {

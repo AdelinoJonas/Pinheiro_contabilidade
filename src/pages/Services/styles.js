@@ -178,6 +178,9 @@ export const ServiceContainer = styled.section`
       flex-direction: column;
     } 
     .leftSide{
+      position: relative;
+      z-index: 555;
+      margin-right: 30rem;
 
     .flexRow{
       display: flex;
@@ -186,7 +189,7 @@ export const ServiceContainer = styled.section`
       gap: 2rem;
       
       .text{
-        min-width: 80%;
+        /* min-width: 80%; */
         display: flex;
         flex-direction: column;
         align-items: end;
@@ -216,6 +219,9 @@ export const ServiceContainer = styled.section`
   }
   
   .rightSide{
+    position: relative;
+    z-index: 555;
+    
     .flexRow{
       display: flex;
       flex-direction: row-reverse;
@@ -248,11 +254,15 @@ export const ServiceContainer = styled.section`
 
 `;
 
-export const backgroundServices = styled.div`
-  position: relative;
-  margin-top: 4rem;
+export const BackgroundServices = styled.div`
+  position: absolute;
+  width: 100%;
+  height: 100vh;
   display: flex;
+  margin-left: -9%;
+  margin-top: 10%;
   flex-direction: column;
+  gap: 4rem;
   justify-content: center;
   align-items: center;
 
@@ -270,7 +280,7 @@ export const backgroundServices = styled.div`
   .imgLogo{
     position: relative;
     opacity: 0.3;
-    height: 100%;
-    width: 25vw;
+    height: 50%;
+    width: 25%;
   }
 `;

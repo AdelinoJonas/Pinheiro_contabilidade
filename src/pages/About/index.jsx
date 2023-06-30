@@ -1,11 +1,11 @@
 import React, { useContext } from 'react';
 import { ThemeContext } from '../../context/ThemeContext';
-import LogoOffice from "../../assets/pinheiro-cores.jpg";
+import LogoOffice from "../../assets/pinheirocores.jpg";
 import { Reveal } from "../../utils/Reveal";
-import office1 from "../../assets/escritorio-de-contabilidade.jpg";
-import office2 from "../../assets/escritorio-contabil.jpg";
+import office1 from "../../assets/escritoriodecontabilidade.jpg";
+import office2 from "../../assets/escritoriocontabil.jpg";
 import Footer from "../../components/Footer";
-import whatsapp from "../../assets/logo_whatsapp_icon3D.png";
+import whatsapp from "../../assets/logowhatsappicon3D.png";
 import * as Sc from './styles';
 import { motion } from 'framer-motion';
 

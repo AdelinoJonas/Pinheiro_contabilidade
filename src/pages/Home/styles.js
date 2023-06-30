@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import homeBg from "../../assets/home-bg.png";
+import homeBg from "../../assets/homebg.png";
 
 export const Container = styled.div`
   height: 100vh;

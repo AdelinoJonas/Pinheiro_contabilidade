@@ -2,11 +2,11 @@ import React, { useContext } from 'react';
 import { ThemeContext } from '../../context/ThemeContext';
 
 import { Reveal } from "../../utils/Reveal";
-import pine from "../../assets/pinheiro-vertical-cores.png";
+import pine from "../../assets/pinheiroverticalcores.png";
 import iob from "../../assets/customers/parceiroAutorizadoIOB.png";
 import Footer from "../../components/Footer";
 import * as Sc from './styles';
-import whatsapp from "../../assets/logo_whatsapp_icon3D.png";
+import whatsapp from "../../assets/logowhatsappicon3D.png";
 import { motion } from 'framer-motion';
 
 export function Services() {
@@ -113,13 +113,23 @@ export function Services() {
                     <Sc.Pd theme={theme}/>
                   </div>
                 </Reveal>
+                <Reveal >
+                  <div className="openCompany flexRow">
+                    <div className="text">
+                      <span>Consultoria E-Social</span>
+                      <p>
+                      Nossa consultoria em eSocial visa garantir que sua empresa esteja em conformidade com todas as obrigações legais relacionadas ao sistema. Trabalhamos de forma personalizada, adaptando nossos serviços às necessidades específicas da sua organização, auxiliando na otimização de processos e na redução de riscos.
+                        </p>
+                    </div>
+                    <Sc.Society theme={theme}/>
+                  </div>
+                  </Reveal>
               </div>
 
-              <Sc.backgroundServices theme={theme}>
-                <h1>PINHEIRO</h1>
+              <Sc.BackgroundServices theme={theme}>
                 <img src={pine} alt="logo" className='imgLogo'/>
-                <h1>CONTABILIDADE</h1>
-              </Sc.backgroundServices >
+                <img src={pine} alt="logo" className='imgLogo'/>
+              </Sc.BackgroundServices >
 
               <div className="rightSide">
 
@@ -149,17 +159,6 @@ export function Services() {
                       <span>Consultoria Fiscal, Contábil e Folha de Pagamento</span>
                       <p>
                       Nossa equipe está atualizada com as mudanças nas leis fiscais e contábeis, garantindo que sua empresa esteja em conformidade com as obrigações legais em constante evolução. Além disso, priorizamos a confidencialidade e a segurança dos dados da sua empresa.
-                        </p>
-                    </div>
-                    <Sc.Society theme={theme}/>
-                  </div>
-                  </Reveal>
-                  <Reveal >
-                  <div className="openCompany flexRow">
-                    <div className="text">
-                      <span>Consultoria E-Social</span>
-                      <p>
-                      Nossa consultoria em eSocial visa garantir que sua empresa esteja em conformidade com todas as obrigações legais relacionadas ao sistema. Trabalhamos de forma personalizada, adaptando nossos serviços às necessidades específicas da sua organização, auxiliando na otimização de processos e na redução de riscos.
                         </p>
                     </div>
                     <Sc.Society theme={theme}/>

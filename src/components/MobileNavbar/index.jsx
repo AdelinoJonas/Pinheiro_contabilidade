@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useRef, useState } from 'react';
 import { RiMenuLine } from 'react-icons/ri';
 import { useNavigate } from 'react-router-dom';
-import LogoOffice from "../../assets/pinheiro-vertical-cores.png";
+import LogoOffice from "../../assets/pinheiroverticalcores.png";
 import { ThemeContext } from '../../context/ThemeContext';
 import * as Sc from './styles';
 

@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
 import { ThemeContext } from '../../context/ThemeContext';
-import LogoOffice from "../../assets/pinheiro-cores.jpg";
+import LogoOffice from "../../assets/pinheirocores.jpg";
 import * as Sc from './styles';
-import whatsapp from "../../assets/logo_whatsapp_icon3D.png";
+import whatsapp from "../../assets/logowhatsappicon3D.png";
 
 export default function Footer() {
   const { theme, whatsappNumber, handleOpenWhatsapp} = useContext(ThemeContext);
