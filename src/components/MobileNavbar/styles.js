@@ -143,8 +143,8 @@ export const LightTheme = styled(BsFillSunFill)`
   `;
 
 export const Menu = styled(RiMenuLine)`
-  width: 3rem;
-  height: 3rem;
+  width: 4rem;
+  height: 4rem;
   color: #FFF;
   cursor: pointer;
 

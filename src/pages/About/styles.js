@@ -2,6 +2,9 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   background: ${(props) => props.theme.bg.secundary};
+    @media(max-width: 700px){
+      width: 100vw;
+    } 
 
   .content{
     padding: 3rem;
@@ -83,9 +86,10 @@ export const Container = styled.div`
           display: flex;
           flex-direction: row;
           justify-content: space-evenly;
-          
+
           @media(max-width: 900px){
             flex-direction: column;
+            width: 90vw;
             } 
           p{
             background-color: ${props => props.theme.bg.sideFilter};
@@ -96,6 +100,10 @@ export const Container = styled.div`
             box-shadow: 9px 11px 23px -2px rgba(0,0,0,0.76);
             -webkit-box-shadow: 9px 11px 23px -2px rgba(0,0,0,0.76);
             -moz-box-shadow: 9px 11px 23px -2px rgba(0,0,0,0.76);
+            @media(max-width: 500px){
+              margin: 1.5;
+              margin: 0 2.5rem 2.5rem -2rem;
+            }
           }
         }
         .contactButtomBox{
@@ -117,7 +125,7 @@ export const Container = styled.div`
                 
             @media(max-width: 900px){
               position: absolute;
-              left: 33%;
+              left: 18%;
             } 
 
             &:hover{
@@ -173,8 +181,11 @@ export const Container = styled.div`
       grid-template-areas: "description"
                             "topics center topics";
       margin-bottom: 5rem;
-          @media(max-width: 900px){
-            
+          @media(max-width: 700px){
+            grid-template-columns: 80vw;
+            grid-template-rows: 15%;
+            grid-template-areas: "description";
+                                  position: relative;
           } 
       li{
         all: unset;
@@ -189,6 +200,7 @@ export const Container = styled.div`
         flex-direction: column;
         justify-content: center;
         padding: 2rem 3rem;
+        height: max-content;
         span {
           font-size: ${props => props.theme.sizeFonts.titleCards};
           font-weight: ${props => props.theme.weightFonts.title};
@@ -214,8 +226,11 @@ export const Container = styled.div`
     img{
       width: 10rem;
       margin-left: 80%;
-      margin: 5rem 0 3rem 85%;
+      /* margin: 5rem 0 3rem 85%; */
       cursor: pointer;
+        @media(max-width: 700px){
+          margin: 5rem 0 3rem 65%;
+          } 
     }
   }
 `;
@@ -232,5 +247,9 @@ export const ImageOffice = styled.div`
     box-shadow: 9px 11px 23px -2px rgba(0,0,0,0.76);
     -webkit-box-shadow: 9px 11px 23px -2px rgba(0,0,0,0.76);
     -moz-box-shadow: 9px 11px 23px -2px rgba(0,0,0,0.76);
+      @media(max-width: 700px){
+        width: 100%;
+        margin-top: 0;
+      } 
   }
 `;
