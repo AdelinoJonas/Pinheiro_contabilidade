@@ -30,7 +30,7 @@ export function MobileNavbar() {
         <RiMenuLine />
       </Sc.Menu>
       {openMenu && (
-        <Sc.BackDrop>
+        <Sc.BackDrop onClick={handleToggleMenu}>
           <Sc.Container theme={theme}>
             <section onClick={() => navigate('/')}>
               <img src={LogoOffice} alt="light theme" />
@@ -46,6 +46,10 @@ export function MobileNavbar() {
                 
               <Sc.SelectItem active='false' theme={theme} to="/services" onClick={handleToggleMenu}>
                 Services
+              </Sc.SelectItem>
+              
+              <Sc.SelectItem active='false' theme={theme} to="/customers" onClick={handleToggleMenu}>
+                Clientes
               </Sc.SelectItem>
             
               <Sc.SelectItem active='false' theme={theme} to="/links" onClick={handleToggleMenu}>

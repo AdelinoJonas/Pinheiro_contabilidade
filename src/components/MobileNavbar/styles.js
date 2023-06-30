@@ -16,7 +16,7 @@ export const BackDrop = styled.div`
 
 export const Container = styled.nav`
   height: 100vh;
-  width: 35vw;
+  width: 35%;
   background: ${(props) => props.theme.bg.primary};
   display: flex;
   flex-direction: column;
@@ -24,6 +24,9 @@ export const Container = styled.nav`
   align-items: center;
   padding: 1rem 2rem 3rem 2rem;
   border: 3px gray;
+    @media(max-width: 700px){
+      width: 180px;
+    } 
 
   section{
     width: 100%;
