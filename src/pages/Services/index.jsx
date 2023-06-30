@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { ThemeContext } from '../../context/ThemeContext';
 
 import { Reveal } from "../../utils/Reveal";
-import pine from "../../assets/pine-logo.png";
+import pine from "../../assets/pinheiro-vertical-cores.png";
 import iob from "../../assets/customers/parceiroAutorizadoIOB.png";
 import Footer from "../../components/Footer";
 import * as Sc from './styles';
