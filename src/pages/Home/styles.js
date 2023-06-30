@@ -7,6 +7,7 @@ export const Container = styled.div`
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  background-attachment: fixed;
   display: flex;
   align-items: center;
 
@@ -17,6 +18,9 @@ export const Container = styled.div`
 
   div{
     padding: 5rem;
+      @media(max-width: 700px){
+        padding: 3rem 2rem;
+      } 
     section{
       min-height: 12rem;
       margin-bottom: 5rem;
