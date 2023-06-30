@@ -267,7 +267,7 @@ export const BackgroundServices = styled.div`
   align-items: center;
 
   @media(max-width: 700px){
-      display: none;
+      /* display: none; */
     } 
   
   h1{
