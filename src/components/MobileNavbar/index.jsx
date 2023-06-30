@@ -65,7 +65,7 @@ export function MobileNavbar() {
               </Sc.SelectItem>
             </div>
 
-            <Sc.ToggleTheme>
+            {/* <Sc.ToggleTheme>
 
               <Sc.LightTheme onClick={toggleTheme} theme={theme} alt="light theme"/>
 
@@ -80,7 +80,7 @@ export function MobileNavbar() {
               </Sc.ToggleContainer>
 
               <Sc.DarkTheme onClick={toggleTheme} theme={theme} alt="Dark theme"/> 
-            </Sc.ToggleTheme>
+            </Sc.ToggleTheme> */}
           </Sc.Container>
           </Sc.BackDrop>
       )}
