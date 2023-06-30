@@ -15,7 +15,6 @@ import iob from "../../assets/customers/iob.png";
 import odonto from "../../assets/customers/odonto.jpg";
 import piadoqueijo from "../../assets/customers/piadoqueijo.jpeg";
 import seven_coffee from "../../assets/customers/seven_coffee.jpeg";
-
 import { Reveal } from "../../utils/Reveal";
 import * as Sc from './styles';
 
