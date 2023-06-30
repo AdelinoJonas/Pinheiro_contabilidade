@@ -23,6 +23,7 @@ export const Container = styled.div`
       margin-top: 5rem;
       @media(max-width: 900px){
           height: 25vh;
+          margin-top: 0;
         } 
       
       span{
