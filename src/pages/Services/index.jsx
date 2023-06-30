@@ -95,6 +95,24 @@ export function Services() {
                     <Sc.Pd theme={theme}/>
                   </div>
                 </Reveal>
+                <Reveal >
+                  <div className="pD flexRow">
+                    <div className="text">
+                      <span>Assessoria Contábil</span>
+                      <p>Oferecemos uma ampla gama de serviços de assessoria contábil para atender às necessidades específicas da sua empresa. Nossos profissionais altamente qualificados e experientes estão prontos para fornecer suporte contábil personalizado e orientação especializada.</p>
+                    </div>
+                    <Sc.Pd theme={theme}/>
+                  </div>
+                </Reveal>
+                <Reveal >
+                  <div className="pD flexRow">
+                    <div className="text">
+                      <span>Terceirização da Folha de Pagamento</span>
+                      <p>Oferecemos serviços especializados de terceirização de folha de pagamento para empresas que desejam simplificar e otimizar o processo de administração de salários e benefícios dos seus colaboradores. Nossa equipe de especialistas em folha de pagamento está preparada para cuidar de todas as etapas desse processo, garantindo conformidade com as leis trabalhistas e previdenciárias, bem como a segurança e confidencialidade dos dados dos funcionários.</p>
+                    </div>
+                    <Sc.Pd theme={theme}/>
+                  </div>
+                </Reveal>
               </div>
 
               <Sc.backgroundServices theme={theme}>
@@ -126,6 +144,39 @@ export function Services() {
                   </div>
                   </Reveal>
                   <Reveal >
+                  <div className="openCompany flexRow">
+                    <div className="text">
+                      <span>Consultoria Fiscal, Contábil e Folha de Pagamento</span>
+                      <p>
+                      Nossa equipe está atualizada com as mudanças nas leis fiscais e contábeis, garantindo que sua empresa esteja em conformidade com as obrigações legais em constante evolução. Além disso, priorizamos a confidencialidade e a segurança dos dados da sua empresa.
+                        </p>
+                    </div>
+                    <Sc.Society theme={theme}/>
+                  </div>
+                  </Reveal>
+                  <Reveal >
+                  <div className="openCompany flexRow">
+                    <div className="text">
+                      <span>Consultoria E-Social</span>
+                      <p>
+                      Nossa consultoria em eSocial visa garantir que sua empresa esteja em conformidade com todas as obrigações legais relacionadas ao sistema. Trabalhamos de forma personalizada, adaptando nossos serviços às necessidades específicas da sua organização, auxiliando na otimização de processos e na redução de riscos.
+                        </p>
+                    </div>
+                    <Sc.Society theme={theme}/>
+                  </div>
+                  </Reveal>
+                  <Reveal >
+                  <div className="openCompany flexRow">
+                    <div className="text">
+                      <span>Consultoria ECD e ECF</span>
+                      <p>
+                      Nossa consultoria em ECD e ECF tem como objetivo principal garantir que sua empresa esteja em conformidade com todas as obrigações legais relacionadas a essas obrigações acessórias. Trabalhamos de forma personalizada, adaptando nossos serviços às necessidades específicas da sua organização.
+                        </p>
+                    </div>
+                    <Sc.Society theme={theme}/>
+                  </div>
+                  </Reveal>
+                  <Reveal >
                   <div className="accountingIntegration flexRow">
                     <div className="text">
                       <span>Integração Contábil</span>
@@ -146,7 +197,9 @@ export function Services() {
                 transition={{duration: 1, delay: 0.25}} className="iob"
                 theme={theme}
               >
-                <img src={iob} alt="IOB Autorizado" />
+                <a href="https://iob.com.br/" target="_blank" rel="noopener noreferrer">
+                  <img src={iob} alt="IOB Autorizado" />
+                </a>
                 <span>Parceiro Onboarding da IOB TECH - líder do mercado contábil. Realizamos instalações, Importações XML e-Social, Consultoria do sistema IOB Gestão Contábil.</span>
               </motion.div>
 

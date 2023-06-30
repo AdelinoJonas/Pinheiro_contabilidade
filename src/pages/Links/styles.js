@@ -12,6 +12,12 @@ export const Container = styled.div`
     flex-wrap: wrap;
     justify-content: space-evenly;
     gap: 3rem;
+    
+    @media(max-width: 700px){
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    } 
 
     .card{
       width: 20vw;
@@ -20,6 +26,9 @@ export const Container = styled.div`
       align-items: center;
       justify-content: space-evenly;
       cursor: pointer;
+      @media(max-width: 700px){
+          width: 80%;
+        } 
 
       .bg-img{
         background-color: #fff;

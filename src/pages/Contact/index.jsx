@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { ThemeContext } from '../../context/ThemeContext';
 import logo from "../../assets/pinheiro-cores.jpg";
-import simbol from "../../assets/contabilidade-semFudo.png";
+import Footer from "../../components/Footer";
 import { Reveal } from "../../utils/Reveal";
 import * as Sc from './styles';
 import { useEffect } from 'react';
@@ -130,6 +130,7 @@ export function Contact() {
           </div>
         </div>
       </Reveal>
+      <Footer />
     </Sc.Container>
   );
 }
