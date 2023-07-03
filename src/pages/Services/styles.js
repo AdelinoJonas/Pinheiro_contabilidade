@@ -174,31 +174,22 @@ export const Graph = styled(BsGraphUpArrow)`
 
 export const ServiceContainer = styled.section`
   display: flex;
-  /* margin: 5rem 0 7rem 0; */
-  background-image: url("../../assets/pinheiroverticalcores.png"),url("../../assets/pinheiroverticalcores.png");
-  background-position-x: 190%,-80%;
-  background-position-y: 0,100%;
-  background-repeat: no-repeat,no-repeat;
-  background-size: 80%;
+  gap: 10rem;
 
     @media(max-width: 700px){
       flex-direction: column;
     } 
     .leftSide{
-      /* position: relative; */
-      /* z-index: 555; */
-      /* width: 50%; */
-      /* margin-right: 30rem; */
+      width: 50%;
 
     .flexRow{
-      width: 90%;
       display: flex;
       align-items: center;
       margin-bottom: 2rem;
       gap: 2rem;
-      
+
       .text{
-        /* min-width: 80%; */
+        width: 100%;
         display: flex;
         flex-direction: column;
         align-items: end;
@@ -228,19 +219,17 @@ export const ServiceContainer = styled.section`
   }
   
   .rightSide{
-    /* position: relative; */
-    /* z-index: 555; */
-    
+    width: 50%;
     .flexRow{
       display: flex;
       flex-direction: row-reverse;
       align-items: center;
+      justify-content: start;
       margin-bottom: 2rem;
       gap: 2rem;
     }
     
     .text{
-      min-width: 80%;
       margin-bottom: 2rem;
         @media(max-width: 700px){
           width: 40%;
@@ -276,7 +265,7 @@ export const BackgroundServices = styled.div`
   align-items: center;
 
   @media(max-width: 700px){
-      /* display: none; */
+
     } 
   
   h1{
