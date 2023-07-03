@@ -16,7 +16,7 @@ export const BackDrop = styled.div`
 
 export const Container = styled.nav`
   height: 100vh;
-  width: 35%;
+
   background: ${(props) => props.theme.bg.primary};
   display: flex;
   flex-direction: column;
@@ -60,6 +60,7 @@ export const SelectItem = styled(NavLink)`
   color: ${props => props.theme.color.links};
   font-size: ${props => props.theme.sizeFonts.subtitle};
   font-weight: ${props => props.theme.weightFonts.links};
+  overflow: hidden;
   
   padding: 1.5rem;
   border-top: 2px solid rgba(245, 244, 244, 0.575);
@@ -69,12 +70,20 @@ export const SelectItem = styled(NavLink)`
     font-weight: ${props => props.theme.weightFonts.title1};
     opacity: 0.8;
     transition: all 0.3s;
+    background: rgba(245, 244, 244, 0.275);
+    border-radius: 25px;
   }
-
+  
   &.active {
     color: ${(props) => props.theme.color.active};
     font-weight: ${(props) => props.theme.weightFonts.title1};
     text-transform: uppercase;
+    background: rgba(245, 244, 244, 0.100);
+    border-right: 6px groove #FFF;
+    border-left: 6px groove #FFF;
+    border-radius: 50px;
+    border-top: none;
+    padding:1rem 0.5rem;
   }
 `;
 

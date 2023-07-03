@@ -22,7 +22,7 @@ export const Reveal = ({ children }) => {
         variants={{
           hidden: { opacity: 0, y: 100 },
           visible: { opacity: 1, y: 0 },
-          exit: { opacity: 0, transition:{ duration: 0.25}}
+          // exit: { opacity: 0, transition:{ duration: 0.25}}
         }}  
         initial= "hidden"
         animate= {mainControls}

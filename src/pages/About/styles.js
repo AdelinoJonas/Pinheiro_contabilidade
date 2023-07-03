@@ -244,9 +244,6 @@ export const ImageOffice = styled.div`
     width: 70%;
     margin-top: 4rem;
     border-radius: 10%;
-    box-shadow: 9px 11px 23px -2px rgba(0,0,0,0.76);
-    -webkit-box-shadow: 9px 11px 23px -2px rgba(0,0,0,0.76);
-    -moz-box-shadow: 9px 11px 23px -2px rgba(0,0,0,0.76);
       @media(max-width: 700px){
         width: 100%;
         margin-top: 0;

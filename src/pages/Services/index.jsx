@@ -21,7 +21,6 @@ export function Services() {
             <motion.div 
                 initial={{opacity: 0, x: -100}}
                 animate={{opacity: 1, x: 0}}
-                exit={{opacity: 0, x: -100}}
                 transition={{duration: 1, delay: 0.25}} 
                 className="mktItem">
                 <div className="image">
@@ -34,7 +33,6 @@ export function Services() {
               <motion.div 
                 initial={{opacity: 0, y: -100}}
                 animate={{opacity: 1, y: 0}}
-                exit={{opacity: 0, y: -100}}
                 transition={{duration: 1, delay: 0.25}}
                 className="mktMiddleItem"
               >
@@ -48,7 +46,6 @@ export function Services() {
               <motion.div 
                 initial={{opacity: 0, x: 100}}
                 animate={{opacity: 1, x: 0}}
-                exit={{opacity: 0, x: 100}}
                 transition={{duration: 1, delay: 0.25}}
                 className="mktItem">
                 <div className="image">
@@ -127,10 +124,10 @@ export function Services() {
                     </Reveal>
                 </div>
 
-                <Sc.BackgroundServices theme={theme}>
+                {/* <Sc.BackgroundServices theme={theme}>
                   <img src={pine} alt="logo" className='imgLogo'/>
                   <img src={pine} alt="logo" className='imgLogo'/>
-                </Sc.BackgroundServices >
+                </Sc.BackgroundServices > */}
 
                 <div className="rightSide">
 
@@ -307,7 +304,6 @@ export function Services() {
               <motion.div 
                 initial={{opacity: 0, x: -100}}
                 animate={{opacity: 1, x: 0}}
-                exit={{opacity: 0, x: -100}}
                 transition={{duration: 1, delay: 0.25}} className="iob"
                 theme={theme}
               >

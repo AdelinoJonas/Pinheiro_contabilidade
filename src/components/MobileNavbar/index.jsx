@@ -64,33 +64,9 @@ export function MobileNavbar() {
                 Contato
               </Sc.SelectItem>
             </div>
-
-            {/* <Sc.ToggleTheme>
-
-              <Sc.LightTheme onClick={toggleTheme} theme={theme} alt="light theme"/>
-
-              <Sc.ToggleContainer htmlFor="toggle">
-                <Sc.ToggleBall isActive={isDarkTheme} />
-                <Sc.HiddenCheckbox
-                  type="checkbox"
-                  id="toggle"
-                  checked={isDarkTheme}
-                  onChange={toggleTheme}
-                />
-              </Sc.ToggleContainer>
-
-              <Sc.DarkTheme onClick={toggleTheme} theme={theme} alt="Dark theme"/> 
-            </Sc.ToggleTheme> */}
-          </Sc.Container>
+            </Sc.Container>
           </Sc.BackDrop>
-      )}
+        )}
     </>
   );
 }
-
-
-
-
-
-
-

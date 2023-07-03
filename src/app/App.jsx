@@ -21,7 +21,9 @@ export default function App() {
             <Sc.Aside>
               <Navbar />
             </Sc.Aside>  : 
-            <Header/>
+            <Sc.MobileContainer>
+              <Header/>
+            </Sc.MobileContainer>
           }
           <Sc.Main>
             <MyRoutes />

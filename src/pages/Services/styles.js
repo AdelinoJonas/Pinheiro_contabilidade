@@ -8,6 +8,7 @@ import { LuNewspaper } from 'react-icons/lu';
 import { SlPeople } from 'react-icons/sl';
 import { MdOutlineAccountBalance } from 'react-icons/md';
 import { BsGraphUpArrow } from 'react-icons/bs';
+import pine from "../../assets/pinheiroverticalcores.png";
 
 export const Container = styled.div`
   background-color: ${(props) => props.theme.bg.sideFilter};
@@ -36,6 +37,7 @@ export const Container = styled.div`
       gap: 2rem;
       img{
         width: 22vw;
+        border-radius: 10px;
 
         @media(max-width: 700px){
           width: 90vw;
@@ -172,17 +174,24 @@ export const Graph = styled(BsGraphUpArrow)`
 
 export const ServiceContainer = styled.section`
   display: flex;
-  margin: 5rem,  0 7rem 0;
+  /* margin: 5rem 0 7rem 0; */
+  background-image: url("../../assets/pinheiroverticalcores.png"),url("../../assets/pinheiroverticalcores.png");
+  background-position-x: 190%,-80%;
+  background-position-y: 0,100%;
+  background-repeat: no-repeat,no-repeat;
+  background-size: 80%;
 
     @media(max-width: 700px){
       flex-direction: column;
     } 
     .leftSide{
-      position: relative;
-      z-index: 555;
-      margin-right: 30rem;
+      /* position: relative; */
+      /* z-index: 555; */
+      /* width: 50%; */
+      /* margin-right: 30rem; */
 
     .flexRow{
+      width: 90%;
       display: flex;
       align-items: center;
       margin-bottom: 2rem;
@@ -219,8 +228,8 @@ export const ServiceContainer = styled.section`
   }
   
   .rightSide{
-    position: relative;
-    z-index: 555;
+    /* position: relative; */
+    /* z-index: 555; */
     
     .flexRow{
       display: flex;
