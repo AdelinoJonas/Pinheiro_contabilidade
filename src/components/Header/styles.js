@@ -17,8 +17,8 @@ export const Logo = styled.div`
   background-color: #fff;
   border-radius: 6px;
   margin: 1rem;
-  width: 55vw;
-  height: 80%;
+  width: 80vw;
+  height: 60%;
   display: flex;
   align-items: center;
   justify-content: center;
