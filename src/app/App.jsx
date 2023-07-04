@@ -1,15 +1,14 @@
-import React from 'react';
-import { BrowserRouter } from 'react-router-dom';
-import { Navbar } from '../components/Navbar';
-import { MobileNavbar } from '../components/MobileNavbar';
-import { ThemeProvider } from '../context/ThemeContext';
-import GlobalStyles from '../global/GlobalStyles';
-import { MyRoutes } from './routes';
-import * as Sc from './styles';
-import { Header } from '../components/Header';
+import React from "react";
+import { BrowserRouter } from "react-router-dom";
+import { Navbar } from "../components/Navbar";
+import { MobileNavbar } from "../components/MobileNavbar";
+import { ThemeProvider } from "../context/ThemeContext";
+import GlobalStyles from "../global/GlobalStyles";
+import { MyRoutes } from "./routes";
+import * as Sc from "./styles";
+import { Header } from "../components/Header";
 
 export default function App() {
-
   let screenWidth = window.innerWidth;
 
   return (
@@ -17,14 +16,15 @@ export default function App() {
       <ThemeProvider>
         <GlobalStyles />
         <Sc.Body>
-          {screenWidth > 900 ? 
+          {screenWidth > 900 ? (
             <Sc.Aside>
               <Navbar />
-            </Sc.Aside>  : 
+            </Sc.Aside>
+          ) : (
             <Sc.MobileContainer>
-              <Header/>
+              <Header />
             </Sc.MobileContainer>
-          }
+          )}
           <Sc.Main>
             <MyRoutes />
           </Sc.Main>

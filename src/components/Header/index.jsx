@@ -1,8 +1,8 @@
-import React, { useContext } from 'react';
-import { ThemeContext } from '../../context/ThemeContext';
+import React, { useContext } from "react";
+import { ThemeContext } from "../../context/ThemeContext";
 import LogoOffice from "../../assets/pinheirocores.jpg";
-import * as Sc from './styles';
-import { MobileNavbar } from '../MobileNavbar';
+import * as Sc from "./styles";
+import { MobileNavbar } from "../MobileNavbar";
 
 export function Header() {
   const { theme } = useContext(ThemeContext);
@@ -13,8 +13,8 @@ export function Header() {
         <MobileNavbar />
       </section>
       <Sc.Logo>
-        <img src={LogoOffice} alt="Logo" onClick={() => navigate('/')}/>
+        <img src={LogoOffice} alt="Logo" onClick={() => navigate("/")} />
       </Sc.Logo>
     </Sc.Container>
-  )
+  );
 }

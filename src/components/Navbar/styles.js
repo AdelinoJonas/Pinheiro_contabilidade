@@ -1,8 +1,7 @@
 import styled from "styled-components";
-import { BsFillMoonStarsFill } from 'react-icons/bs';
-import { BsFillSunFill } from 'react-icons/bs';
+import { BsFillMoonStarsFill } from "react-icons/bs";
+import { BsFillSunFill } from "react-icons/bs";
 import { NavLink } from "react-router-dom";
-
 
 export const Container = styled.nav`
   width: 20%;
@@ -16,7 +15,7 @@ export const Container = styled.nav`
   border-right: 3px double ${(props) => props.theme.bg.quarternary};
   position: fixed;
 
-  section{
+  section {
     width: 16vw;
     height: 210px;
     display: flex;
@@ -33,42 +32,41 @@ export const Container = styled.nav`
     }
   }
 
-  div{
+  div {
     width: 95%;
     display: flex;
     flex-direction: column;
     margin-top: 1rem;
   }
-  
-  `;
+`;
 
 export const SelectItem = styled(NavLink)`
   all: unset;
   text-decoration: none;
   cursor: pointer;
-  color: ${props => props.theme.color.links};
-  font-size: ${props => props.theme.sizeFonts.subtitle};
-  font-weight: ${props => props.theme.weightFonts.links};
-  
+  color: ${(props) => props.theme.color.links};
+  font-size: ${(props) => props.theme.sizeFonts.subtitle};
+  font-weight: ${(props) => props.theme.weightFonts.links};
+
   padding: 1.3rem;
   /* border-top: 2px solid rgba(245, 244, 244, 0.575); */
-  
-  &:hover{
-    color: ${props => props.theme.color.active};
-    font-weight: ${props => props.theme.weightFonts.title1};
+
+  &:hover {
+    color: ${(props) => props.theme.color.active};
+    font-weight: ${(props) => props.theme.weightFonts.title1};
     opacity: 0.8;
     transition: all 0.3s;
     background: rgba(245, 244, 244, 0.275);
     border-radius: 25px;
   }
-  
+
   &.active {
     color: ${(props) => props.theme.color.active};
     font-weight: ${(props) => props.theme.weightFonts.title1};
     text-transform: uppercase;
-    background: rgba(245, 244, 244, 0.100);
-    border-right: 6px groove #FFF;
-    border-left: 6px groove #FFF;
+    background: rgba(245, 244, 244, 0.1);
+    border-right: 6px groove #fff;
+    border-left: 6px groove #fff;
     border-radius: 50px;
     border-top: none;
   }
@@ -78,14 +76,14 @@ export const FirstItem = styled(NavLink)`
   all: unset;
   text-decoration: none;
   cursor: pointer;
-  color: ${props => props.theme.color.links};
-  font-size: ${props => props.theme.sizeFonts.subtitle};
-  font-weight: ${props => props.theme.weightFonts.links};
+  color: ${(props) => props.theme.color.links};
+  font-size: ${(props) => props.theme.sizeFonts.subtitle};
+  font-weight: ${(props) => props.theme.weightFonts.links};
   padding: 1rem;
-    
-  &:hover{
-    color: ${props => props.theme.color.active};
-    font-weight: ${props => props.theme.weightFonts.title1};
+
+  &:hover {
+    color: ${(props) => props.theme.color.active};
+    font-weight: ${(props) => props.theme.weightFonts.title1};
     opacity: 0.8;
     transition: all 0.3s;
     background: rgba(245, 244, 244, 0.275);
@@ -95,9 +93,9 @@ export const FirstItem = styled(NavLink)`
     color: ${(props) => props.theme.color.active};
     font-weight: ${(props) => props.theme.weightFonts.title1};
     text-transform: uppercase;
-    background: rgba(245, 244, 244, 0.100);
-    border-right: 6px groove #FFF;
-    border-left: 6px groove #FFF;
+    background: rgba(245, 244, 244, 0.1);
+    border-right: 6px groove #fff;
+    border-left: 6px groove #fff;
     border-radius: 50px;
     border-top: none;
   }
@@ -109,7 +107,6 @@ export const ToggleTheme = styled.nav`
   align-items: center;
   justify-content: space-evenly;
   margin-top: 2rem;
-  
 `;
 
 export const ToggleContainer = styled.label`
@@ -121,7 +118,6 @@ export const ToggleContainer = styled.label`
   position: relative;
   cursor: pointer;
   border: 2px solid #07351f;
-
 `;
 
 export const ToggleBall = styled.span`
@@ -135,7 +131,7 @@ export const ToggleBall = styled.span`
   top: 50%;
   transform: translateY(-50%);
   transition: transform 0.3s ease-in-out;
-  left: ${({ isActive }) => (isActive ? 'calc(100% - 25px)' : '2px')};
+  left: ${({ isActive }) => (isActive ? "calc(100% - 25px)" : "2px")};
 `;
 
 export const HiddenCheckbox = styled.input`
@@ -150,22 +146,22 @@ export const HiddenCheckbox = styled.input`
 export const DarkTheme = styled(BsFillMoonStarsFill)`
   width: 3rem;
   height: 3rem;
-  color: ${(props) => (props.theme.color.toggleTheme)};
+  color: ${(props) => props.theme.color.toggleTheme};
   cursor: pointer;
 
-  &:hover{
-    color: ${props => props.theme.color.toggleTheme};
+  &:hover {
+    color: ${(props) => props.theme.color.toggleTheme};
     transition: all 0.3s;
-    }
-  `;
+  }
+`;
 
 export const LightTheme = styled(BsFillSunFill)`
   width: 3rem;
   height: 3rem;
-  color: ${(props) => (props.theme.color.toggleTheme)};
+  color: ${(props) => props.theme.color.toggleTheme};
   cursor: pointer;
-  &:hover{
-    color: ${props => props.theme.color.toggleTheme};
+  &:hover {
+    color: ${(props) => props.theme.color.toggleTheme};
     transition: all 0.3s;
-    }
-  `;
+  }
+`;

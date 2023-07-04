@@ -4,7 +4,7 @@ export const Container = styled.div`
   background: ${(props) => props.theme.bg.secundary};
   padding: 3rem;
 
-  .body{
+  .body {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -15,7 +15,7 @@ export const Container = styled.div`
       align-items: center;
     } */
 
-    .card{
+    .card {
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -23,11 +23,11 @@ export const Container = styled.div`
       cursor: pointer;
       margin-bottom: 14vh;
 
-      img{
+      img {
         width: 20vw;
         background-color: #fff;
         border-radius: 24px;
-        @media(max-width: 700px){
+        @media (max-width: 700px) {
           width: 30vw;
           height: 30vw;
         }

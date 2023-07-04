@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import { BsFillMoonStarsFill } from 'react-icons/bs';
-import { BsFillSunFill } from 'react-icons/bs';
-import { RiMenuLine } from 'react-icons/ri';
+import { BsFillMoonStarsFill } from "react-icons/bs";
+import { BsFillSunFill } from "react-icons/bs";
+import { RiMenuLine } from "react-icons/ri";
 import { NavLink } from "react-router-dom";
 
 export const BackDrop = styled.div`
@@ -24,11 +24,11 @@ export const Container = styled.nav`
   align-items: center;
   padding: 1rem 2rem 3rem 2rem;
   border: 3px gray;
-    @media(max-width: 700px){
-      width: 180px;
-    } 
+  @media (max-width: 700px) {
+    width: 180px;
+  }
 
-  section{
+  section {
     width: 100%;
     height: 30%;
     display: flex;
@@ -44,46 +44,44 @@ export const Container = styled.nav`
       margin-top: -2rem;
     }
   }
-  div{
+  div {
     width: 95%;
     display: flex;
     flex-direction: column;
-    
   }
-  
-  `;
+`;
 
 export const SelectItem = styled(NavLink)`
   all: unset;
   text-decoration: none;
   cursor: pointer;
-  color: ${props => props.theme.color.links};
-  font-size: ${props => props.theme.sizeFonts.subtitle};
-  font-weight: ${props => props.theme.weightFonts.links};
+  color: ${(props) => props.theme.color.links};
+  font-size: ${(props) => props.theme.sizeFonts.subtitle};
+  font-weight: ${(props) => props.theme.weightFonts.links};
   overflow: hidden;
-  
+
   padding: 1.5rem;
   border-top: 2px solid rgba(245, 244, 244, 0.575);
-    
-  &:hover{
-    color: ${props => props.theme.color.active};
-    font-weight: ${props => props.theme.weightFonts.title1};
+
+  &:hover {
+    color: ${(props) => props.theme.color.active};
+    font-weight: ${(props) => props.theme.weightFonts.title1};
     opacity: 0.8;
     transition: all 0.3s;
     background: rgba(245, 244, 244, 0.275);
     border-radius: 25px;
   }
-  
+
   &.active {
     color: ${(props) => props.theme.color.active};
     font-weight: ${(props) => props.theme.weightFonts.title1};
     text-transform: uppercase;
-    background: rgba(245, 244, 244, 0.100);
-    border-right: 6px groove #FFF;
-    border-left: 6px groove #FFF;
+    background: rgba(245, 244, 244, 0.1);
+    border-right: 6px groove #fff;
+    border-left: 6px groove #fff;
     border-radius: 50px;
     border-top: none;
-    padding:1rem 0.5rem;
+    padding: 1rem 0.5rem;
   }
 `;
 
@@ -116,7 +114,7 @@ export const ToggleBall = styled.span`
   top: 50%;
   transform: translateY(-50%);
   transition: transform 0.3s ease-in-out;
-  left: ${({ isActive }) => (isActive ? 'calc(100% - 35px)' : '5px')};
+  left: ${({ isActive }) => (isActive ? "calc(100% - 35px)" : "5px")};
 `;
 
 export const HiddenCheckbox = styled.input`
@@ -131,34 +129,34 @@ export const HiddenCheckbox = styled.input`
 export const DarkTheme = styled(BsFillMoonStarsFill)`
   width: 3rem;
   height: 3rem;
-  color: ${(props) => (props.theme.color.toggleTheme)};
+  color: ${(props) => props.theme.color.toggleTheme};
   cursor: pointer;
 
-  &:hover{
-    color: ${props => props.theme.color.toggleTheme};
+  &:hover {
+    color: ${(props) => props.theme.color.toggleTheme};
     transition: all 0.3s;
-    }
-  `;
+  }
+`;
 
 export const LightTheme = styled(BsFillSunFill)`
   width: 3rem;
   height: 3rem;
-  color: ${(props) => (props.theme.color.toggleTheme)};
+  color: ${(props) => props.theme.color.toggleTheme};
   cursor: pointer;
-  &:hover{
-    color: ${props => props.theme.color.toggleTheme};
+  &:hover {
+    color: ${(props) => props.theme.color.toggleTheme};
     transition: all 0.3s;
-    }
-  `;
+  }
+`;
 
 export const Menu = styled(RiMenuLine)`
   width: 4rem;
   height: 4rem;
-  color: #FFF;
+  color: #fff;
   cursor: pointer;
 
-  &:hover{
-    color: #FFF;
+  &:hover {
+    color: #fff;
     transition: all 0.3s;
-    }
-  `;
+  }
+`;

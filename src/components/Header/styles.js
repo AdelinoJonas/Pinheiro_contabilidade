@@ -7,10 +7,9 @@ export const Container = styled.div`
   justify-content: space-between;
   align-items: center;
   flex-direction: row-reverse;
-  section{
+  section {
     margin: 2rem;
   }
-  
 `;
 
 export const Logo = styled.div`
@@ -27,4 +26,3 @@ export const Logo = styled.div`
     height: 90%;
   }
 `;
-
