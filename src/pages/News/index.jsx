@@ -1,8 +1,8 @@
-import axios from 'axios';
-import React, { useContext, useEffect, useState } from 'react';
-import { ThemeContext } from '../../context/ThemeContext';
-import Footer from '../../components/Footer';
-import * as Sc from './styles';
+import axios from "axios";
+import React, { useContext, useEffect, useState } from "react";
+import { ThemeContext } from "../../context/ThemeContext";
+import Footer from "../../components/Footer";
+import * as Sc from "./styles";
 
 export function News() {
   const { theme } = useContext(ThemeContext);
@@ -13,12 +13,12 @@ export function News() {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          'https://www.businessinformativos.com.br/Services/Informativos/json?auth=ODkyNw%3D%3D'
+          "https://www.businessinformativos.com.br/Services/Informativos/json?auth=ODkyNw%3D%3D"
         );
 
         setImages(response.data.infos);
       } catch (error) {
-        console.error('Erro na requisição:', error);
+        console.error("Erro na requisição:", error);
       }
     };
 
@@ -26,22 +26,22 @@ export function News() {
   }, []);
 
   const handleImageClick = (url) => {
-    window.open(url, '_blank');
+    window.open(url, "_blank");
   };
 
   return (
-  <>
-    <Sc.ImageContainer theme={theme}>
-      {images.map((image, index) => (
-        <Sc.Image
-          key={index}
-          src={image.mini}
-          alt={image.titulo}
-          onClick={() => handleImageClick(image.pdffile)}
-        />
-      ))}
-    </Sc.ImageContainer>
-    <Footer />
-  </>
+    <>
+      <Sc.ImageContainer theme={theme}>
+        {images.map((image, index) => (
+          <Sc.Image
+            key={index}
+            src={image.mini}
+            alt={image.titulo}
+            onClick={() => handleImageClick(image.pdffile)}
+          />
+        ))}
+      </Sc.ImageContainer>
+      <Footer />
+    </>
   );
-};
+}

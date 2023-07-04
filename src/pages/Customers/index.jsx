@@ -1,5 +1,5 @@
-import React, { useContext } from 'react';
-import { ThemeContext } from '../../context/ThemeContext';
+import React, { useContext } from "react";
+import { ThemeContext } from "../../context/ThemeContext";
 import nho from "../../assets/customers/nho.jpeg";
 import adelino from "../../assets/customers/jonasadelinonetologo.png";
 import lelulita from "../../assets/customers/lelulita.jpg";
@@ -16,75 +16,75 @@ import odonto from "../../assets/customers/odonto.jpg";
 import piadoqueijo from "../../assets/customers/piadoqueijo.jpeg";
 import seven_coffee from "../../assets/customers/sevencoffee.jpeg";
 import { Reveal } from "../../utils/Reveal";
-import * as Sc from './styles';
+import * as Sc from "./styles";
 
 export function Customers() {
   const { theme } = useContext(ThemeContext);
-  
+
   const images = [
     {
-      name: 'adelino',
+      name: "adelino",
       src: adelino,
-      site:"https://adelinoportfolio.netlify.app/"
+      site: "https://adelinoportfolio.netlify.app/",
     },
     {
-      name: 'nho',
+      name: "nho",
       src: nho,
-      site:"https://www.nhoalimentos.com.br/"
+      site: "https://www.nhoalimentos.com.br/",
     },
     {
-      name: 'lelulita',
+      name: "lelulita",
       src: lelulita,
     },
     {
-      name: 'aguia',
+      name: "aguia",
       src: aguia,
     },
     {
-      name: 'boxecoville',
+      name: "boxecoville",
       src: boxecoville,
     },
     {
-      name: 'dure',
+      name: "dure",
       src: dure,
     },
     {
-      name: 'exalt',
+      name: "exalt",
       src: exalt,
     },
     {
-      name: 'gge',
+      name: "gge",
       src: gge,
     },
     {
-      name: 'ljr',
+      name: "ljr",
       src: ljr,
     },
     {
-      name: 'luanna_barros',
+      name: "luanna_barros",
       src: luanna_barros,
     },
     {
-      name: 'oticaMartins',
+      name: "oticaMartins",
       src: oticaMartins,
     },
     {
-      name: 'seven_coffee',
+      name: "seven_coffee",
       src: seven_coffee,
     },
     {
-      name: 'iob',
+      name: "iob",
       src: iob,
-      site:"https://iob.com.br"
+      site: "https://iob.com.br",
     },
     {
-      name: 'odonto',
+      name: "odonto",
       src: odonto,
     },
     {
-      name: 'pia do queijo',
+      name: "pia do queijo",
       src: piadoqueijo,
-    }
+    },
   ];
 
   return (

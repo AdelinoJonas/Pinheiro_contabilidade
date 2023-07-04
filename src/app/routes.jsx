@@ -1,12 +1,12 @@
-import { Route, Routes, useLocation } from 'react-router-dom';
-import { Home } from '../pages/Home';
-import { About } from '../pages/About';
-import { Services } from '../pages/Services';
-import { Customers } from '../pages/Customers';
-import { Contact } from '../pages/Contact';
-import { AnimatePresence } from 'framer-motion';
-import { Links } from '../pages/Links';
-import { News } from '../pages/News';
+import { Route, Routes, useLocation } from "react-router-dom";
+import { Home } from "../pages/Home";
+import { About } from "../pages/About";
+import { Services } from "../pages/Services";
+import { Customers } from "../pages/Customers";
+import { Contact } from "../pages/Contact";
+import { AnimatePresence } from "framer-motion";
+import { Links } from "../pages/Links";
+import { News } from "../pages/News";
 
 export function MyRoutes() {
   const location = useLocation();

@@ -13,8 +13,7 @@ export const Image = styled.img`
   width: 250px;
   height: 300px;
   cursor: pointer;
-  border: 1px solid #000; 
+  border: 1px solid #000;
   border-radius: 12px;
   margin-bottom: 5rem;
 `;
-

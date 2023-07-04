@@ -1,5 +1,5 @@
-import React, { createContext, useState } from 'react';
-import { lightTheme, darkTheme } from '../global/themes/theme';
+import React, { createContext, useState } from "react";
+import { lightTheme, darkTheme } from "../global/themes/theme";
 
 export const ThemeContext = createContext();
 
@@ -25,7 +25,18 @@ export const ThemeProvider = ({ children }) => {
   }
 
   return (
-    <ThemeContext.Provider value={{ theme, toggleTheme, isDarkTheme, handleToggleMenu, openMenu, setOpenMenu, handleOpenWhatsapp, whatsappNumber }}>
+    <ThemeContext.Provider
+      value={{
+        theme,
+        toggleTheme,
+        isDarkTheme,
+        handleToggleMenu,
+        openMenu,
+        setOpenMenu,
+        handleOpenWhatsapp,
+        whatsappNumber,
+      }}
+    >
       {children}
     </ThemeContext.Provider>
   );

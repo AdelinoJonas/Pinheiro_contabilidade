@@ -1,8 +1,8 @@
 export const textVariant = () => {
   return {
-    hiden: { 
-      y: 100, 
-      opacity: 0 
+    hiden: {
+      y: 100,
+      opacity: 0,
     },
     show: {
       y: 0,
